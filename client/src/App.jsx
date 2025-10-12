@@ -12,7 +12,7 @@ import AboutSection from "@/components/AboutSection";
 import UserLayout from "@/components/Admin/UserLayout";
 import DashBoard from "@/components/Admin/Dashboard";
 // Import all pages
-import Home from "@/pages/home";
+
 import NotFound from "@/pages/NotFound";
 import AndamanPage from "@/pages/Andaman/Andaman";
 import Bali4NPage from "@/pages/Bali-bliss/Bali4NPage";
