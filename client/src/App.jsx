@@ -36,7 +36,7 @@ import MunnarPage from "@/pages/munnar/MunnarPage";
 import NewZealandPage from "@/pages/New Zealand/NewZealandPage";
 import OotyPage from "@/pages/ooty/OotyPage";
 import ScandinaviaPage from "@/pages/Scandinavia/ScandinaviaPage";
-import SingaporePage from "@/pages/Singapore/SingaporePage";
+import SingaporePage from "@/pages/singapore/SingaporePage";
 import Singapore5NPage from "@/pages/singapore/Singapore5NPage";
 import SingaporeMalaysiaPage from "@/pages/singapore/SingaporeMalaysiaPage";
 import SriLankaPage from "@/pages/Srilanka/SriLanka5NPage";
