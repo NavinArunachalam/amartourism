@@ -34,7 +34,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative h-screen flex items-center justify-center overflow-hidden"
+      className="relative h-screen flex items-center justify-center pt-20" // Added pt-20 for header space
     >
       {/* Background Image with Overlay */}
       <div
@@ -43,7 +43,9 @@ const Hero = () => {
           backgroundImage: `url(${heroImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          backgroundAttachment: "fixed",
+          backgroundAttachment: "scroll", // Changed to scroll
+          width: "100%",
+          height: "100%",
         }}
       />
 

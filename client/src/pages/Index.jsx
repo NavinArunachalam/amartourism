@@ -9,8 +9,7 @@ import HappyCustomers from "@/components/HappyCustomers"
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <main>
+    <div >
         <Hero />
         <PackagesSection />
         <HoneymoonSection />
@@ -19,8 +18,6 @@ const Index = () => {
         <TestimonialsSection />
         <ContactSection />
         <ExploreSection/>
-      </main>
- 
     </div>
   );
 };

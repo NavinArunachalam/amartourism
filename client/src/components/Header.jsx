@@ -55,7 +55,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 max-w-full overflow-x-hidden ${
         isScrolled
           ? "bg-background/95 backdrop-blur-md travel-shadow"
           : "bg-transparent"
@@ -66,7 +66,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="p-2 bg-gradient-package rounded-lg">
-              {/* <Plane className="h-6 w-6 text-accent" /> */}
+              <Plane className="h-6 w-6 text-accent" />
             </div>
             <div>
               <h1 className="text-xl font-bold text-accent">Amar Tourism</h1>
@@ -116,7 +116,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4">
+          <div className="md:hidden mt-4 pb-4 max-w-full overflow-x-hidden">
             <div className="flex flex-col space-y-4 bg-background/95 backdrop-blur-md rounded-lg p-4 travel-shadow">
               {navItems.map((item) => (
                 <button

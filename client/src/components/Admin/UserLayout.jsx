@@ -6,15 +6,15 @@ import Footer from "@/components/Footer";
 
 const UserLayout = () => {
   return (
-    <div className="user-layout" >
+    <div className="user-layout flex flex-col min-h-screen">
       <Header />
-      <main style={{ minHeight: '80vh'}}>
+      <main className="flex-grow">
         <Outlet />
       </main>
-
       <Footer />
     </div>
   );
 };
+
 
 export default UserLayout;
