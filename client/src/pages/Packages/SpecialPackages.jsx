@@ -158,11 +158,6 @@ const SpecialPackages = () => {
       {apiPackages.length === 0 && !loading && (
         <div className={styles.specialOffersEmpty}>No special offers available.</div>
       )}
-      <div className={styles.specialOffersViewAllBtnContainer}>
-        <a href="#" className={styles.specialOffersViewAllBtn}>
-          View All Packages
-        </a>
-      </div>
     </div>
   );
 };
