@@ -15,8 +15,8 @@ const isProd = process.env.NODE_ENV === "production";
 
 // Configure CORS to allow credentials and specify the frontend origin
 app.use(cors({
-  origin: 'http://localhost:5173',
-  credentials: true // Allow credentials (cookies, etc.)
+  origin:process.env.CLIENT_URL||"https://amartourism-client.vercel.app",
+  credentials: true
 }));
 
 // ------------------- Middleware -------------------
@@ -55,14 +55,14 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: "Internal server error" });
 });
 
-// ------------------- DB Connect -------------------
+
 connectDB()
   .then(() => console.log("MongoDB connected ✅"))
   .catch((err) => console.error("Failed to connect to DB:", err));
 
-  // ------------------- Start Server -------------------
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT} `);
-});
+
+// app.listen(PORT, () => {
+//   console.log(`Server running on http://localhost:${PORT} `);
+// });
 
 module.exports = app;
