@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Heart, MapPin, Star, Calendar } from "lucide-react";
 import beachImage from "@/assets/beach.jpg";
 import mountainsImage from "@/assets/mountains.jpg";
