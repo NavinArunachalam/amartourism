@@ -51,7 +51,7 @@ import AllHoneymoon from "@/components/AllHoneymoon";
 import PackageDetails from "@/pages/Packages/PackageDetails";
 import PlaceDetailCard from "@/pages/Packages/PlaceDetailCard";
 import AdminLayout from "@/components/Admin/AdminLayout";
-import AdminLogin from "@/components/Admin/AdminLogin";
+import AdminLogin from "@/components/Admin/Adminlogin";
 import TourPackages from "@/components/Admin/TourPackage";
 import AddTourPackage from "@/components/Admin/AddTourPackage";
 import SpecialOffer from "@/components/Admin/Specialoffer/SpecialOffer";
