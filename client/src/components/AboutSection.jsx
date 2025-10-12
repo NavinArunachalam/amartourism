@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/Card";
 import { Plane, Hotel, Users, Shield, Briefcase, Ticket, Truck, Handshake, Camera, Award } from "lucide-react";
 
 const stats = [
