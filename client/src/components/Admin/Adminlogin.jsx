@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -11,22 +10,19 @@ const AdminLogin = () => {
   const navigate = useNavigate();
   const API_URL = import.meta.env.VITE_API_URL;
 
-  // Check for existing JWT token on mount
   useEffect(() => {
     const checkToken = async () => {
       try {
-        const response = await axios.get(`${API_URL}/api/admin/profile`, {withCredentials: true});
-
-        if (response.ok) {
-          // Token is valid, redirect to dashboard
+        const response = await axios.get(`${API_URL}/api/admin/profile`, {
+          withCredentials: true,
+        });
+        if (response.status === 200) {
           navigate('/admin/dashboard');
         }
       } catch (error) {
-        // Token is invalid or missing, stay on login page
-        console.log({error},'No valid token found, staying on login page');
+        console.log('No valid token found, staying on login page:', error.message);
       }
     };
-
     checkToken();
   }, [navigate]);
 
@@ -36,25 +32,15 @@ const AdminLogin = () => {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/admin/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        credentials: 'include',
-        body: JSON.stringify({ username, password }),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        alert(data.message);
-        navigate('/admin/dashboard');
-      } else {
-        setError(data.message || 'Login failed. Please try again.');
-      }
+      const response = await axios.post(
+        `${API_URL}/api/admin/login`,
+        { username, password },
+        { withCredentials: true }
+      );
+      alert(response.data.message);
+      navigate('/admin/dashboard');
     } catch (error) {
-      setError({error},'An error occurred. Please try again.');
+      setError(error.response?.data?.message || 'Login failed. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -67,13 +53,13 @@ const AdminLogin = () => {
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
-              Email
+              Username
             </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
               id="username"
-              type="username"
-              placeholder="Enter your email"
+              type="text"
+              placeholder="Enter your username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
@@ -103,15 +89,8 @@ const AdminLogin = () => {
             >
               {loading ? 'Signing In...' : 'Sign In'}
             </button>
-            <a className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
-              Forgot Password?
-            </a>
           </div>
-          {error && (
-            <p className="text-red-500 text-sm mt-4">
-              {error}
-            </p>
-          )}
+          {error && <p className="text-red-500 text-sm mt-4">{error}</p>}
         </form>
       </div>
     </div>
