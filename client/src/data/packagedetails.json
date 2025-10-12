@@ -1,0 +1,442 @@
+{
+  "groupTours": [
+    {
+      "id": 1,
+      "title": "Dubai Group Departure ex Chennai",
+      "description": "Sharjah | Abu Dhabi | Dubai",
+      "image": "beach.jpg",
+      "duration": "4 Nights 5 Days",
+      "groupSize": "Group Tour",
+      "rating": "4.9",
+      "price": "₹45,000",
+      "highlights": ["Sharjah", "Abu Dhabi", "Dubai"],
+      "departure": "Chennai"
+    },
+    {
+      "id": 2,
+      "title": "Dubai Group Departure ex Mumbai",
+      "description": "Sharjah | Abu Dhabi | Dubai",
+      "image": "beach.jpg",
+      "duration": "4 Nights 5 Days",
+      "groupSize": "Group Tour",
+      "rating": "4.9",
+      "price": "₹42,000",
+      "highlights": ["Sharjah", "Abu Dhabi", "Dubai"],
+      "departure": "Mumbai"
+    },
+    {
+      "id": 3,
+      "title": "Dubai Group Departure ex Bangalore",
+      "description": "Sharjah | Abu Dhabi | Dubai",
+      "image": "beach.jpg",
+      "duration": "4 Nights 5 Days",
+      "groupSize": "Group Tour",
+      "rating": "4.9",
+      "price": "₹44,000",
+      "highlights": ["Sharjah", "Abu Dhabi", "Dubai"],
+      "departure": "Bangalore"
+    },
+    {
+      "id": 4,
+      "title": "Europe Winter Group Departure ex Chennai",
+      "description": "Paris | Zurich | Seefeld / Axams | Padova | Arezzo | Rome",
+      "image": "mountains.jpg",
+      "duration": "9 Nights 10 Days",
+      "groupSize": "Group Tour",
+      "rating": "4.8",
+      "price": "₹1,25,000",
+      "highlights": ["Paris", "Zurich", "Rome"],
+      "departure": "Chennai"
+    },
+    {
+      "id": 5,
+      "title": "Europe Winter Group Departure ex Bangalore",
+      "description": "Paris | Zurich | Seefeld / Axams | Padova | Arezzo | Rome",
+      "image": "mountains.jpg",
+      "duration": "9 Nights 10 Days",
+      "groupSize": "Group Tour",
+      "rating": "4.8",
+      "price": "₹1,28,000",
+      "highlights": ["Paris", "Zurich", "Rome"],
+      "departure": "Bangalore"
+    },
+    {
+      "id": 6,
+      "title": "Europe Summer Group Departure ex Chennai",
+      "description": "Paris | Zurich | Seefeld / Axams | Padova | Arezzo | Rome",
+      "image": "mountains.jpg",
+      "duration": "9 Nights 10 Days",
+      "groupSize": "Group Tour",
+      "rating": "4.8",
+      "price": "₹1,22,000",
+      "highlights": ["Paris", "Zurich", "Rome"],
+      "departure": "Chennai"
+    },
+    {
+      "id": 7,
+      "title": "China Group Departure ex Chennai",
+      "description": "Beijing | Xian | Shanghai",
+      "image": "heritage.jpg",
+      "duration": "6 Nights 7 Days",
+      "groupSize": "Group Tour",
+      "rating": "4.7",
+      "price": "₹85,000",
+      "highlights": ["Beijing", "Xian", "Shanghai"],
+      "departure": "Chennai"
+    },
+    {
+      "id": 8,
+      "title": "Amazing Japan Group Tour ex Chennai",
+      "description": "Tokyo | Hiroshima | Osaka | Kyoto",
+      "image": "heritage.jpg",
+      "duration": "8 Nights 9 Days",
+      "groupSize": "Group Tour",
+      "rating": "4.9",
+      "price": "₹1,15,000",
+      "highlights": ["Tokyo", "Hiroshima", "Kyoto"],
+      "departure": "Chennai"
+    },
+    {
+      "id": 9,
+      "title": "Thailand Group Departure ex Chennai",
+      "description": "Bangkok | Pattaya",
+      "image": "beach.jpg",
+      "duration": "3 Nights 4 Days",
+      "groupSize": "Group Tour",
+      "rating": "4.8",
+      "price": "₹35,000",
+      "highlights": ["Bangkok", "Pattaya"],
+      "departure": "Chennai"
+    },
+    {
+      "id": 10,
+      "title": "Malaysia and Singapore Group Departure ex Chennai",
+      "description": "Singapore | Malaysia | Kuala Lumpur",
+      "image": "beach.jpg",
+      "duration": "6 Nights 7 Days",
+      "groupSize": "Group Tour",
+      "rating": "4.8",
+      "price": "₹55,000",
+      "highlights": ["Singapore", "Malaysia", "Kuala Lumpur"],
+      "departure": "Chennai"
+    },
+    {
+      "id": 11,
+      "title": "Best of Sri Lanka Group Departure ex Chennai",
+      "description": "Kandy | Nuwara Eliya | Bentota | Colombo",
+      "image": "mountains.jpg",
+      "duration": "4 Nights 5 Days",
+      "groupSize": "Group Tour",
+      "rating": "4.7",
+      "price": "₹32,000",
+      "highlights": ["Kandy", "Nuwara Eliya", "Bentota"],
+      "departure": "Chennai"
+    },
+    {
+      "id": 12,
+      "title": "Beautiful Bali Group Tour ex Chennai",
+      "description": "Experience the magic of Bali",
+      "image": "beach.jpg",
+      "duration": "4 Nights 5 Days",
+      "groupSize": "Group Tour",
+      "rating": "4.9",
+      "price": "₹48,000",
+      "highlights": ["Beach Resort", "Temples", "Culture"],
+      "departure": "Chennai"
+    },
+    {
+      "id": 13,
+      "title": "Fantastic Australia Group Tour ex Chennai",
+      "description": "Australia",
+      "image": "beach.jpg",
+      "duration": "10 Nights 11 Days",
+      "groupSize": "Group Tour",
+      "rating": "4.8",
+      "price": "₹1,85,000",
+      "highlights": ["Sydney", "Melbourne", "Gold Coast"],
+      "departure": "Chennai"
+    },
+    {
+      "id": 14,
+      "title": "Egypt Treasures Group Tour ex Chennai",
+      "description": "Cairo | Giza | Alexandria",
+      "image": "heritage.jpg",
+      "duration": "4 Nights 5 Days",
+      "groupSize": "Group Tour",
+      "rating": "4.7",
+      "price": "₹65,000",
+      "highlights": ["Cairo", "Giza", "Alexandria"],
+      "departure": "Chennai"
+    },
+    {
+      "id": 15,
+      "title": "Blissful Baku Group Tour ex Chennai",
+      "description": "Baku",
+      "image": "mountains.jpg",
+      "duration": "4 Nights 5 Days",
+      "groupSize": "Group Tour",
+      "rating": "4.6",
+      "price": "₹42,000",
+      "highlights": ["Baku", "Cultural Sites", "Caspian Sea"],
+      "departure": "Chennai"
+    },
+    {
+      "id": 16,
+      "title": "Golden Triangle Group Tour ex Chennai",
+      "description": "New Delhi | Agra | Jaipur",
+      "image": "heritage.jpg",
+      "duration": "4 Nights 5 Days",
+      "groupSize": "Group Tour",
+      "rating": "4.8",
+      "price": "₹25,000",
+      "highlights": ["New Delhi", "Agra", "Jaipur"],
+      "departure": "Chennai"
+    },
+    {
+      "id": 17,
+      "title": "Kashmir Group Departure ex Chennai",
+      "description": "Kashmir",
+      "image": "mountains.jpg",
+      "duration": "4 Nights 5 Days",
+      "groupSize": "Group Tour",
+      "rating": "4.9",
+      "price": "₹35,000",
+      "highlights": ["Srinagar", "Gulmarg", "Pahalgam"],
+      "departure": "Chennai"
+    },
+    {
+      "id": 18,
+      "title": "Andaman Group Departure ex Chennai",
+      "description": "Port Blair | Havelock | Neil island",
+      "image": "beach.jpg",
+      "duration": "4 Nights 5 Days",
+      "groupSize": "Group Tour",
+      "rating": "4.7",
+      "price": "₹28,000",
+      "highlights": ["Port Blair", "Havelock", "Neil Island"],
+      "departure": "Chennai"
+    }
+  ],
+  "honeymoonPackages": [
+    {
+      "id": 1,
+      "destination": "Maldives",
+      "description": "Overwater villas and pristine beaches",
+      "image": "beach.jpg",
+      "duration": "5 Nights 6 Days",
+      "rating": "4.9",
+      "price": "₹85,000",
+      "highlights": ["Private Villa", "Water Sports", "Romantic Dining"]
+    },
+    {
+      "id": 2,
+      "destination": "Bali",
+      "description": "Tropical paradise with cultural charm",
+      "image": "beach.jpg",
+      "duration": "6 Nights 7 Days",
+      "rating": "4.8",
+      "price": "₹65,000",
+      "highlights": ["Beach Resort", "Temple Tours", "Spa Treatments"]
+    },
+    {
+      "id": 3,
+      "destination": "Mauritius",
+      "description": "Island paradise in the Indian Ocean",
+      "image": "beach.jpg",
+      "duration": "5 Nights 6 Days",
+      "rating": "4.8",
+      "price": "₹75,000",
+      "highlights": ["Luxury Resort", "Coral Reefs", "Romantic Cruises"]
+    },
+    {
+      "id": 4,
+      "destination": "Phuket",
+      "description": "Thailand's jewel with stunning beaches",
+      "image": "beach.jpg",
+      "duration": "4 Nights 5 Days",
+      "rating": "4.7",
+      "price": "₹55,000",
+      "highlights": ["Beach Villa", "Island Hopping", "Thai Cuisine"]
+    },
+    {
+      "id": 5,
+      "destination": "Switzerland",
+      "description": "Alpine romance in scenic mountains",
+      "image": "mountains.jpg",
+      "duration": "7 Nights 8 Days",
+      "rating": "4.9",
+      "price": "₹1,25,000",
+      "highlights": ["Mountain Views", "Scenic Trains", "Luxury Hotels"]
+    },
+    {
+      "id": 6,
+      "destination": "Seychelles",
+      "description": "Pristine beaches and luxury resorts",
+      "image": "beach.jpg",
+      "duration": "6 Nights 7 Days",
+      "rating": "4.9",
+      "price": "₹95,000",
+      "highlights": ["Private Beach", "Marine Life", "Sunset Views"]
+    },
+    {
+      "id": 7,
+      "destination": "Langkawi",
+      "description": "Malaysian paradise with duty-free shopping",
+      "image": "beach.jpg",
+      "duration": "4 Nights 5 Days",
+      "rating": "4.6",
+      "price": "₹45,000",
+      "highlights": ["Cable Car", "Beaches", "Mangrove Tours"]
+    },
+    {
+      "id": 8,
+      "destination": "Paris",
+      "description": "City of love and romance",
+      "image": "heritage.jpg",
+      "duration": "5 Nights 6 Days",
+      "rating": "4.8",
+      "price": "₹85,000",
+      "highlights": ["Eiffel Tower", "Seine Cruise", "Romantic Cafes"]
+    },
+    {
+      "id": 9,
+      "destination": "Italy",
+      "description": "Romance through historic cities",
+      "image": "heritage.jpg",
+      "duration": "8 Nights 9 Days",
+      "rating": "4.8",
+      "price": "₹1,15,000",
+      "highlights": ["Venice", "Florence", "Romantic Dining"]
+    },
+    {
+      "id": 10,
+      "destination": "Krabi",
+      "description": "Limestone cliffs and emerald waters",
+      "image": "beach.jpg",
+      "duration": "4 Nights 5 Days",
+      "rating": "4.7",
+      "price": "₹52,000",
+      "highlights": ["Island Tours", "Rock Climbing", "Beach Resorts"]
+    },
+    {
+      "id": 11,
+      "destination": "Greece",
+      "description": "Santorini sunsets and Aegean beauty",
+      "image": "beach.jpg",
+      "duration": "7 Nights 8 Days",
+      "rating": "4.8",
+      "price": "₹95,000",
+      "highlights": ["Santorini", "Mykonos", "Ancient Sites"]
+    },
+    {
+      "id": 12,
+      "destination": "Thailand",
+      "description": "Beaches, culture, and tropical romance",
+      "image": "beach.jpg",
+      "duration": "5 Nights 6 Days",
+      "rating": "4.7",
+      "price": "₹48,000",
+      "highlights": ["Beach Resorts", "Thai Massage", "Cultural Tours"]
+    },
+    {
+      "id": 13,
+      "destination": "Dubai",
+      "description": "Luxury and desert romance",
+      "image": "beach.jpg",
+      "duration": "4 Nights 5 Days",
+      "rating": "4.8",
+      "price": "₹62,000",
+      "highlights": ["Luxury Hotels", "Desert Safari", "Shopping"]
+    },
+    {
+      "id": 14,
+      "destination": "Sri Lanka",
+      "description": "Tropical beauty and cultural heritage",
+      "image": "mountains.jpg",
+      "duration": "5 Nights 6 Days",
+      "rating": "4.6",
+      "price": "₹38,000",
+      "highlights": ["Hill Country", "Beaches", "Tea Plantations"]
+    },
+    {
+      "id": 15,
+      "destination": "Singapore",
+      "description": "Modern city-state with tropical charm",
+      "image": "beach.jpg",
+      "duration": "4 Nights 5 Days",
+      "rating": "4.7",
+      "price": "₹55,000",
+      "highlights": ["Marina Bay", "Gardens", "Fine Dining"]
+    },
+    {
+      "id": 16,
+      "destination": "Malaysia",
+      "description": "Diverse culture and natural beauty",
+      "image": "beach.jpg",
+      "duration": "5 Nights 6 Days",
+      "rating": "4.6",
+      "price": "₹42,000",
+      "highlights": ["Kuala Lumpur", "Beaches", "Cultural Sites"]
+    },
+    {
+      "id": 17,
+      "destination": "Croatia",
+      "description": "Adriatic coastline and historic cities",
+      "image": "beach.jpg",
+      "duration": "7 Nights 8 Days",
+      "rating": "4.7",
+      "price": "₹88,000",
+      "highlights": ["Dubrovnik", "Split", "Island Hopping"]
+    },
+    {
+      "id": 18,
+      "destination": "South Africa",
+      "description": "Wildlife and wine country romance",
+      "image": "mountains.jpg",
+      "duration": "8 Nights 9 Days",
+      "rating": "4.8",
+      "price": "₹1,05,000",
+      "highlights": ["Safari", "Cape Town", "Wine Tours"]
+    },
+    {
+      "id": 19,
+      "destination": "Koh Samui",
+      "description": "Thai island paradise",
+      "image": "beach.jpg",
+      "duration": "5 Nights 6 Days",
+      "rating": "4.7",
+      "price": "₹58,000",
+      "highlights": ["Beach Villas", "Spa Resorts", "Water Sports"]
+    },
+    {
+      "id": 20,
+      "destination": "Australia",
+      "description": "From Sydney to Great Barrier Reef",
+      "image": "beach.jpg",
+      "duration": "10 Nights 11 Days",
+      "rating": "4.8",
+      "price": "₹1,95,000",
+      "highlights": ["Sydney", "Melbourne", "Great Barrier Reef"]
+    },
+    {
+      "id": 21,
+      "destination": "Spain",
+      "description": "Passionate culture and beautiful coasts",
+      "image": "heritage.jpg",
+      "duration": "7 Nights 8 Days",
+      "rating": "4.7",
+      "price": "₹92,000",
+      "highlights": ["Barcelona", "Madrid", "Costa del Sol"]
+    },
+    {
+      "id": 22,
+      "destination": "Europe",
+      "description": "Multi-country romantic journey",
+      "image": "heritage.jpg",
+      "duration": "12 Nights 13 Days",
+      "rating": "4.8",
+      "price": "₹1,45,000",
+      "highlights": ["Paris", "Rome", "Vienna"]
+    }
+  ]
+}

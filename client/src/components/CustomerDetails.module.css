@@ -1,0 +1,241 @@
+body {
+  font-weight: normal;
+  font-size: 18px;
+  position: relative;
+  line-height: 1.66em;
+  color: #292929;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+  vertical-align: middle;
+}
+
+.creativeTemplate {
+  min-height: 100vh;
+  padding: 40px 12px;
+  position: relative;
+  z-index: 5;
+  background: url(https://imgpanda.com/upload/ib/0pOfzusR8z.png) no-repeat center;
+  background-size: cover;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top:30px;
+}
+.comingSoonContent {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+.comingSoonContent h6 {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+.comingSoonContent h1 {
+  font-size: 80px;
+  line-height: 1.18em;
+  padding: 8px 0 20px;
+  color: #000;
+  font-weight: normal;
+  font-family: "Libre Baskerville", serif;
+  margin-bottom: 0.5rem;
+}
+.comingSoonContent .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.comingSoonContent .row .colMd9 {
+  flex: 0 0 auto;
+  width: 100%;
+  margin: 0 auto;
+}
+.comingSoonContent .row .colMd9 p {
+  font-size: 22px;
+  line-height: 1.66em;
+  padding-bottom: 35px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.clientForm {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+.formGroup {
+  margin-bottom: 15px;
+  position: relative;
+}
+.clientForm input,
+.clientForm select {
+  width: 100%;
+  padding: 15px 15px 15px 50px;
+  border: none;
+  border-radius: 10px;
+  background: #F4F4F4;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.05);
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+.clientForm input:focus,
+.clientForm select:focus {
+  background: #fff;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.1);
+}
+.formGroup i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #888;
+}
+.clientForm button {
+  width: 100%;
+  background: #FFC107;
+  color: #000;
+  border-radius: 10px;
+  padding: 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.clientForm button:hover {
+  background: #FFD54F;
+}
+
+.socialIcon {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+.socialIcon li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #FFC107;
+  color: #000;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+.socialIcon li a:hover {
+  background: #FFD54F;
+  color: #000;
+}
+
+.shapes {
+  position: absolute;
+  z-index: -1;
+}
+.shapeOne {
+  top: 8%;
+  left: 45%;
+  animation: jumpTwo 5s infinite linear;
+}
+.shapeTwo {
+  top: 6%;
+  right: 45%;
+  animation: jumpThree 5s infinite linear;
+}
+.shapeThree {
+  top: 20%;
+  right: 8%;
+}
+.shapeFour {
+  bottom: 20%;
+  left: 8%;
+}
+.shapeFive {
+  top: 20%;
+  left: 10%;
+  animation: moveclouds 10s alternate infinite;
+}
+.shapeSix {
+  bottom: 20%;
+  right: 10%;
+  animation: moveclouds2 10s alternate infinite;
+}
+
+@keyframes jumpTwo {
+  0%, 100% { transform: translate3d(0,0,0); }
+  40% { transform: translate3d(0,20px,0); }
+}
+@keyframes jumpThree {
+  0%, 100% { transform: translate3d(0,0,0); }
+  40% { transform: translate3d(0,-20px,0); }
+}
+@keyframes moveclouds {
+  0% { margin-left: 200px; }
+  100% { margin-left: -200px; }
+}
+@keyframes moveclouds2 {
+  0% { margin-right: 200px; }
+  100% { margin-right: -200px; }
+}
+
+@media (max-width: 991px) {
+  .comingSoonContent h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 460px) {
+  .comingSoonContent h1 {
+    font-size: 38px;
+  }
+  .clientForm input,
+  .clientForm select {
+    font-size: 14px;
+  }
+}
+
+.coffeeButton {
+  position: fixed;
+  z-index: 9;
+  top: 80px;
+  right: 20px;
+  background-color: #FFC107;
+  color: #333;
+  padding: 7px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: "Dancing Script", cursive;
+  font-weight: 600;
+  font-size: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s;
+}
+.coffeeButton:hover {
+  background-color: #FFD54F;
+}
+.coffeeIcon {
+  font-size: 24px;
+  line-height: 1;
+}

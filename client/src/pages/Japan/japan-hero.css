@@ -1,0 +1,35 @@
+.hero-sakura-moments {
+  width: 100%;
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+.hero-sakura-moments h1 {
+  font-size: 45px;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 15px;
+}
+.hero-sakura-moments p {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 25px;
+}
+.hero-sakura-moments .btn {
+  background: goldenrod;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.hero-sakura-moments .btn:hover {
+  background: #d4a017;
+}

@@ -1,0 +1,220 @@
+.reviewSection {
+  position: relative !important;
+  width: 800px !important;
+  max-width: 100% !important;
+  height: 400px !important;
+  margin: auto !important;
+  margin-top: 50px !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  border: none !important;
+}
+
+/* Slider container */
+.reviewSection .slides {
+  display: flex !important;
+  width: 100% !important;
+  height: 100% !important;
+  transition: transform 0.6s ease-in-out !important;
+  border-radius: 15px 15px 0 0 !important;
+}
+
+/* Image styles */
+.reviewSection .slide {
+  min-width: 100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 15px 15px 0 0 !important;
+  flex-shrink: 0 !important;
+  user-select: none !important;
+  pointer-events: none !important;
+  border: none !important;
+}
+
+.reviewSection .slide.active {
+  pointer-events: auto !important;
+}
+
+/* Bottom card styles */
+.reviewSection .bottomCenter {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 60% !important;
+  background: #fff !important;
+  padding: 15px 20px !important;
+  padding-bottom: 0 !important;
+  text-align: center !important;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1) !important;
+  z-index: 2 !important;
+  overflow: visible !important;
+  border-radius: 20px 20px 0 0 !important;
+  transition: all 0.3s ease-in-out !important;
+  border: none !important;
+}
+
+/* Pseudo-elements for rounded corners */
+.reviewSection .bottomCenter::before {
+  content: "" !important;
+  position: absolute !important;
+  bottom: -10px !important;
+  left: -30px !important;
+  width: 50px !important;
+  height: 40px !important;
+  background: #fff !important;
+  border-radius: 0 !important;
+  z-index: -1 !important;
+  -webkit-mask: radial-gradient(30px at top left, transparent 98%, #000) !important;
+  mask: radial-gradient(30px at top left, transparent 98%, #000) !important;
+}
+
+.reviewSection .bottomCenter::after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: -10px !important;
+  right: -30px !important;
+  width: 50px !important;
+  height: 40px !important;
+  background: #fff !important;
+  border-radius: 0 !important;
+  z-index: -1 !important;
+  -webkit-mask: radial-gradient(30px at top right, transparent 98%, #000) !important;
+  mask: radial-gradient(30px at top right, transparent 98%, #000) !important;
+}
+
+/* Heading styles to match HTML */
+.reviewSection .luxuryHeading {
+  font-family: 'Gloock', serif !important;
+  font-weight: 700 !important;
+  font-size: 18px !important; /* Match HTML */
+  color: #333 !important;
+  margin: 5px 0 !important;
+}
+
+/* Subtitle styles to match HTML */
+.reviewSection .luxurySubtitle {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px !important; /* Match HTML */
+  color: #666 !important;
+  margin: 5px 0 10px !important;
+}
+
+/* Button container */
+.reviewSection .buttons {
+  margin-top: 20px !important;
+  margin-bottom: 12px !important;
+  text-align: center !important;
+}
+
+/* Button styles to override index.css */
+.reviewSection .btn {
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  padding: 0.75em 1.5em !important;
+  border: none !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  letter-spacing: 0.5px !important;
+  margin: 0 10px 10px !important;
+  user-select: none !important;
+}
+
+.reviewSection .btn.primary {
+  background-color: #ffc727 !important;
+  color: #222 !important;
+  box-shadow: 0 4px 12px rgba(255, 199, 39, 0.4) !important;
+}
+
+.reviewSection .btn.primary:hover {
+  background-color: #ffb400 !important;
+  box-shadow: 0 6px 16px rgba(255, 180, 0, 0.5) !important;
+  transform: translateY(-2px) !important;
+}
+
+.reviewSection .btn.secondary {
+  background-color: transparent !important;
+  color: #ffc727 !important;
+  border: 2px solid #ffc727 !important;
+}
+
+.reviewSection .btn.secondary:hover {
+  background-color: #fff8e1 !important;
+  color: #222 !important;
+  border-color: #ffb400 !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Indicators */
+.reviewSection .indicators {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin-top: 20px !important;
+}
+
+.reviewSection .dot {
+  height: 10px !important;
+  width: 10px !important;
+  background-color: #ccc !important;
+  border-radius: 50% !important;
+  display: inline-block !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.reviewSection .dot.active {
+  background-color: #333 !important;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .reviewSection {
+    width: 95% !important;
+    border-radius: 10px !important;
+  }
+
+  .reviewSection .bottomCenter {
+    width: 80% !important;
+    border-radius: 10px 10px 0 0 !important;
+  }
+
+  .reviewSection .bottomCenter::before {
+    left: -20px !important;
+    bottom: -20px !important;
+    -webkit-mask: radial-gradient(20px at top left, transparent 98%, #000) !important;
+    mask: radial-gradient(20px at top left, transparent 98%, #000) !important;
+  }
+
+  .reviewSection .bottomCenter::after {
+    right: -20px !important;
+    bottom: -20px !important;
+    -webkit-mask: radial-gradient(20px at top right, transparent 98%, #000) !important;
+    mask: radial-gradient(20px at top right, transparent 98%, #000) !important;
+  }
+
+  .reviewSection .btn {
+    margin: 5px !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 414px) {
+  .reviewSection .bottomCenter {
+    border-radius: 10px 10px 0 0 !important;
+  }
+
+  .reviewSection .bottomCenter::before,
+  .reviewSection .bottomCenter::after {
+    display: none !important;
+  }
+
+  .reviewSection .btn {
+    width: 100% !important;
+    margin: 5px 0 !important;
+  }
+}

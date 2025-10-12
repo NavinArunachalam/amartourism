@@ -1,0 +1,189 @@
+.customerReviewSection {
+  width: 100%;
+  min-height: 40vh; /* Minimum height for the section */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.customerReviewSection .container {
+  width: 100%;
+  max-width: 1200px; /* Constrain width for better centering */
+  height: 70vh; /* Fixed height for consistency */
+  display: flex;
+  align-items: center; /* Vertically center content */
+}
+
+.customerReview {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Ensure children stretch to same height */
+  width: 100%;
+  height: 100%; /* Match container height */
+}
+
+/* Left side */
+.testiUserImg {
+  width: 40%;
+  height: 100%; /* Match parent height */
+  min-height: 40vh; /* Prevent collapse */
+  background: #ffffff; /* replaced var(--white) */
+  display: flex;
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+}
+
+.galleryThumbs {
+  width: 90%;
+  height: 80%; /* Slightly reduced to fit within container */
+  max-height: 600px; /* Prevent overflow */
+  display: flex;
+  align-items: center; /* Ensure Swiper content is vertically centered */
+}
+
+.galleryThumbs .swiper-wrapper {
+  align-items: center; /* Center slides vertically */
+}
+
+.swiperSlide {
+  background-position: center;
+  background-size: cover;
+  width: 250px !important;
+  height: 330px;
+  position: relative;
+  transition: all 0.4s ease; /* Smooth transition */
+}
+
+.swiperSlideImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: contrast(0.5) blur(1px);
+  transition: filter 0.4s ease; /* Smooth filter transition */
+}
+
+/* Make active image clear and focused */
+:global(.swiper-slide-active) img {
+  filter: contrast(1) blur(0) !important;
+}
+
+/* Make inactive images dim and blurred */
+:global(.swiper-slide) img {
+  filter: contrast(0.5) blur(1px);
+}
+
+/* Right side */
+.userSaying {
+  width: 60%;
+  height: 100%; /* Match parent height */
+  min-height: 40vh; /* Prevent collapse */
+  background: #e89a3d; /* replaced var(--theme-color2) */
+  color: #ffffff; /* text color */
+  display: flex;
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+}
+
+.testimonial {
+  width: 100%;
+  height: 80%; /* Slightly reduced to fit within container */
+  max-height: 600px; /* Prevent overflow */
+  display: flex;
+  align-items: center; /* Ensure Swiper content is vertically centered */
+  margin: auto;
+}
+
+.quote {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically within quote */
+  min-height: 300px; /* Ensure consistent height to avoid flicker */
+}
+
+.quoteIcon {
+  width: 40px;
+  margin-bottom: 25px;
+}
+
+.testimonialText {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #ffffff; /* ensure text is visible */
+}
+
+.name {
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  line-height: 35px;
+}
+
+.designation {
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  opacity: 0.8;
+}
+
+.swiperPagination {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column; /* Vertical pagination */
+}
+
+.swiperPaginationBullet {
+  background: #ffffff;
+  opacity: 0.7;
+}
+
+.swiperPaginationBulletActive {
+  background: #000000;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .customerReview {
+    flex-direction: column;
+    height: auto; /* Allow height to adjust on mobile */
+    min-height: 80vh; /* Ensure minimum height for mobile */
+  }
+
+  .testiUserImg,
+  .userSaying {
+    width: 100%;
+    height: 40vh; /* Equal height for both sections on mobile */
+    min-height: 40vh; /* Prevent collapse */
+  }
+
+  .galleryThumbs,
+  .testimonial {
+    width: 100%;
+    height: 100%; /* Full height for mobile */
+    max-height: none; /* Remove max-height constraint */
+  }
+
+  .swiperSlide {
+    width: 200px !important; /* Smaller slides for mobile */
+    height: 250px;
+  }
+
+  .quote {
+    width: 90%;
+    padding: 20px;
+    min-height: 250px; /* Prevent collapse on mobile */
+  }
+
+  .testimonialText {
+    font-size: 16px; /* Adjust font size for mobile */
+  }
+}

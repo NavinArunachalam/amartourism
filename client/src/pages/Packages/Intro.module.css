@@ -1,0 +1,163 @@
+/* Reset and base styles from HTML version */
+.oktoberfestIntro {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  padding: 40px;
+  min-height: 100dvh;
+  height: 100dvh; /* Ensure full viewport height */
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(45deg, rgba(255,193,7,0.2) 0%, rgba(255,87,34,0.2) 100%); /* Subtle gradient for intro section */
+}
+
+/* Info section */
+.oktoberfestIntroInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 50px;
+  max-width: 500px; /* Prevent text from stretching too wide */
+}
+
+.oktoberfestIntroInfo h1 {
+  font-family: 'Young Serif', serif;
+  text-align: center;
+  font-size: 3rem;
+  margin: 0;
+  color: #000; /* Match HTML version */
+}
+
+.oktoberfestIntroInfo p {
+  font-size: 1.1rem;
+  margin: 0 0 20px 0;
+  color: #000; /* Match HTML version */
+  text-align: center;
+}
+
+/* Beer images container */
+.oktoberfestIntroSplitBeer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Match margin-left from HTML */
+}
+
+/* Beer images */
+.oktoberfestIntroBeer {
+  max-width: 100%;
+  width: 250px;
+  height: 300px; /* Explicit height to match HTML version */
+  object-fit: cover; /* Ensure image fills the space without distortion */
+  border-radius: 20px;
+  border: 2px solid orange;
+}
+
+.oktoberfestIntroBeerSecond {
+  transform: translateY(-1.5rem);
+}
+
+/* Explore button */
+.oktoberfestIntroButtonExplore {
+  display: inline-block;
+  position: relative;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  color: #FFD700; /* Yellow text */
+  background: linear-gradient(45deg, rgba(255,193,7,1) 0%, rgba(255,87,34,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Transparent text with gradient fill */
+}
+
+.oktoberfestIntroButtonExplore:hover {
+  text-shadow: 0px 0px 8px rgba(255,255,255,0.8); /* Subtle glow on hover */
+}
+
+.oktoberfestIntroButtonExplore::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  border-radius: inherit;
+  transition: all 0.5s;
+  background: linear-gradient(45deg, rgba(255,193,7,1) 0%, rgba(255,87,34,1) 100%);
+}
+
+.oktoberfestIntroButtonExplore::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 2.5px;
+  top: 2px;
+  bottom: 2.5px;
+  right: 2px;
+  z-index: -1;
+  border-radius: 8px;
+  transition: all 0.5s;
+  background: #fff; /* Inner white background for button */
+}
+
+/* Media Queries */
+@media (max-width: 1100px) {
+  .oktoberfestIntroBeer {
+    width: 200px;
+    height: 240px; /* Adjust height proportionally */
+  }
+}
+
+@media (max-width: 800px) {
+  .oktoberfestIntro {
+    padding: 30px;
+  }
+  .oktoberfestIntroBeer {
+    width: 150px;
+    height: 180px; /* Adjust height proportionally */
+  }
+  .oktoberfestIntroInfo {
+    gap: 20px;
+    padding: 30px 30px;
+  }
+  .oktoberfestIntroInfo h1 {
+    font-size: 2.5rem;
+  }
+  .oktoberfestIntroInfo p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .oktoberfestIntro {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      'split-beer'
+      'info';
+    padding: 20px;
+  }
+  .oktoberfestIntroInfo {
+    grid-area: info;
+  }
+  .oktoberfestIntroSplitBeer {
+    grid-area: split-beer;
+    margin: 20px auto;
+  }
+  .oktoberfestIntroBeer {
+    width: 100px;
+    height: 120px; /* Adjust height proportionally */
+  }
+}

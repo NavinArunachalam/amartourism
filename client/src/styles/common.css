@@ -1,0 +1,322 @@
+.common-styles {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.common-styles section {
+  padding: 60px 10%;
+}
+
+.common-styles h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #222;
+}
+
+.common-styles .day {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.common-styles .day img {
+  width: 27%;
+  max-width: 400px;
+  height: 150px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.common-styles .day-content {
+  max-width: 600px;
+}
+
+.common-styles .day h3 {
+  margin-bottom: 10px;
+  color: black;
+  font-size: 20px;
+}
+
+.common-styles .day p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.common-styles .inclusions {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: nowrap;
+  padding: 40px 0;
+  background: #f9f9f9;
+}
+
+.common-styles .inclusions > div {
+  width: 48%;
+  max-width: 460px;
+}
+
+.common-styles .inclusions h3 {
+  margin-bottom: 15px;
+}
+
+.common-styles .inclusions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.common-styles .inclusions ul li {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.common-styles .included li::before {
+  content: "✔ ";
+  color: green;
+}
+
+.common-styles .excluded li::before {
+  content: "✘ ";
+  color: red;
+}
+
+.common-styles .tips-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.common-styles .tip-box {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.common-styles .tip-box:hover {
+  transform: translateY(-5px);
+}
+
+.common-styles .tip-box i {
+  font-size: 30px;
+  color: goldenrod;
+  margin-bottom: 15px;
+}
+
+.common-styles .tip-box h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.common-styles .tip-box p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.common-styles .booking {
+  background: #fff5e1;
+  text-align: center;
+}
+
+.common-styles .booking form {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.common-styles .form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.common-styles .form-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.common-styles .form-row .form-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.common-styles label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.common-styles input,
+.common-styles select,
+.common-styles textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.common-styles button {
+  width: 100%;
+  background: #f8c94a;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.common-styles button:hover {
+  background: #f7b733;
+}
+
+.common-styles footer {
+  background: black;
+  padding: 20px 10%;
+  font-size: 14px;
+}
+
+.common-styles .footer-top {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.common-styles .footer-top a {
+  color: white;
+  text-decoration: none;
+}
+
+.common-styles hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.common-styles .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.common-styles .social-icons a {
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.common-styles .social-icons a:hover {
+  color: #0077b5;
+}
+
+.common-styles .policy-section {
+  background: #f9f9f9;
+  padding: 40px 10%;
+}
+
+.common-styles .policy-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.common-styles .policy-box {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.common-styles .policy-box h3 {
+  color: #222;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.common-styles .policy-box p {
+  line-height: 1.6;
+  color: #444;
+}
+
+.common-styles .addons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.common-styles .addon-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.common-styles .addon-card h4 {
+  color: #222;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.common-styles .addon-card p {
+  color: #555;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.common-styles .addon-price {
+  font-weight: bold;
+  color: goldenrod;
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .common-styles .day {
+    flex-direction: column;
+  }
+
+  .common-styles .day img {
+    width: 100%;
+    height: auto;
+  }
+
+  .common-styles .form-row {
+    flex-direction: column;
+  }
+
+  .common-styles .footer-top,
+  .common-styles .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .common-styles .inclusions {
+    gap: 10px;
+  }
+
+  .common-styles .inclusions > div {
+    width: 45%;
+    min-width: 200px;
+  }
+}

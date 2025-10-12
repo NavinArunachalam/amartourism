@@ -1,0 +1,162 @@
+import React from "react";
+import { Link as ScrollLink } from "react-scroll";
+import "../../styles/common.css";
+import "./thailand4n-hero.css";
+
+const Thailand4NPage = () => {
+  return (
+    <div className="common-styles">
+      <section className="hero-thailand4n">
+        <h1>Thailand 4 Nights / 5 Days</h1>
+        <p>Explore Pattaya & Bangkok – Beaches, Culture & Adventure!</p>
+        <ScrollLink to="booking" smooth={true} duration={500} className="btn">
+          Book Now
+        </ScrollLink>
+      </section>
+
+      <section className="itinerary">
+        <h2>Detailed Day-by-Day Itinerary</h2>
+        <div className="day">
+          <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80" alt="" />
+          <div className="day-content">
+            <h3>Day 1: Arrival & Transfer to Pattaya</h3>
+            <p>Arrival at DMK Airport. Transfer to Pattaya, visit Gems Gallery, hotel check-in and relax.</p>
+          </div>
+        </div>
+        <div className="day">
+          <div className="day-content">
+            <h3>Day 2: Coral Island & Alcazar Show</h3>
+            <p>Breakfast. Speedboat ride to Coral Island with lunch. Evening Alcazar Cabaret Show. Overnight in Pattaya.</p>
+          </div>
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="" />
+        </div>
+        <div className="day">
+          <img src="https://images.unsplash.com/photo-1538688423619-a81d3f23454b?auto=format&fit=crop&w=800&q=80" alt="" />
+          <div className="day-content">
+            <h3>Day 3: Nong Nooch Village & Floating Market</h3>
+            <p>Breakfast. Visit Tiger Park, Nong Nooch Village (Elephant Show, Cultural Show, Tram Ride, Lunch). Visit Floating Market, Big Buddha & Pattaya Viewpoint. Overnight in Pattaya.</p>
+          </div>
+        </div>
+        <div className="day">
+          <div className="day-content">
+            <h3>Day 4: Transfer to Bangkok – Safari World</h3>
+            <p>Breakfast. Transfer to Bangkok. Visit Safari World & Marine Park, buffet lunch included, River Safari Ride. Return to hotel. Evening free for dinner or night market.</p>
+          </div>
+          <img src="https://images.unsplash.com/photo-1611171719487-dcfca186f2fa?auto=format&fit=crop&w=800&q=80" alt="" />
+        </div>
+        <div className="day">
+          <img src="https://images.unsplash.com/photo-1585996728432-47e810cd7a3c?auto=format&fit=crop&w=800&q=80" alt="" />
+          <div className="day-content">
+            <h3>Day 5: Temple Tour & Departure</h3>
+            <p>Breakfast. Temple Tour: Wat Arun, Wat Pho & Wat Phra Kaew. Transfer to airport for departure.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="inclusions-wrapper">
+        <h2 style={{ textAlign: "center", margin: "40px 0" }}>Package Inclusions & Exclusions</h2>
+        <div className="inclusions">
+          <div className="included">
+            <h3>What's Included</h3>
+            <ul>
+              <li>4 Nights accommodation (3/4-star hotels)</li>
+              <li>Private airport & hotel transfers</li>
+              <li>Daily breakfast (4 breakfasts)</li>
+              <li>Coral Island Tour with lunch</li>
+              <li>Alcazar Show with transfers</li>
+              <li>Nong Nooch Village Tour with lunch, shows & tram</li>
+              <li>Floating Market with rowing boat</li>
+              <li>Tiger Park visit (transfers only, entry extra)</li>
+              <li>Big Buddha & Pattaya Viewpoint</li>
+              <li>Safari World & Marine Park with lunch</li>
+              <li>Bangkok Temple Tour (Wat Arun, Wat Pho, Wat Phra Kaew)</li>
+              <li>All tours private basis (unless specified as SIC)</li>
+            </ul>
+          </div>
+          <div className="excluded">
+            <h3>What's Excluded</h3>
+            <ul>
+              <li>Airfare</li>
+              <li>Visa charges & travel insurance</li>
+              <li>Personal expenses (tips, laundry, mini-bar, etc.)</li>
+              <li>Meals not mentioned in itinerary</li>
+              <li>Security deposit at hotels (1000 THB or passport)</li>
+              <li>Any services not in inclusions</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="tips-section">
+        <h2>Essential Travel Tips for Thailand</h2>
+        <div className="tips-container">
+          <div className="tip-box">
+            <i className="fas fa-suitcase-rolling"></i>
+            <h3>Packing</h3>
+            <p>Carry light, breathable clothing, sunscreen, hat, sunglasses, and comfortable shoes. Keep passport & visa handy.</p>
+          </div>
+          <div className="tip-box">
+            <i className="fas fa-passport"></i>
+            <h3>Money & SIM</h3>
+            <p>Exchange some Thai Baht before travel. Inform bank about international use. Consider a local SIM for connectivity.</p>
+          </div>
+          <div className="tip-box">
+            <i className="fas fa-utensils"></i>
+            <h3>Food & Etiquette</h3>
+            <p>Opt for freshly cooked street food. Remove shoes before temples. Respect Thai culture and monarchy.</p>
+          </div>
+          <div className="tip-box">
+            <i className="fas fa-users"></i>
+            <h3>Safety & Time</h3>
+            <p>Use insect repellent, stay hydrated, carry ID copies, and be punctual for tours and transfers.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="booking" id="booking">
+        <h2>Book Your Unforgettable Journey</h2>
+        <p>Ready to explore Thailand? Fill out the form below and our team will contact you.</p>
+        <form>
+          <div className="form-row">
+            <div className="form-group">
+              <label>Name</label>
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div className="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="your@example.com" required />
+            </div>
+          </div>
+          <div className="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+91 9876543210" required />
+          </div>
+          <div className="form-row">
+            <div className="form-group">
+              <label>Preferred Travel Date</label>
+              <input type="date" required />
+            </div>
+            <div className="form-group">
+              <label>Number of People</label>
+              <select>
+                <option>1 Person</option>
+                <option>2 People</option>
+                <option>3 People</option>
+                <option>4+ People</option>
+              </select>
+            </div>
+          </div>
+          <div className="form-group">
+            <label>Additional Message (Optional)</label>
+            <textarea placeholder="Any specific requests or questions?"></textarea>
+          </div>
+          <button type="submit">Submit Inquiry</button>
+        </form>
+      </section>
+
+
+    </div>
+  );
+};
+
+export default Thailand4NPage;
