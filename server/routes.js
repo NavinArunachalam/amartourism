@@ -1,8 +1,8 @@
 // routes/index.js
 
-const tourPackageUpload = require("../config/multer");
-const tourPackageController = require("../controllers/TourPackageController");
-const { loginAdmin, logoutAdmin, getAdminProfile } = require("../controllers/AdminController");
+const tourPackageUpload = require("./config/multer");
+const tourPackageController = require("./controllers/TourPackageController");
+const { loginAdmin, logoutAdmin, getAdminProfile } = require("./controllers/AdminController");
 const { isAdmin } = require("./AdminAuth"); 
 
 module.exports = (app) => {
