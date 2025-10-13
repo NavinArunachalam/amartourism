@@ -1,11 +1,11 @@
 const jwt = require("jsonwebtoken");
 const ADMIN_JWT_SECRET = process.env.ADMIN_JWT_SECRET || "supersecretadmin";
 
-// Hardcoded admin credentials (for demo purposes; in production, use environment variables or a secure method)
+// Hardcoded admin credentials (use env vars in production)
 const ADMIN_CREDENTIALS = {
   username: "amartourism",
-  password: "amartorism1234", // In a real app, hash this password (e.g., using bcrypt)
-  name: "Admin User"
+  password: "amartorism1234",
+  name: "Admin User",
 };
 
 // ------------------- LOGIN ADMIN -------------------
@@ -13,52 +13,68 @@ const loginAdmin = async (req, res) => {
   try {
     const { username, password } = req.body;
 
-    // Check if the provided credentials match the hardcoded admin credentials
     if (username !== ADMIN_CREDENTIALS.username || password !== ADMIN_CREDENTIALS.password) {
       return res.status(401).json({ message: "Invalid credentials" });
     }
 
-    // Create JWT token
     const token = jwt.sign(
-      { adminId: "admin-123", name: ADMIN_CREDENTIALS.name, username: ADMIN_CREDENTIALS.username },
+      {
+        adminId: "admin-123",
+        name: ADMIN_CREDENTIALS.name,
+        username: ADMIN_CREDENTIALS.username,
+      },
       ADMIN_JWT_SECRET,
-      { expiresIn: "1d" }
+      { expiresIn: "10y" }
     );
 
-    // Send token in HTTP-only cookie
+    // ✅ Cookie settings for Vercel cross-origin
     res.cookie("admin_jwt", token, {
       httpOnly: true,
-      maxAge: 10 * 365 * 24 * 60 * 60 * 1000, // 10 years (adjust as needed)
-      sameSite: "none",
-      secure: process.env.NODE_ENV === "production",
+      secure: true, // ✅ required for HTTPS (Vercel)
+      sameSite: "none", // ✅ required for cross-site cookies
+      maxAge: 10 * 365 * 24 * 60 * 60 * 1000, // 10 years
     });
 
     res.status(200).json({
       message: "Admin login successful",
-      admin: { name: ADMIN_CREDENTIALS.name, username: ADMIN_CREDENTIALS.username },
+      admin: {
+        name: ADMIN_CREDENTIALS.name,
+        username: ADMIN_CREDENTIALS.username,
+      },
     });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
 };
 
+// ------------------- VERIFY TOKEN (Middleware) -------------------
+const verifyAdmin = (req, res, next) => {
+  const token = req.cookies.admin_jwt;
+  if (!token) return res.status(401).json({ message: "Unauthorized: No token" });
+
+  try {
+    const decoded = jwt.verify(token, ADMIN_JWT_SECRET);
+    req.admin = decoded;
+    next();
+  } catch {
+    return res.status(401).json({ message: "Unauthorized: Invalid token" });
+  }
+};
+
 // ------------------- GET ADMIN PROFILE -------------------
 const getAdminProfile = (req, res) => {
-  const admin = req.admin; // Set by JWT middleware
+  const admin = req.admin;
   if (!admin) return res.status(401).json({ message: "Unauthorized" });
-
   res.status(200).json({ admin });
 };
 
 // ------------------- LOGOUT ADMIN -------------------
 const logoutAdmin = (req, res) => {
-  // Clear the cookie
   res.clearCookie("admin_jwt", {
     httpOnly: true,
-    sameSite: "lax",
-    secure: process.env.NODE_ENV === "production",
+    secure: true,
+    sameSite: "none",
   });
-
   res.status(200).json({ message: "Admin logged out" });
 };
 
@@ -66,4 +82,5 @@ module.exports = {
   loginAdmin,
   logoutAdmin,
   getAdminProfile,
+  verifyAdmin,
 };
