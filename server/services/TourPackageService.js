@@ -1,5 +1,5 @@
 const TourPackage = require("../models/Tour");
-const Review = require("../models/Review");
+const Review = require("../models/AdminReview");
 const {
   uploadSingleFile,
   formatSingleResponse,
