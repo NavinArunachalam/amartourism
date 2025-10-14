@@ -1,8 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, MapPin, Phone, Clock, Send } from "lucide-react";
@@ -19,9 +18,9 @@ const ContactSection = () => {
     date: "",
     people: "",
     vacationType: "",
-    message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState(""); // "", "loading", "success", "error"
+  const [errorMsg, setErrorMsg] = useState("");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -30,8 +29,25 @@ const ContactSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setTimeout(() => {
+    setStatus("loading");
+    setErrorMsg("");
+
+    // Google Apps Script Web App URL
+    const WEB_APP_URL =
+      "https://script.google.com/macros/s/AKfycbzQu3v4ZDvEEMATRjVP9xxhWbuRzSe-o0a8gvrNBE6htSI4B2ErmgSm57Z02i5OOI61/exec";
+
+    try {
+      await fetch(WEB_APP_URL, {
+        method: "POST",
+        mode: "no-cors", // Required for Google Apps Script
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData), // Send all form data
+      });
+
+      // no-cors prevents reading response, assume success if no error thrown
+      setStatus("success");
       toast({
         title: "Message Sent Successfully!",
         description: "Thank you for your interest. We'll get back to you within 24 hours.",
@@ -46,10 +62,14 @@ const ContactSection = () => {
         date: "",
         people: "",
         vacationType: "",
-        message: "",
       });
-      setIsSubmitting(false);
-    }, 1000);
+    } catch (error) {
+      setStatus("error");
+      setErrorMsg(
+        "Failed to submit the form. Please check your internet connection or contact support."
+      );
+      console.error("Submission error:", error.message);
+    }
   };
 
   const contactInfo = [
@@ -105,6 +125,15 @@ const ContactSection = () => {
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
+                {status === "success" && (
+                  <p className="text-green-600">
+                    Thank you! Your inquiry has been submitted successfully. We'll
+                    contact you soon.
+                  </p>
+                )}
+                {status === "error" && (
+                  <p className="text-red-600">{errorMsg}</p>
+                )}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="name">Full Name *</Label>
@@ -236,28 +265,14 @@ const ContactSection = () => {
                   </select>
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message *</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    placeholder="Tell us about your travel plans, budget, preferences, and any special requirements..."
-                    required
-                    rows={5}
-                    className="focus:ring-primary"
-                  />
-                </div>
-
                 <Button
                   type="submit"
                   variant="hero"
                   size="lg"
-                  disabled={isSubmitting}
+                  disabled={status === "loading"}
                   className="w-full"
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {status === "loading" ? "Submitting..." : "Submit Inquiry"}
                 </Button>
               </form>
             </CardContent>

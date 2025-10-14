@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useToast } from "@/hooks/use-toast";
 import styles from './CustomerDetails.module.css';
 
 const ComingSoon = () => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     city: '',
@@ -13,26 +15,57 @@ const ComingSoon = () => {
     people: '',
     vacationType: ''
   });
+  const [status, setStatus] = useState(""); // "", "loading", "success", "error"
+  const [errorMsg, setErrorMsg] = useState("");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = () => {
-    console.log('Form submitted:', formData);
-    alert('Thank you for submitting your travel details!');
-    setFormData({
-      name: '',
-      city: '',
-      email: '',
-      phone: '',
-      whatsapp: '',
-      destination: '',
-      date: '',
-      people: '',
-      vacationType: ''
-    });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMsg("");
+
+    // Google Apps Script Web App URL
+    const WEB_APP_URL =
+      "https://script.google.com/macros/s/AKfycbzQu3v4ZDvEEMATRjVP9xxhWbuRzSe-o0a8gvrNBE6htSI4B2ErmgSm57Z02i5OOI61/exec";
+
+    try {
+      await fetch(WEB_APP_URL, {
+        method: "POST",
+        mode: "no-cors", // Required for Google Apps Script
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData), // Send all form data
+      });
+
+      // no-cors prevents reading response, assume success if no error thrown
+      setStatus("success");
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thank you for your interest. We'll get back to you within 24 hours.",
+      });
+      setFormData({
+        name: '',
+        city: '',
+        email: '',
+        phone: '',
+        whatsapp: '',
+        destination: '',
+        date: '',
+        people: '',
+        vacationType: ''
+      });
+    } catch (error) {
+      setStatus("error");
+      setErrorMsg(
+        "Failed to submit the form. Please check your internet connection or contact support."
+      );
+      console.error("Submission error:", error.message);
+    }
   };
 
   return (
@@ -48,6 +81,15 @@ const ComingSoon = () => {
           </div>
 
           <div className={styles.clientForm}>
+            {status === "success" && (
+              <p className={styles.successMessage}>
+                Thank you! Your inquiry has been submitted successfully. We'll
+                contact you soon.
+              </p>
+            )}
+            {status === "error" && (
+              <p className={styles.errorMessage}>{errorMsg}</p>
+            )}
             <div className={styles.formGroup}>
               <i className="fas fa-user"></i>
               <input
@@ -151,7 +193,9 @@ const ComingSoon = () => {
                 <option>GROUP TOUR</option>
               </select>
             </div>
-            <button onClick={handleSubmit}>Submit</button>
+            <button type="submit" onClick={handleSubmit} disabled={status === "loading"}>
+              {status === "loading" ? "Submitting..." : "Submit"}
+            </button>
           </div>
 
           <ul className={styles.socialIcon}>

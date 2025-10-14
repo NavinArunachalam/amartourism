@@ -3,7 +3,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import "../../styles/common.css";
 import "./new-zealand-hero.css";
-
+import FormFilling  from '@/components/FormFilling.jsx';
 const NewZealandPage = () => {
   return (
    <div className="common-styles">
@@ -156,43 +156,7 @@ const NewZealandPage = () => {
       <section className="booking" id="booking">
         <h2>Book Your Unforgettable Journey</h2>
         <p>Fill out the form below, and our travel experts will help customize your vacation.</p>
-        <form>
-          <div className="form-row">
-            <div className="form-group">
-              <label>Name</label>
-              <input type="text" placeholder="Your Name" required />
-            </div>
-            <div className="form-group">
-              <label>Email</label>
-              <input type="email" placeholder="your@example.com" required />
-            </div>
-          </div>
-          <div className="form-group">
-            <label>Phone Number</label>
-            <input type="tel" placeholder="+1 (555) 123-4567" required />
-          </div>
-          <div className="form-row">
-            <div className="form-group">
-              <label>Preferred Travel Date</label>
-              <input type="date" required />
-            </div>
-            <div className="form-group">
-              <label>Number of People</label>
-              <select>
-                <option>1 Person</option>
-                <option>2 People</option>
-                <option>3 People</option>
-                <option>4+ People</option>
-              </select>
-            </div>
-          </div>
-          <div className="form-group">
-            <label>Additional Message</label>
-            <textarea placeholder="Any special requests?"></textarea>
-          </div>
-          <button type="submit">Submit Inquiry</button>
-        </form>
-      </section>
+          <FormFilling/>         </section>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import "../../styles/common.css";
 import "./lakshadweep-hero.css";
-
+import FormFilling  from '@/components/FormFilling.jsx';
 const LakshadweepPage = () => {
   return (
    <div className="common-styles">
@@ -157,61 +157,7 @@ const LakshadweepPage = () => {
       <section className="booking" id="booking">
         <h2>Book Your Lakshadweep Paradise</h2>
         <p>Fill out the form below, and our travel experts will help customize your island paradise experience.</p>
-        <form>
-          <div className="form-row">
-            <div className="form-group">
-              <label>Name</label>
-              <input type="text" placeholder="Your Name" required />
-            </div>
-            <div className="form-group">
-              <label>Email</label>
-              <input type="email" placeholder="your@example.com" required />
-            </div>
-          </div>
-          <div className="form-group">
-            <label>Phone Number</label>
-            <input type="tel" placeholder="+1 (555) 123-4567" required />
-          </div>
-          <div className="form-row">
-            <div className="form-group">
-              <label>Preferred Travel Date</label>
-              <input type="date" required />
-            </div>
-            <div className="form-group">
-              <label>Number of People</label>
-              <select>
-                <option>2 People (Couple)</option>
-                <option>3 People</option>
-                <option>4 People</option>
-                <option>5+ People</option>
-              </select>
-            </div>
-          </div>
-          <div className="form-group">
-            <label>Island Preference</label>
-            <select>
-              <option>Standard Package (Kavaratti + Bangaram)</option>
-              <option>Extended Stay Kavaratti</option>
-              <option>Extended Stay Bangaram</option>
-              <option>Custom Island Combination</option>
-            </select>
-          </div>
-          <div className="form-group">
-            <label>Water Sports Interest</label>
-            <select>
-              <option>Basic Snorkeling</option>
-              <option>Advanced Diving</option>
-              <option>All Water Activities</option>
-              <option>Relaxed Beach Time Only</option>
-            </select>
-          </div>
-          <div className="form-group">
-            <label>Additional Message</label>
-            <textarea placeholder="Any special requests or questions?"></textarea>
-          </div>
-          <button type="submit">Submit Inquiry</button>
-        </form>
-      </section>
+          <FormFilling/>         </section>
 
       </div>
   );

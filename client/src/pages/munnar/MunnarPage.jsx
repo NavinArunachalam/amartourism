@@ -3,6 +3,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import "../../styles/common.css";
 import "./munnar-hero.css";
+import FormFilling  from '@/components/FormFilling.jsx';
 
 const MunnarPage = () => {
   return (
@@ -148,60 +149,7 @@ const MunnarPage = () => {
       <section className="booking" id="booking">
         <h2>Book Your Munnar Paradise Getaway</h2>
         <p>Fill out the form below, and our travel experts will help customize your Kerala experience.</p>
-        <form>
-          <div className="form-row">
-            <div className="form-group">
-              <label>Name</label>
-              <input type="text" placeholder="Your Name" required />
-            </div>
-            <div className="form-group">
-              <label>Email</label>
-              <input type="email" placeholder="your@example.com" required />
-            </div>
-          </div>
-          <div className="form-group">
-            <label>Phone Number</label>
-            <input type="tel" placeholder="+1 (555) 123-4567" required />
-          </div>
-          <div className="form-row">
-            <div className="form-group">
-              <label>Preferred Travel Date</label>
-              <input type="date" required />
-            </div>
-            <div className="form-group">
-              <label>Number of People</label>
-              <select>
-                <option>2 People (Couple)</option>
-                <option>3 People</option>
-                <option>4 People</option>
-                <option>5+ People</option>
-              </select>
-            </div>
-          </div>
-          <div className="form-group">
-            <label>Houseboat Category</label>
-            <select>
-              <option>Deluxe Houseboat</option>
-              <option>Premium Houseboat</option>
-              <option>Luxury Houseboat</option>
-              <option>Customized Selection</option>
-            </select>
-          </div>
-          <div className="form-group">
-            <label>Meal Preference</label>
-            <select>
-              <option>Non-Vegetarian (Standard)</option>
-              <option>Vegetarian</option>
-              <option>Vegan</option>
-              <option>Special Dietary Requirements</option>
-            </select>
-          </div>
-          <div className="form-group">
-            <label>Additional Message</label>
-            <textarea placeholder="Any special requests?"></textarea>
-          </div>
-          <button type="submit">Submit Inquiry</button>
-        </form>
+          <FormFilling/>
       </section>
     </div>
   );

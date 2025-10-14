@@ -2,6 +2,7 @@ import React from "react";
 import { Link as ScrollLink } from "react-scroll";
 import "../../styles/common.css";
 import "./thailand5n-hero.css";
+import FormFilling  from '@/components/FormFilling.jsx';
 
 const Thailand5NPage = () => {
   return (
@@ -125,43 +126,8 @@ const Thailand5NPage = () => {
       <section className="booking" id="booking">
         <h2>Book Your Unforgettable Journey</h2>
         <p>Ready to explore Thailand? Fill out the form below and our team will contact you.</p>
-        <form>
-          <div className="form-row">
-            <div className="form-group">
-              <label>Name</label>
-              <input type="text" placeholder="Your Name" required />
-            </div>
-            <div className="form-group">
-              <label>Email</label>
-              <input type="email" placeholder="your@example.com" required />
-            </div>
-          </div>
-          <div className="form-group">
-            <label>Phone Number</label>
-            <input type="tel" placeholder="+91 9876543210" required />
-          </div>
-          <div className="form-row">
-            <div className="form-group">
-              <label>Preferred Travel Date</label>
-              <input type="date" required />
-            </div>
-            <div className="form-group">
-              <label>Number of People</label>
-              <select>
-                <option>1 Person</option>
-                <option>2 People</option>
-                <option>3 People</option>
-                <option>4+ People</option>
-              </select>
-            </div>
-          </div>
-          <div className="form-group">
-            <label>Additional Message (Optional)</label>
-            <textarea placeholder="Any specific requests or questions?"></textarea>
-          </div>
-          <button type="submit">Submit Inquiry</button>
-        </form>
-      </section>
+       <FormFilling/>
+        </section>
     </div>
   );
 };

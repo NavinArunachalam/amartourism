@@ -3,7 +3,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import '../../styles/common.css'
 import "./ooty3n4d-hero.css";
-
+import FormFilling  from '@/components/FormFilling.jsx';
 const Ooty3N4DPage = () => {
   return (
   <div className="common-styles">
@@ -157,60 +157,7 @@ const Ooty3N4DPage = () => {
       <section className="booking" id="booking">
         <h2>Book Your Ooty Escape</h2>
         <p>Fill out the form below, and our travel experts will help customize your hill station getaway.</p>
-        <form>
-          <div className="form-row">
-            <div className="form-group">
-              <label>Name</label>
-              <input type="text" placeholder="Your Name" required />
-            </div>
-            <div className="form-group">
-              <label>Email</label>
-              <input type="email" placeholder="your@example.com" required />
-            </div>
-          </div>
-          <div className="form-group">
-            <label>Phone Number</label>
-            <input type="tel" placeholder="+1 (555) 123-4567" required />
-          </div>
-          <div className="form-row">
-            <div className="form-group">
-              <label>Preferred Travel Date</label>
-              <input type="date" required />
-            </div>
-            <div className="form-group">
-              <label>Number of People</label>
-              <select>
-                <option>2 People (Couple)</option>
-                <option>3 People</option>
-                <option>4 People</option>
-                <option>5+ People</option>
-              </select>
-            </div>
-          </div>
-          <div className="form-group">
-            <label>Pickup Location</label>
-            <select>
-              <option>Coimbatore Railway Junction</option>
-              <option>Coimbatore Airport</option>
-              <option>Other Location (Specify in message)</option>
-            </select>
-          </div>
-          <div className="form-group">
-            <label>Hotel Category Preference</label>
-            <select>
-              <option>Standard Hotel</option>
-              <option>Deluxe Hotel</option>
-              <option>Premium Hotel</option>
-              <option>Heritage Property</option>
-            </select>
-          </div>
-          <div className="form-group">
-            <label>Additional Message</label>
-            <textarea placeholder="Any special requests?"></textarea>
-          </div>
-          <button type="submit">Submit Inquiry</button>
-        </form>
-      </section>
+          <FormFilling/>      </section>
 
      
     </div>
