@@ -120,7 +120,7 @@ export const DetailPage = () => {
   if (!card) return <div className="container mx-auto px-4 py-20">Package not found</div>;
 
   return (
-    <div className="container mx-auto px-4 py-20">
+    <div className="container mx-auto px-4 py-20 min-h-screen">
       <h1 className="text-4xl font-bold text-blue-600 mb-4">{card.title}</h1>
       <img
         className="w-full max-w-md mx-auto rounded-lg mb-4"

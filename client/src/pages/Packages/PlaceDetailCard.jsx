@@ -132,7 +132,7 @@ const PackageDetails = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <section id="packages" className="py-20 bg-travel-light-blue">
+    <section id="packages" className="py-20 bg-travel-light-blue min-h-screen">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-accent mb-4">

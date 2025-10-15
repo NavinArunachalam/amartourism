@@ -13,13 +13,14 @@
 .hero-australia h1 {
   font-size: 45px;
   font-weight: 800;
-  color: #000;
+  color: #f5d103;
   margin-bottom: 15px;
+  line-height: 1.2;
 }
 
 .hero-australia p {
   font-size: 18px;
-  color: #444;
+  color: #efff13;
   margin-bottom: 25px;
 }
 
