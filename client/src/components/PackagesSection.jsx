@@ -95,7 +95,7 @@ const PackagesSection = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-primary font-semibold mb-2">Enjoy stress free group tours with GT</p>
+          <p className="text-primary font-semibold mb-2">Enjoy stress free group tours with AmarTourism</p>
           <h2 className="text-4xl md:text-5xl font-bold text-accent mb-4">
             Ultimate Group Tour Adventures
           </h2>

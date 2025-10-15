@@ -55,19 +55,18 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 max-w-full overflow-x-hidden ${
-        isScrolled
-          ? "bg-background/95 backdrop-blur-md travel-shadow"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 max-w-full overflow-x-hidden ${isScrolled
+        ? "bg-background/95 backdrop-blur-md travel-shadow"
+        : "bg-transparent"
+        }`}
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="p-2 bg-gradient-package rounded-lg">
-              <Plane className="h-6 w-6 text-accent" />
-            </div>
+            <div className=" bg-white rounded-full">
+                <img src="/amaricon-removebg-preview.png" alt="" className="h-14 w-14 " />
+              </div>
             <div>
               <h1 className="text-xl font-bold text-accent">Amar Tourism</h1>
               <p className="text-xs text-muted-foreground">Explore the World</p>

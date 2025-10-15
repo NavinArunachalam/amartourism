@@ -31,10 +31,6 @@ const services = [
 ];
 
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <footer className="bg-accent text-white mt-10" >
       
@@ -44,8 +40,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="p-2 bg-primary rounded-lg">
-                <Plane className="h-6 w-6 text-accent" />
+              <div className=" bg-white rounded-full">
+                <img src="/amaricon-removebg-preview.png" alt="" className="h-14 w-14 " />
               </div>
               <div>
                 <h3 className="text-xl font-bold">Amar Tourism</h3>
@@ -53,9 +49,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-white/80 leading-relaxed">
-              Your trusted travel companion for over 15 years. We create
-              extraordinary journeys and unforgettable memories across India and
-              around the world.
+             Amar Tourism is a professionally managed travel company headquartered in Chennai, with a branch office in Erode, Tamil Nadu. Founded by Mr. Amarnath Annadurai
             </p>
             <div className="flex space-x-4">
               <Button
@@ -136,25 +130,12 @@ const Footer = () => {
       {/* Bottom Footer */}
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-center items-center">
             <div className="text-white/80 text-sm mb-4 md:mb-0">
-              © 2025 Amar Tourism. All Rights Reserved. | Backed by Sangam Hotels
-              Group
+        <p> © 2025 Amar Tourism. All Rights Reserved. </p>     
+           <p className="text-center"><span className="text-yellow-500"> Developed By Procols </span></p>   
             </div>
-            <div className="flex space-x-6 text-sm">
-              <button className="text-white/80 hover:text-primary smooth-transition">
-                Privacy Policy
-              </button>
-              <button className="text-white/80 hover:text-primary smooth-transition">
-                Terms of Service
-              </button>
-              <button
-                onClick={scrollToTop}
-                className="text-white/80 hover:text-primary smooth-transition"
-              >
-                Back to Top
-              </button>
-            </div>
+ 
           </div>
         </div>
       </div>
