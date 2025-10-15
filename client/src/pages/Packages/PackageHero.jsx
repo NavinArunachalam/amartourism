@@ -16,7 +16,7 @@ const slides = [
     t1: 'OVERWATER',
     t2: 'VILLAS',
     desc: 'Experience luxury and serenity in the Maldives, with crystal-clear waters and breathtaking overwater villas.',
-    img: '',
+    img: '/maldives/maldives.jpg',
   },
 ];
 

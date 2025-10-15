@@ -14,7 +14,7 @@ const HoneymoonSection = () => {
 
   // Define route mapping based on place
   const routeMap = {
-    dubai: '/dubai',
+      dubai: '/dubai',
     europe: '/europe',
     andaman: '/andaman',
     thailand: '/thailand-4n',
@@ -24,6 +24,19 @@ const HoneymoonSection = () => {
     vietnam: '/enchanting-vietnam-5n6d',
     australia: '/australia',
     azerbaijan: '/azerbaijan',
+    bhutan: '/bhutan',
+    delhi: '/delhi',
+    japan: '/japan',
+    kazakhstan: '/kazakhstan',
+    lakshadweep: '/lakshadweep',
+    maldives: '/maldives',
+    manali: '/kullu-manali',
+    munnar: '/munnar',
+    newzealand: '/new-zealand',
+    ooty: '/ooty-3n4d',
+    scandinavia: '/scandinavia',
+    srilanka: '/sri-lanka',
+    wayanad: '/wayanad'
   };
 
   useEffect(() => {

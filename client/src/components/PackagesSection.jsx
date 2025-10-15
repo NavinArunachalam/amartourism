@@ -7,28 +7,28 @@ import axios from 'axios';
 
 const routeMap = {
   dubai: '/dubai',
-  europe: '/europe',
-  andaman: '/andaman',
-  thailand: '/thailand-4n',
-  malaysia: '/malaysia',
-  singapore: '/singapore',
-  bali: '/bali-4n',
-  vietnam: '/enchanting-vietnam-5n6d',
-  australia: '/australia',
-  azerbaijan: '/azerbaijan',
-  bhutan: '/bhutan',
-  delhi: '/delhi',
-  japan: '/japan',
-  kazakhstan: '/kazakhstan',
-  lakshadweep: '/lakshadweep',
-  maldives: '/maldives',
-  manali: '/kullu-manali',
-  munnar: '/munnar',
-  newzealand: '/new-zealand',
-  ooty: '/ooty-3n4d',
-  scandinavia: '/scandinavia',
-  srilanka: '/sri-lanka',
-  wayanad: '/wayanad',
+    europe: '/europe',
+    andaman: '/andaman',
+    thailand: '/thailand-4n',
+    malaysia: '/malaysia',
+    singapore: '/singapore',
+    bali: '/bali-4n',
+    vietnam: '/enchanting-vietnam-5n6d',
+    australia: '/australia',
+    azerbaijan: '/azerbaijan',
+    bhutan: '/bhutan',
+    delhi: '/delhi',
+    japan: '/japan',
+    kazakhstan: '/kazakhstan',
+    lakshadweep: '/lakshadweep',
+    maldives: '/maldives',
+    manali: '/kullu-manali',
+    munnar: '/munnar',
+    newzealand: '/new-zealand',
+    ooty: '/ooty-3n4d',
+    scandinavia: '/scandinavia',
+    srilanka: '/sri-lanka',
+    wayanad: '/wayanad'
 };
 
 const PackagesSection = () => {
@@ -190,7 +190,7 @@ const PackagesSection = () => {
         </div>
         {/* View All Packages */}
         <div className="text-center mt-12">
-          <Link to="/all-places">
+          <Link to="/all-packages">
             <Button variant="travel" size="lg" className="px-8">
               View All Packages
             </Button>

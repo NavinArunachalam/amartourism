@@ -47,7 +47,7 @@ const PackageDetails = () => {
 
   // Route map for handleLearnMore
   const routeMap = {
-    dubai: '/dubai',
+   dubai: '/dubai',
     europe: '/europe',
     andaman: '/andaman',
     thailand: '/thailand-4n',

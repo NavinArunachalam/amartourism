@@ -18,6 +18,7 @@ const AllPlaces = () => {
         const response = await axios.get(`${API_URL}/api/tour-packages`);
         const allTours = response.data.map(p => ({
           id: p._id,
+          place: p.place?.toLowerCase() || 'unknown',
           image: p.image || 'https://via.placeholder.com/400',
           title: p.title || 'No Title'
         }));
@@ -37,8 +38,9 @@ const AllPlaces = () => {
     fetchTours();
   }, [API_URL]);
 
-  const handleNavigate = (id) => {
-    navigate(`/details/${id}`);
+  const handleNavigate = (place) => {
+    console.log(`Navigating to: /details/${place}`);
+    navigate(`/details/${place}`);
   };
 
   if (loading) return <div className="container mx-auto px-4 py-20">Loading tours...</div>;
@@ -69,7 +71,7 @@ const AllPlaces = () => {
             <div className="more">
               <button
                 className="modal-open"
-                onClick={() => handleNavigate(card.id)}
+                onClick={() => handleNavigate(card.place)}
               >
                 more
                 <IoOpenOutline className="open-icon" />

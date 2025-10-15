@@ -1,4 +1,6 @@
+
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Intro.module.css';
 
 const OktoberfestIntro = () => {
@@ -7,9 +9,9 @@ const OktoberfestIntro = () => {
       <div className={styles.oktoberfestIntroInfo}>
         <h1>Oktoberfest</h1>
         <p>Join us for Oktoberfest, the world's most famous beer festival! Four days of fun, food, and German beer await.</p>
-        <a href="#content" className={styles.oktoberfestIntroButtonExplore}>
+        <Link to="/all-places" className={styles.oktoberfestIntroButtonExplore}>
           Explore
-        </a>
+        </Link>
       </div>
       <div className={styles.oktoberfestIntroSplitBeer}>
         <img

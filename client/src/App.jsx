@@ -136,7 +136,6 @@ const App = () => (
               <Route path="daily-deal/edit/:id" element={<EditDailyDeals />} />
             </Route>
           </Route>
-
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

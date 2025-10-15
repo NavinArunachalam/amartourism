@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Heart, MapPin, Star, Calendar } from "lucide-react";
+import { Clock, Star, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import PackageHero from "@/pages/Packages/PackageHero";
 import axios from 'axios';
@@ -13,8 +13,9 @@ const AllPackages = () => {
   const [error, setError] = useState(null);
   const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
+  // Define route mapping based on place
   const routeMap = {
-    dubai: '/dubai',
+      dubai: '/dubai',
     europe: '/europe',
     andaman: '/andaman',
     thailand: '/thailand-4n',
@@ -36,7 +37,7 @@ const AllPackages = () => {
     ooty: '/ooty-3n4d',
     scandinavia: '/scandinavia',
     srilanka: '/sri-lanka',
-    wayanad: '/wayanad',
+    wayanad: '/wayanad'
   };
 
   useEffect(() => {
@@ -92,20 +93,16 @@ const AllPackages = () => {
     navigate(-1);
   };
 
-  if (loading) return <div className="container mx-auto px-4 py-20 text-center text-gray-600">Loading packages...</div>;
-  if (error) return <div className="container mx-auto px-4 py-20 text-center text-red-500">Error: {error}</div>;
+  if (loading) return <div className="container mx-auto px-4 py-20">Loading packages...</div>;
+  if (error) return <div className="container mx-auto px-4 py-20">Error: {error}</div>;
 
   return (
-    <section id="packages" className="py-20 bg-gradient-to-br from-rose-50 to-pink-50">
+    <section id="packages" className="py-20 bg-travel-light-blue">
       <PackageHero />
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <Heart className="h-8 w-8 text-rose-500" />
-            <p className="text-primary font-semibold">Group Adventures</p>
-            <Heart className="h-8 w-8 text-rose-500" />
-          </div>
+          <p className="text-primary font-semibold mb-2">Enjoy stress free group tours with GT</p>
           <h2 className="text-4xl md:text-5xl font-bold text-accent mb-4">
             Ultimate Group Tour Adventures
           </h2>
@@ -117,55 +114,56 @@ const AllPackages = () => {
         </div>
 
         {/* Packages Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {packages.map((pkg, index) => (
             <Card
               key={pkg.id}
-              className="honeymoon-card overflow-hidden border-0 elevated-shadow bg-white hover:shadow-xl group"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`package-card overflow-hidden border-0 elevated-shadow bg-white hover:shadow-xl`}
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Package Image */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-64 overflow-hidden">
                 <img
                   src={pkg.image}
                   alt={pkg.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   onError={(e) => { e.target.src = 'https://via.placeholder.com/400'; }}
                 />
-                <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-2 py-1 flex items-center space-x-1">
-                  <Star className="h-3 w-3 text-primary fill-current" />
-                  <span className="text-xs font-semibold">{pkg.rating}</span>
-                </div>
-                <div className="absolute top-3 left-3 bg-rose-500/90 backdrop-blur-sm rounded-full p-1">
-                  <Heart className="h-4 w-4 text-white fill-current" />
-                </div>
-                <div className="absolute bottom-3 left-3 bg-accent/90 backdrop-blur-sm rounded-lg px-2 py-1">
-                  <span className="text-white font-semibold">{pkg.price}</span>
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center space-x-1">
+                  <Star className="h-4 w-4 text-primary fill-current" />
+                  <span className="text-sm font-semibold">{pkg.rating}</span>
                 </div>
               </div>
 
-              <CardHeader className="pb-3">
-                <CardTitle className="text-lg font-bold text-accent flex items-center space-x-2">
-                  <MapPin className="h-4 w-4 text-primary" />
-                  <span>{pkg.title}</span>
+              <CardHeader className="pb-4">
+                <CardTitle className="text-xl font-bold text-accent">
+                  {pkg.title}
                 </CardTitle>
-                <CardDescription className="text-sm">{pkg.description}</CardDescription>
+                <CardDescription className="text-base">
+                  {pkg.place}
+                </CardDescription>
               </CardHeader>
 
               <CardContent className="pt-0">
-                {/* Duration */}
-                <div className="flex items-center space-x-1 mb-3 text-sm text-muted-foreground">
-                  <Calendar className="h-4 w-4" />
-                  <span>{pkg.duration}</span>
+                {/* Package Details */}
+                <div className="flex items-center justify-between mb-4 text-sm text-muted-foreground">
+                  <div className="flex items-center space-x-1">
+                    <Clock className="h-4 w-4" />
+                    <span>{pkg.duration}</span>
+                  </div>
+                  <div className="flex items-center space-x-1">
+                    <Users className="h-4 w-4" />
+                    <span>{pkg.groupSize}</span>
+                  </div>
                 </div>
 
                 {/* Highlights */}
-                <div className="mb-4">
-                  <div className="flex flex-wrap gap-1">
+                <div className="mb-6">
+                  <div className="flex flex-wrap gap-2">
                     {pkg.highlights.map((highlight, idx) => (
                       <span
                         key={idx}
-                        className="px-2 py-1 bg-rose-100 text-rose-700 text-xs rounded-full font-medium"
+                        className="px-3 py-1 bg-primary/10 text-accent text-xs rounded-full font-medium"
                       >
                         {highlight}
                       </span>
@@ -176,28 +174,29 @@ const AllPackages = () => {
                 {/* Action Buttons */}
                 <div className="flex gap-2">
                   <Button
-                    variant="honeymoon"
-                    className="flex-1 text-xs"
+                    variant="package"
+                    className="flex-1"
                     onClick={handleBookNow}
                   >
                     Book Now
                   </Button>
                   <Button
                     variant="outline"
-                    className="flex-1 text-xs"
+                    className="flex-1"
                     onClick={() => handleLearnMore(pkg.place)}
                   >
-                    Details
+                    Learn More
                   </Button>
                 </div>
               </CardContent>
             </Card>
           ))}
           {packages.length === 0 && !loading && (
-            <p className="text-center col-span-full text-muted-foreground">No group tours available.</p>
+            <p className="text-center col-span-full">No group tours available.</p>
           )}
         </div>
 
+       
         {/* Back Button */}
         <div className="text-center mt-12">
           <Button
