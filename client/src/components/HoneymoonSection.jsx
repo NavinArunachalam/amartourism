@@ -47,7 +47,7 @@ const HoneymoonSection = () => {
             image: p.image || 'https://via.placeholder.com/400',
             duration: p.duration || 'Unknown Duration',
             rating: p.rating || '4.0',
-            price: p.price || 'Contact for Price',
+         
             highlights: p.highlights || []
           }));
         setHoneymoonDestinations(honeymoonPackages);
@@ -120,9 +120,6 @@ const HoneymoonSection = () => {
                 <div className="absolute top-3 left-3 bg-rose-500/90 backdrop-blur-sm rounded-full p-1">
                   <Heart className="h-4 w-4 text-white fill-current" />
                 </div>
-                <div className="absolute bottom-3 left-3 bg-accent/90 backdrop-blur-sm rounded-lg px-2 py-1">
-                  <span className="text-white font-semibold">{destination.price}</span>
-                </div>
               </div>
 
               <CardHeader className="pb-3">
@@ -179,25 +176,6 @@ const HoneymoonSection = () => {
           {honeymoonDestinations.length === 0 && !loading && (
             <p className="text-center col-span-full text-muted-foreground">No honeymoon packages available.</p>
           )}
-        </div>
-
-        {/* Customer Reviews */}
-        <div className="mt-12 text-center">
-          <h3 className="text-2xl font-bold text-accent mb-4">What Our Couples Say</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div>
-              <p className="font-semibold text-accent">Priya & Rohan</p>
-              <p className="text-muted-foreground">Dream honeymoon in Maldives!</p>
-            </div>
-            <div>
-              <p className="font-semibold text-accent">Neha & Arjun</p>
-              <p className="text-muted-foreground">Bali was pure magic!</p>
-            </div>
-            <div>
-              <p className="font-semibold text-accent">Aisha & Karan</p>
-              <p className="text-muted-foreground">Switzerland exceeded all expectations!</p>
-            </div>
-          </div>
         </div>
 
         {/* View All Honeymoon Packages */}

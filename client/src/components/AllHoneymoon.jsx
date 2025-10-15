@@ -83,6 +83,7 @@ const HoneymoonSection = () => {
 
   return (
     <section id="honeymoon" className="py-20 bg-gradient-to-br from-rose-50 to-pink-50">
+         <PackageHero />
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -182,25 +183,6 @@ const HoneymoonSection = () => {
           {honeymoonDestinations.length === 0 && !loading && (
             <p className="text-center col-span-full">No honeymoon packages available.</p>
           )}
-        </div>
-
-        {/* Customer Reviews */}
-        <div className="mt-12 text-center">
-          <h3 className="text-2xl font-bold text-accent mb-4">What Our Travelers Say</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div>
-              <p className="font-semibold text-accent">Priya Sharma</p>
-              <p className="text-muted-foreground">Amazing travel experience with Amar Tourism!</p>
-            </div>
-            <div>
-              <p className="font-semibold text-accent">Vikram Singh</p>
-              <p className="text-muted-foreground">Best tour packages, highly recommend!</p>
-            </div>
-            <div>
-              <p className="font-semibold text-accent">Anita Desai</p>
-              <p className="text-muted-foreground">Unforgettable trips with great service!</p>
-            </div>
-          </div>
         </div>
 
         {/* Back Button */}
