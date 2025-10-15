@@ -41,7 +41,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className=" bg-white rounded-full">
-                <img src="/amaricon-removebg-preview.png" alt="" className="h-14 w-14 " />
+                <img src="/amaricon-removebg-preview.png" alt="" className="h-12 w-12 " />
               </div>
               <div>
                 <h3 className="text-xl font-bold">Amar Tourism</h3>

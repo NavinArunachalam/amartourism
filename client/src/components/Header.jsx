@@ -65,7 +65,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className=" bg-white rounded-full">
-                <img src="/amaricon-removebg-preview.png" alt="" className="h-14 w-14 " />
+                <img src="/amaricon-removebg-preview.png" alt="" className="h-12 w-12 " />
               </div>
             <div>
               <h1 className="text-xl font-bold text-accent">Amar Tourism</h1>
