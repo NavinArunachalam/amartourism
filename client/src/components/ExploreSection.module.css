@@ -202,59 +202,100 @@
     width: 100% !important;
   }
 }
-
 @media (max-width: 414px) {
+  .reviewSection {
+    position: relative !important;
+    width: 95% !important; /* Slightly narrower for mobile */
+    max-width: 100% !important;
+    height: 300px !important; /* Reduced height for mobile to fit content */
+    margin: auto !important;
+    margin-top: 30px !important; /* Reduced margin for mobile */
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    border: none !important;
+  }
+
   .reviewSection .bottomCenter {
-    border-radius: 10px 10px 0 0 !important;
-   width: 40%;
-   height: 50%;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 80% !important; /* Slightly wider than before for balance */
+    background: #fff !important;
+    padding: 1px 5px !important; /* Reduced padding for mobile */
+    text-align: center !important;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1) !important;
+    z-index: 2 !important;
+    overflow: visible !important;
+    border-radius: 15px 15px 0 0 !important; /* Softer corners */
+    transition: all 0.3s ease-in-out !important;
+    border: none !important;
+     /* Allow dynamic height */
+    min-height: 70px !important; /* Ensure enough space for content */
   }
 
-  .reviewSection .bottomCenter::before,
+  /* Reintroduce pseudo-elements with adjusted sizes */
+  .reviewSection .bottomCenter::before {
+    content: "" !important;
+    position: absolute !important;
+    bottom: -10px !important;
+    left: -15px !important;
+    width: 30px !important;
+    height: 30px !important;
+    background: #fff !important;
+    z-index: -1 !important;
+    -webkit-mask: radial-gradient(15px at top left, transparent 98%, #000) !important;
+    mask: radial-gradient(15px at top left, transparent 98%, #000) !important;
+  }
+
   .reviewSection .bottomCenter::after {
-    display: none !important;
+    content: "" !important;
+    position: absolute !important;
+    bottom: -10px !important;
+    right: -15px !important;
+    width: 30px !important;
+    height: 30px !important;
+    background: #fff !important;
+    z-index: -1 !important;
+    -webkit-mask: radial-gradient(15px at top right, transparent 98%, #000) !important;
+    mask: radial-gradient(15px at top right, transparent 98%, #000) !important;
   }
 
-.reviewSection .btn {
-  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif !important;
-  font-weight: 400 !important;
-  font-size: 13px !important;
-  padding:5px !important;
-  border: none !important;
-  border-radius: 8px !important;
-  cursor: pointer !important;
-  transition: all 0.3s ease !important;
-  letter-spacing: 0.5px !important;
-  margin: 0 10px 10px !important;
-  user-select: none !important;
-}
-.reviewSection .luxuryHeading {
-  font-family: 'Gloock', serif !important;
-  font-weight: 700 !important;
-  font-size: 15px !important; /* Match HTML */
-  color: #333 !important;
+  .reviewSection .luxuryHeading {
+    font-family: 'Gloock', serif !important;
+    font-weight: 700 !important;
+    font-size: 14px !important; /* Slightly larger for readability */
+    color: #333 !important;
+    margin: 0 0 !important;
+    padding: 0 !important; /* Reduced padding */
+  }
 
-}
-.reviewSection .buttons {
-  margin-top: 5px !important;
-  margin-bottom: 10px !important;
-  text-align: center !important;
-}
-.reviewSection .luxurySubtitle {
-  font-family: 'Montserrat', sans-serif !important;
-  font-weight: 400 !important;
-  font-size: 12px !important; /* Match HTML */
-  color: #666 !important;
-}
-.reviewSection {
-  position: relative !important;
-  width: 800px !important;
-  max-width: 100% !important;
-  height: 400px !important;
-  margin: auto !important;
-  margin-top: 50px !important;
-  border-radius: 20px !important;
-  overflow: hidden !important;
-  border: none !important;
-}
+  .reviewSection .luxurySubtitle {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 12px !important;
+    color: #666 !important;
+    margin:0 !important; /* Reduced margin */
+  }
+
+  .reviewSection .buttons {
+    margin-top: 1px !important;
+    margin-bottom: 1px !important;
+    text-align: center !important;
+  }
+
+  .reviewSection .btn {
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    padding: 5px 16px !important; /* Adjusted padding for mobile */
+    border: none !important;
+    border-radius: 6px !important; /* Slightly smaller radius */
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    user-select: none !important;
+    
+    width: auto !important; /* Allow buttons to fit content */
+    display: inline-block !important; /* Ensure buttons align properly */
+  }
 }
