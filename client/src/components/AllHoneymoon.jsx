@@ -37,7 +37,7 @@ const HoneymoonSection = () => {
             id: p._id,
            place: p.place?.toLowerCase()|| (p.title ? Object.keys(routeMap).find(key => p.title.toLowerCase().includes(key)) : 'unknown'),
             title: p.title || 'No Title',
-            description: p.description || 'No Description',
+            description: p.place || 'No Description',
             image: p.image || 'https://via.placeholder.com/400',
             duration: p.duration || 'Unknown Duration',
             groupSize: p.groupSize || 'Group Tour',
@@ -135,7 +135,7 @@ const HoneymoonSection = () => {
                   <span>{destination.destination}</span>
                 </CardTitle>
                 <CardDescription className="text-sm">
-                  {destination.description}
+                  {destination.place}
                 </CardDescription>
               </CardHeader>
 

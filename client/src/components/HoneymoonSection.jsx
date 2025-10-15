@@ -31,11 +31,7 @@ const HoneymoonSection = () => {
         const response = await axios.get(`${API_URL}/api/tour-packages`);
         const honeymoonPackages = response.data
           .filter(p => 
-            p.groupSize === 'Group Tour' && 
-            (p.category === 'honeymoon' || 
-             ['maldives', 'bali', 'phuket', 'switzerland', 'seychelles', 'langkawi', 'paris', 'manali']
-               .some(place => p.place?.toLowerCase().includes(place) || p.title?.toLowerCase().includes(place))
-            )
+            p.groupSize === 'Honeymoon' 
           )
           .slice(0, 8)
           .map(p => ({
@@ -43,7 +39,7 @@ const HoneymoonSection = () => {
             place: p.place?.toLowerCase() || 
                    (p.title ? Object.keys(routeMap).find(key => p.title.toLowerCase().includes(key)) : 'unknown'),
             destination: p.title || 'No Title',
-            description: p.description || 'No Description',
+            description: p.place || 'No Description',
             image: p.image || 'https://via.placeholder.com/400',
             duration: p.duration || 'Unknown Duration',
             rating: p.rating || '4.0',
@@ -128,7 +124,7 @@ const HoneymoonSection = () => {
                   <span>{destination.destination}</span>
                 </CardTitle>
                 <CardDescription className="text-sm">
-                  {destination.description}
+                  {destination.place}
                 </CardDescription>
               </CardHeader>
 

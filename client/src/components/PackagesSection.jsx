@@ -133,7 +133,7 @@ const PackagesSection = () => {
                   {pkg.title}
                 </CardTitle>
                 <CardDescription className="text-base">
-                  {pkg.description}
+                  {pkg.place}
                 </CardDescription>
               </CardHeader>
 
