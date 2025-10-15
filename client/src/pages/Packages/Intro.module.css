@@ -4,8 +4,8 @@
   grid-template-columns: repeat(2, 1fr);
   place-items: center;
   padding: 40px;
-  min-height: 100dvh;
-  height: 100dvh; /* Ensure full viewport height */
+  min-height: 80dvh;
+  height: 80dvh; /* Ensure full viewport height */
   overflow: hidden;
   width: 100%;
   box-sizing: border-box;
@@ -157,7 +157,7 @@
     margin: 20px auto;
   }
   .oktoberfestIntroBeer {
-    width: 100px;
-    height: 120px; /* Adjust height proportionally */
+    width: 120px;
+    height: 170px; /* Adjust height proportionally */
   }
 }
