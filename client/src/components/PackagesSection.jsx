@@ -1,9 +1,9 @@
+import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Clock, MapPin, Star, Users } from "lucide-react";
-import mountainsImage from "@/assets/mountains.jpg";
-import beachImage from "@/assets/beach.jpg";
 import { Link, useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 const routeMap = {
   dubai: '/dubai',
@@ -32,101 +32,64 @@ const routeMap = {
 };
 
 const PackagesSection = () => {
+  const [packages, setPackages] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
-  const packages = [
-    {
-      id: 1,
-      title: "Dubai Group Departure ex Chennai",
-      description: "Sharjah | Abu Dhabi | Dubai",
-      image: beachImage,
-      duration: "4 Nights 5 Days",
-      groupSize: "Group Tour",
-      rating: "4.9",
-      price: "₹45,000",
-      highlights: ["Sharjah", "Abu Dhabi", "Dubai"],
-      departure: "Chennai",
-    },
-    {
-      id: 2,
-      title: "Dubai Group Departure ex Mumbai",
-      description: "Sharjah | Abu Dhabi | Dubai",
-      image: beachImage,
-      duration: "4 Nights 5 Days",
-      groupSize: "Group Tour",
-      rating: "4.9",
-      price: "₹42,000",
-      highlights: ["Sharjah", "Abu Dhabi", "Dubai"],
-      departure: "Mumbai",
-    },
-    {
-      id: 3,
-      title: "Dubai Group Departure ex Bangalore",
-      description: "Sharjah | Abu Dhabi | Dubai",
-      image: beachImage,
-      duration: "4 Nights 5 Days",
-      groupSize: "Group Tour",
-      rating: "4.9",
-      price: "₹44,000",
-      highlights: ["Sharjah", "Abu Dhabi", "Dubai"],
-      departure: "Bangalore",
-    },
-    {
-      id: 4,
-      title: "Europe Winter Group Departure ex Chennai",
-      description: "Paris | Zurich | Seefeld / Axams | Padova | Arezzo | Rome",
-      image: mountainsImage,
-      duration: "9 Nights 10 Days",
-      groupSize: "Group Tour",
-      rating: "4.8",
-      price: "₹1,25,000",
-      highlights: ["Paris", "Zurich", "Rome"],
-      departure: "Chennai",
-    },
-    {
-      id: 5,
-      title: "Europe Winter Group Departure ex Bangalore",
-      description: "Paris | Zurich | Seefeld / Axams | Padova | Arezzo | Rome",
-      image: mountainsImage,
-      duration: "9 Nights 10 Days",
-      groupSize: "Group Tour",
-      rating: "4.8",
-      price: "₹1,28,000",
-      highlights: ["Paris", "Zurich", "Rome"],
-      departure: "Bangalore",
-    },
-    {
-      id: 6,
-      title: "Europe Summer Group Departure ex Chennai",
-      description: "Paris | Zurich | Seefeld / Axams | Padova | Arezzo | Rome",
-      image: mountainsImage,
-      duration: "9 Nights 10 Days",
-      groupSize: "Group Tour",
-      rating: "4.8",
-      price: "₹1,22,000",
-      highlights: ["Paris", "Zurich", "Rome"],
-      departure: "Chennai",
-    },
-  ];
+  useEffect(() => {
+    const fetchPackages = async () => {
+      try {
+        setLoading(true);
+        const response = await axios.get(`${API_URL}/api/tour-packages`);
+        const groupPackages = response.data
+          .filter(p => p.groupSize === 'Group Tour')
+          .slice(0, 6)
+          .map(p => ({
+            id: p._id,
+            place: p.place?.toLowerCase() || (p.title ? Object.keys(routeMap).find(key => p.title.toLowerCase().includes(key)) : 'unknown'),
+            title: p.title || 'No Title',
+            description: p.description || 'No Description',
+            image: p.image || 'https://via.placeholder.com/400',
+            duration: p.duration || 'Unknown Duration',
+            groupSize: p.groupSize || 'Group Tour',
+            rating: p.rating || '4.0',
+            price: p.price || 'Contact for Price',
+            highlights: p.highlights || [],
+            departure: p.departure || 'Unknown Departure'
+          }));
+        setPackages(groupPackages);
+      } catch (err) {
+        setError(`Failed to fetch packages: ${err.message}`);
+        console.error('Error fetching packages:', err);
+        if (err.response) {
+          console.log('Error Response:', err.response.data);
+          console.log('Error Status:', err.response.status);
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const getDestinationId = (title) => {
-    const lowerTitle = title.toLowerCase();
-    if (lowerTitle.includes('dubai')) return 'dubai';
-    if (lowerTitle.includes('europe')) return 'europe';
-    return null; // Fallback if no match
-  };
+    fetchPackages();
+  }, [API_URL]);
 
-  const handleLearnMore = (title) => {
-    const destinationId = getDestinationId(title);
-    const route = routeMap[destinationId];
+  const handleLearnMore = (place) => {
+    const route = routeMap[place];
     if (route) {
       navigate(route);
+    } else {
+      console.warn(`No route found for place: ${place}`);
     }
   };
 
   const handleBookNow = () => {
     navigate('/customer-details');
   };
+
+  if (loading) return <div className="container mx-auto px-4 py-20">Loading packages...</div>;
+  if (error) return <div className="container mx-auto px-4 py-20">Error: {error}</div>;
 
   return (
     <section id="packages" className="py-20 bg-travel-light-blue">
@@ -158,6 +121,7 @@ const PackagesSection = () => {
                   src={pkg.image}
                   alt={pkg.title}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  onError={(e) => { e.target.src = 'https://via.placeholder.com/400'; }}
                 />
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center space-x-1">
                   <Star className="h-4 w-4 text-primary fill-current" />
@@ -213,7 +177,7 @@ const PackagesSection = () => {
                   <Button
                     variant="outline"
                     className="flex-1"
-                    onClick={() => handleLearnMore(pkg.title)}
+                    onClick={() => handleLearnMore(pkg.place)}
                   >
                     Learn More
                   </Button>
@@ -221,11 +185,33 @@ const PackagesSection = () => {
               </CardContent>
             </Card>
           ))}
+          {packages.length === 0 && !loading && (
+            <p className="text-center col-span-full">No group tours available.</p>
+          )}
+        </div>
+
+        {/* Customer Reviews */}
+        <div className="mt-12 text-center">
+          <h3 className="text-2xl font-bold text-accent mb-4">What Our Travelers Say</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <p className="font-semibold text-accent">Priya Sharma</p>
+              <p className="text-muted-foreground">Amazing travel experience with Amar Tourism!</p>
+            </div>
+            <div>
+              <p className="font-semibold text-accent">Vikram Singh</p>
+              <p className="text-muted-foreground">Best tour packages, highly recommend!</p>
+            </div>
+            <div>
+              <p className="font-semibold text-accent">Anita Desai</p>
+              <p className="text-muted-foreground">Unforgettable trips with great service!</p>
+            </div>
+          </div>
         </div>
 
         {/* View All Packages */}
         <div className="text-center mt-12">
-          <Link to="/all-packages">
+          <Link to="/all-places">
             <Button variant="travel" size="lg" className="px-8">
               View All Packages
             </Button>

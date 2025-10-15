@@ -1,123 +1,82 @@
+import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Heart, MapPin, Star, Calendar } from "lucide-react";
-import beachImage from "@/assets/beach.jpg";
-import mountainsImage from "@/assets/mountains.jpg";
-import heritageImage from "@/assets/heritage.jpg";
 import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const routeMap = {
-  Maldives: '/maldives',
-  Bali: '/bali-6n', // Maps to /bali-6n based on 6N/7D duration
-  Phuket: '/thailand-4n', // Maps to /thailand-4n based on 4N/5D duration
-  Switzerland: '/europe', // Maps to /europe as Switzerland is part of Europe
-  Seychelles: '/seychelles', // Not in provided routes, handled as null
-  Langkawi: '/malaysia', // Maps to /malaysia as Langkawi is part of Malaysia
-  Paris: '/europe', // Maps to /europe as Paris is part of Europe
-  Manali: '/kullu-manali', // Added to handle Mauritius
+  maldives: '/maldives',
+  bali: '/bali-6n',
+  phuket: '/thailand-4n',
+  switzerland: '/europe',
+  seychelles: '/seychelles',
+  langkawi: '/malaysia',
+  paris: '/europe',
+  manali: '/kullu-manali',
+  // Add more as needed
 };
 
 const HoneymoonSection = () => {
   const navigate = useNavigate();
+  const [honeymoonDestinations, setHoneymoonDestinations] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
-  const honeymoonDestinations = [
-    {
-      id: 1,
-      destination: "Maldives",
-      description: "Overwater villas and pristine beaches",
-      image: beachImage,
-      duration: "5 Nights 6 Days",
-      rating: "4.9",
-      price: "₹85,000",
-      highlights: ["Private Villa", "Water Sports", "Romantic Dining"]
-    },
-    {
-      id: 2,
-      destination: "Bali",
-      description: "Tropical paradise with cultural charm",
-      image: beachImage,
-      duration: "6 Nights 7 Days",
-      rating: "4.8",
-      price: "₹65,000",
-      highlights: ["Beach Resort", "Temple Tours", "Spa Treatments"]
-    },
-    {
-      id: 3,
-      destination: "Manali",
-      description: "Island paradise in the Indian Ocean",
-      image: beachImage,
-      duration: "5 Nights 6 Days",
-      rating: "4.8",
-      price: "₹75,000",
-      highlights: ["Luxury Resort", "Coral Reefs", "Romantic Cruises"]
-    },
-    {
-      id: 4,
-      destination: "Phuket",
-      description: "Thailand's jewel with stunning beaches",
-      image: beachImage,
-      duration: "4 Nights 5 Days",
-      rating: "4.7",
-      price: "₹55,000",
-      highlights: ["Beach Villa", "Island Hopping", "Thai Cuisine"]
-    },
-    {
-      id: 5,
-      destination: "Switzerland",
-      description: "Alpine romance in scenic mountains",
-      image: mountainsImage,
-      duration: "7 Nights 8 Days",
-      rating: "4.9",
-      price: "₹1,25,000",
-      highlights: ["Mountain Views", "Scenic Trains", "Luxury Hotels"]
-    },
-    {
-      id: 6,
-      destination: "Seychelles",
-      description: "Pristine beaches and luxury resorts",
-      image: beachImage,
-      duration: "6 Nights 7 Days",
-      rating: "4.9",
-      price: "₹95,000",
-      highlights: ["Private Beach", "Marine Life", "Sunset Views"]
-    },
-    {
-      id: 7,
-      destination: "Langkawi",
-      description: "Malaysian paradise with duty-free shopping",
-      image: beachImage,
-      duration: "4 Nights 5 Days",
-      rating: "4.6",
-      price: "₹45,000",
-      highlights: ["Cable Car", "Beaches", "Mangrove Tours"]
-    },
-    {
-      id: 8,
-      destination: "Paris",
-      description: "City of love and romance",
-      image: heritageImage,
-      duration: "5 Nights 6 Days",
-      rating: "4.8",
-      price: "₹85,000",
-      highlights: ["Eiffel Tower", "Seine Cruise", "Romantic Cafes"]
-    },
-  ];
+  useEffect(() => {
+    const fetchHoneymoonPackages = async () => {
+      try {
+        setLoading(true);
+        const response = await axios.get(`${API_URL}/api/tour-packages`);
+        const honeymoonPackages = response.data
+          .filter(p => 
+            p.groupSize === 'Group Tour' && 
+            (p.category === 'honeymoon' || 
+             ['maldives', 'bali', 'phuket', 'switzerland', 'seychelles', 'langkawi', 'paris', 'manali']
+               .some(place => p.place?.toLowerCase().includes(place) || p.title?.toLowerCase().includes(place))
+            )
+          )
+          .slice(0, 8)
+          .map(p => ({
+            id: p._id,
+            place: p.place?.toLowerCase() || 
+                   (p.title ? Object.keys(routeMap).find(key => p.title.toLowerCase().includes(key)) : 'unknown'),
+            destination: p.title || 'No Title',
+            description: p.description || 'No Description',
+            image: p.image || 'https://via.placeholder.com/400',
+            duration: p.duration || 'Unknown Duration',
+            rating: p.rating || '4.0',
+            price: p.price || 'Contact for Price',
+            highlights: p.highlights || []
+          }));
+        setHoneymoonDestinations(honeymoonPackages);
+      } catch (err) {
+        setError(`Failed to fetch honeymoon packages: ${err.message}`);
+        console.error('Error fetching honeymoon packages:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const handleDetails = (destination, duration) => {
-    let route = routeMap[destination];
-    if (destination === 'Bali' && duration === '6 Nights 7 Days') {
-      route = '/bali-6n'; // Ensure Bali 6N/7D maps to /bali-6n
-    } else if (destination === 'Bali') {
-      route = '/bali-4n'; // Default to /bali-4n for other durations
-    }
+    fetchHoneymoonPackages();
+  }, [API_URL]);
+
+  const handleDetails = (place) => {
+    const route = routeMap[place];
     if (route) {
       navigate(route);
+    } else {
+      console.warn(`No route found for place: ${place}`);
     }
   };
 
   const handleBookNow = () => {
     navigate('/customer-details');
   };
+
+  if (loading) return <div className="container mx-auto px-4 py-20 text-center">Loading honeymoon packages...</div>;
+  if (error) return <div className="container mx-auto px-4 py-20 text-center text-red-500">Error: {error}</div>;
 
   return (
     <section id="honeymoon" className="py-20 bg-gradient-to-br from-rose-50 to-pink-50">
@@ -143,7 +102,7 @@ const HoneymoonSection = () => {
           {honeymoonDestinations.map((destination, index) => (
             <Card
               key={destination.id}
-              className={`honeymoon-card overflow-hidden border-0 elevated-shadow bg-white hover:shadow-xl group`}
+              className="honeymoon-card overflow-hidden border-0 elevated-shadow bg-white hover:shadow-xl group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Destination Image */}
@@ -152,6 +111,7 @@ const HoneymoonSection = () => {
                   src={destination.image}
                   alt={destination.destination}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onError={(e) => { e.target.src = 'https://via.placeholder.com/400'; }}
                 />
                 <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-2 py-1 flex items-center space-x-1">
                   <Star className="h-3 w-3 text-primary fill-current" />
@@ -161,6 +121,7 @@ const HoneymoonSection = () => {
                   <Heart className="h-4 w-4 text-white fill-current" />
                 </div>
                 <div className="absolute bottom-3 left-3 bg-accent/90 backdrop-blur-sm rounded-lg px-2 py-1">
+                  <span className="text-white font-semibold">{destination.price}</span>
                 </div>
               </div>
 
@@ -207,7 +168,7 @@ const HoneymoonSection = () => {
                   <Button
                     variant="outline"
                     className="flex-1 text-xs"
-                    onClick={() => handleDetails(destination.destination, destination.duration)}
+                    onClick={() => handleDetails(destination.place)}
                   >
                     Details
                   </Button>
@@ -215,9 +176,31 @@ const HoneymoonSection = () => {
               </CardContent>
             </Card>
           ))}
+          {honeymoonDestinations.length === 0 && !loading && (
+            <p className="text-center col-span-full text-muted-foreground">No honeymoon packages available.</p>
+          )}
         </div>
 
-        {/* View All Packages */}
+        {/* Customer Reviews */}
+        <div className="mt-12 text-center">
+          <h3 className="text-2xl font-bold text-accent mb-4">What Our Couples Say</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <p className="font-semibold text-accent">Priya & Rohan</p>
+              <p className="text-muted-foreground">Dream honeymoon in Maldives!</p>
+            </div>
+            <div>
+              <p className="font-semibold text-accent">Neha & Arjun</p>
+              <p className="text-muted-foreground">Bali was pure magic!</p>
+            </div>
+            <div>
+              <p className="font-semibold text-accent">Aisha & Karan</p>
+              <p className="text-muted-foreground">Switzerland exceeded all expectations!</p>
+            </div>
+          </div>
+        </div>
+
+        {/* View All Honeymoon Packages */}
         <div className="text-center mt-12">
           <Link to="/all-honeymoon">
             <Button variant="travel" size="lg" className="px-8">

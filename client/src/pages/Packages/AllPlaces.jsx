@@ -1,50 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { IoOpenOutline } from 'react-icons/io5';
-
-const cardData = [
-  { id: 'andaman', image: 'thailand2.jpg', title: 'Andaman Islands Packages' },
-  { id: 'australia', image: 'malaysia.jpg', title: 'Majestic Australia Road Trip' },
-  { id: 'azerbaijan', image: 'singapore.jpg', title: 'Explore Azerbaijan Packages' },
-  { id: 'bali', image: 'bali.png', title: 'Two type of Bali-Bliss Packages available' },
-  { id: 'bhutan', image: 'dubai.jpg', title: 'Bhutan - Land of the Thunder Dragon' },
-  { id: 'delhi', image: 'dubai.jpg', title: 'Delhi Golden Triangle' },
-  { id: 'dubai', image: 'dubai.jpg', title: 'Dazzling Dubai Discovery' },
-  { id: 'europe', image: 'vietnam.jpg', title: 'Glimpses of Europe' },
-  { id: 'jammukashmir', image: 'vietnam.jpg', title: 'Jammu and Kashmir Packages' },
-  { id: 'japan', image: 'vietnam.jpg', title: 'Japan Cherry Blossom Tour' },
-  { id: 'kazakhstan', image: 'vietnam.jpg', title: 'Kazakhstan Adventure Packages' },
-  { id: 'lakshadweep', image: 'vietnam.jpg', title: 'Lakshadweep Paradise Explorer' },
-  { id: 'malaysia', image: 'vietnam.jpg', title: 'Discover the Wonders of Malaysia' },
-  { id: 'maldives', image: 'vietnam.jpg', title: 'Maldives Paradise' },
-  { id: 'manali', image: 'vietnam.jpg', title: 'Amazing Kullu-Manali' },
-  { id: 'munnar', image: 'vietnam.jpg', title: 'Munnar - Paradise' },
-  { id: 'newzealand', image: 'vietnam.jpg', title: 'New Zealand Packages' },
-  { id: 'ooty', image: 'vietnam.jpg', title: 'Ooty - Queen of Hill Stations' },
-  { id: 'scandinavia', image: 'vietnam.jpg', title: 'Scandinavia with Northern Lights' },
-  { id: 'singapore', image: 'vietnam.jpg', title: 'Singapore Three Packages' },
-  { id: 'srilanka', image: 'vietnam.jpg', title: 'Sri Lanka Packages' },
-  { id: 'thailand', image: 'vietnam.jpg', title: 'Thailand Packages' },
-  { id: 'wayanad', image: 'vietnam.jpg', title: 'Ooty - Queen of Hill Stations' },
-];
+import axios from 'axios';
+import './cards.css'; // Assuming the same CSS file is used for styling
 
 const AllPlaces = () => {
-  const [openModal, setOpenModal] = useState(null);
+  const [tours, setTours] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
-  // const handleOpenModal = (modalId) => {
-  //   setOpenModal(modalId);
-  //   document.body.classList.add('prevent-background-scroll');
-  // };
+  useEffect(() => {
+    const fetchTours = async () => {
+      try {
+        setLoading(true);
+        const response = await axios.get(`${API_URL}/api/tour-packages`);
+        const allTours = response.data.map(p => ({
+          id: p._id,
+          image: p.image || 'https://via.placeholder.com/400',
+          title: p.title || 'No Title'
+        }));
+        setTours(allTours);
+      } catch (err) {
+        setError(`Failed to fetch tours: ${err.message}`);
+        console.error('Error fetching tours:', err);
+        if (err.response) {
+          console.log('Error Response:', err.response.data);
+          console.log('Error Status:', err.response.status);
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const handleCloseModal = () => {
-    setOpenModal(null);
-    document.body.classList.remove('prevent-background-scroll');
-  };
+    fetchTours();
+  }, [API_URL]);
 
   const handleNavigate = (id) => {
     navigate(`/details/${id}`);
   };
+
+  if (loading) return <div className="container mx-auto px-4 py-20">Loading tours...</div>;
+  if (error) return <div className="container mx-auto px-4 py-20">Error: {error}</div>;
 
   return (
     <div className="container mx-auto px-4 py-20">
@@ -57,9 +55,14 @@ const AllPlaces = () => {
         </p>
       </div>
       <section id="content" className="card-section">
-        {cardData.map((card) => (
+        {tours.map((card) => (
           <div key={card.id} className="card">
-            <img className="card-img" src={card.image} alt={`${card.title} image`} />
+            <img
+              className="card-img"
+              src={card.image}
+              alt={`${card.title} image`}
+              onError={(e) => { e.target.src = 'https://via.placeholder.com/400'; }}
+            />
             <div className="title">
               <h2>{card.title}</h2>
             </div>
@@ -72,17 +75,11 @@ const AllPlaces = () => {
                 <IoOpenOutline className="open-icon" />
               </button>
             </div>
-            {openModal === card.id && (
-              <div className="modal" onClick={handleCloseModal}>
-                <div className="modal-content">
-                  <button className="modal-close">Close</button>
-                  <h2>{card.title}</h2>
-                  <p>Details about {card.title} go here.</p>
-                </div>
-              </div>
-            )}
           </div>
         ))}
+        {tours.length === 0 && !loading && (
+          <p>No tours available.</p>
+        )}
       </section>
     </div>
   );
@@ -90,16 +87,45 @@ const AllPlaces = () => {
 
 export const DetailPage = () => {
   const { id } = useParams();
-  const card = cardData.find((item) => item.id === id);
+  const [card, setCard] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
-  if (!card) {
-    return <div className="container mx-auto px-4 py-20">Package not found</div>;
-  }
+  useEffect(() => {
+    const fetchTour = async () => {
+      try {
+        setLoading(true);
+        const response = await axios.get(`${API_URL}/api/tour-packages/${id}`);
+        setCard({
+          id: response.data._id,
+          image: response.data.image || 'https://via.placeholder.com/400',
+          title: response.data.title || 'No Title'
+        });
+      } catch (err) {
+        setError(`Failed to fetch tour: ${err.message}`);
+        console.error('Error fetching tour:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchTour();
+  }, [id, API_URL]);
+
+  if (loading) return <div className="container mx-auto px-4 py-20">Loading...</div>;
+  if (error) return <div className="container mx-auto px-4 py-20">Error: {error}</div>;
+  if (!card) return <div className="container mx-auto px-4 py-20">Package not found</div>;
 
   return (
     <div className="container mx-auto px-4 py-20">
       <h1 className="text-4xl font-bold text-blue-600 mb-4">{card.title}</h1>
-      <img className="w-full max-w-md mx-auto rounded-lg mb-4" src={card.image} alt={`${card.title} image`} />
+      <img
+        className="w-full max-w-md mx-auto rounded-lg mb-4"
+        src={card.image}
+        alt={`${card.title} image`}
+        onError={(e) => { e.target.src = 'https://via.placeholder.com/400'; }}
+      />
       <p className="text-lg text-gray-600">Details about {card.title} go here.</p>
       <button
         className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
@@ -110,4 +136,5 @@ export const DetailPage = () => {
     </div>
   );
 };
-  export default  AllPlaces
+
+export default AllPlaces;

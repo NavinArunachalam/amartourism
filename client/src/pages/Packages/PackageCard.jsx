@@ -17,8 +17,8 @@ const CardSection = () => {
         setLoading(true);
         console.log('Fetching from:', `${API_URL}/api/tour-packages`);
         const response = await axios.get(`${API_URL}/api/tour-packages`);
-        const allTours = response.data.filter(p => p.groupSize === 'Group Tour');
-        console.log('Filtered Group Tours:', allTours);
+        const allTours = response.data.filter(p => p.groupSize === 'Group Tour').slice(0, 6);
+        console.log('Filtered Group Tours (Limited to 6):', allTours);
         setTours(allTours.map(p => ({
           id: p._id,
           place: p.place?.toLowerCase() || 'unknown',

@@ -1,17 +1,18 @@
+import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Heart, MapPin, Star, Calendar } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-
-// Import image assets
-import beachImage from "@/assets/beach.jpg";
-import mountainsImage from "@/assets/mountains.jpg";
-import heritageImage from "@/assets/heritage.jpg";
+import axios from 'axios';
 
 const HoneymoonSection = () => {
   const navigate = useNavigate();
+  const [honeymoonDestinations, setHoneymoonDestinations] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
-  // Define route mapping based on cardId
+  // Define route mapping based on place
   const routeMap = {
     dubai: '/dubai',
     europe: '/europe',
@@ -25,37 +26,49 @@ const HoneymoonSection = () => {
     azerbaijan: '/azerbaijan',
   };
 
-  // Map image filenames to imported image modules
-  const imageMap = {
-    "beach.jpg": beachImage,
-    "mountains.jpg": mountainsImage,
-    "heritage.jpg": heritageImage
-  };
+  useEffect(() => {
+    const fetchHoneymoonPackages = async () => {
+      try {
+        setLoading(true);
+        const response = await axios.get(`${API_URL}/api/tour-packages`);
+        const honeymoonPackages = response.data
+          .filter(p => p.groupSize === 'Honeymoon') // Adjust filter based on API
+          .map(p => ({
+            id: p._id,
+           place: p.place?.toLowerCase()|| (p.title ? Object.keys(routeMap).find(key => p.title.toLowerCase().includes(key)) : 'unknown'),
+            title: p.title || 'No Title',
+            description: p.description || 'No Description',
+            image: p.image || 'https://via.placeholder.com/400',
+            duration: p.duration || 'Unknown Duration',
+            groupSize: p.groupSize || 'Group Tour',
+            rating: p.rating || '4.0',
+            price: p.price || 'Contact for Price',
+            highlights: p.highlights || [],
+            departure: p.departure || 'Unknown Departure',
+            destination: p.title || 'Unknown Destination'
+          }));
+        setHoneymoonDestinations(honeymoonPackages);
+      } catch (err) {
+        setError(`Failed to fetch honeymoon packages: ${err.message}`);
+        console.error('Error fetching honeymoon packages:', err);
+        if (err.response) {
+          console.log('Error Response:', err.response.data);
+          console.log('Error Status:', err.response.status);
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  // Use the first 10 packages from the provided data
-  const honeymoonDestinations = [
-    { id: 1, cardId: 'dubai', title: "Dubai Group Departure ex Chennai", description: "Sharjah | Abu Dhabi | Dubai", image: beachImage, duration: "4 Nights 5 Days", groupSize: "Group Tour", rating: "4.9", price: "₹45,000", highlights: ["Sharjah", "Abu Dhabi", "Dubai"], departure: "Chennai" },
-    { id: 2, cardId: 'dubai', title: "Dubai Group Departure ex Mumbai", description: "Sharjah | Abu Dhabi | Dubai", image: beachImage, duration: "4 Nights 5 Days", groupSize: "Group Tour", rating: "4.9", price: "₹42,000", highlights: ["Sharjah", "Abu Dhabi", "Dubai"], departure: "Mumbai" },
-    { id: 3, cardId: 'dubai', title: "Dubai Group Departure ex Bangalore", description: "Sharjah | Abu Dhabi | Dubai", image: beachImage, duration: "4 Nights 5 Days", groupSize: "Group Tour", rating: "4.9", price: "₹44,000", highlights: ["Sharjah", "Abu Dhabi", "Dubai"], departure: "Bangalore" },
-    { id: 4, cardId: 'europe', title: "Europe Winter Group Departure ex Chennai", description: "Paris | Zurich | Seefeld / Axams | Padova | Arezzo | Rome", image: mountainsImage, duration: "9 Nights 10 Days", groupSize: "Group Tour", rating: "4.8", price: "₹1,25,000", highlights: ["Paris", "Zurich", "Rome"], departure: "Chennai" },
-    { id: 5, cardId: 'europe', title: "Europe Winter Group Departure ex Bangalore", description: "Paris | Zurich | Seefeld / Axams | Padova | Arezzo | Rome", image: mountainsImage, duration: "9 Nights 10 Days", groupSize: "Group Tour", rating: "4.8", price: "₹1,28,000", highlights: ["Paris", "Zurich", "Rome"], departure: "Bangalore" },
-    { id: 6, cardId: 'europe', title: "Europe Summer Group Departure ex Chennai", description: "Paris | Zurich | Seefeld / Axams | Padova | Arezzo | Rome", image: mountainsImage, duration: "9 Nights 10 Days", groupSize: "Group Tour", rating: "4.8", price: "₹1,22,000", highlights: ["Paris", "Zurich", "Rome"], departure: "Chennai" },
-    { id: 7, cardId: 'andaman', title: "Andaman Group Departure ex Chennai", description: "Port Blair | Havelock | Neil Island", image: beachImage, duration: "4 Nights 5 Days", groupSize: "Group Tour", rating: "4.7", price: "₹28,000", highlights: ["Port Blair", "Havelock", "Neil Island"], departure: "Chennai" },
-    { id: 8, cardId: 'thailand', title: "Thailand Group Departure ex Chennai", description: "Bangkok | Pattaya", image: beachImage, duration: "3 Nights 4 Days", groupSize: "Group Tour", rating: "4.8", price: "₹35,000", highlights: ["Bangkok", "Pattaya"], departure: "Chennai" },
-    { id: 9, cardId: 'thailand', title: "Thailand Group Departure ex Mumbai", description: "Bangkok | Phuket", image: beachImage, duration: "4 Nights 5 Days", groupSize: "Group Tour", rating: "4.8", price: "₹38,000", highlights: ["Bangkok", "Phuket"], departure: "Mumbai" },
-    { id: 10, cardId: 'thailand', title: "Thailand Group Departure ex Bangalore", description: "Bangkok | Krabi", image: beachImage, duration: "4 Nights 5 Days", groupSize: "Group Tour", rating: "4.8", price: "₹37,000", highlights: ["Bangkok", "Krabi"], departure: "Bangalore" },
-  ].map(pkg => ({
-    ...pkg,
-    image: imageMap[pkg.image] || pkg.image, // Use imageMap if string, else use direct image
-    destination: pkg.title // Use title as destination
-  }));
+    fetchHoneymoonPackages();
+  }, [API_URL]);
 
   const handleBookNow = () => {
     navigate('/customer-details');
   };
 
-  const handleDetails = (cardId) => {
-    const route = routeMap[cardId];
+  const handleDetails = (place) => {
+    const route = routeMap[place];
     if (route) {
       navigate(route);
     }
@@ -64,6 +77,9 @@ const HoneymoonSection = () => {
   const handleBack = () => {
     navigate(-1);
   };
+
+  if (loading) return <div className="container mx-auto px-4 py-20">Loading honeymoon packages...</div>;
+  if (error) return <div className="container mx-auto px-4 py-20">Error: {error}</div>;
 
   return (
     <section id="honeymoon" className="py-20 bg-gradient-to-br from-rose-50 to-pink-50">
@@ -98,6 +114,7 @@ const HoneymoonSection = () => {
                   src={destination.image}
                   alt={destination.destination}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onError={(e) => { e.target.src = 'https://via.placeholder.com/400'; }}
                 />
                 <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-2 py-1 flex items-center space-x-1">
                   <Star className="h-3 w-3 text-primary fill-current" />
@@ -107,6 +124,7 @@ const HoneymoonSection = () => {
                   <Heart className="h-4 w-4 text-white fill-current" />
                 </div>
                 <div className="absolute bottom-3 left-3 bg-accent/90 backdrop-blur-sm rounded-lg px-2 py-1">
+                  <span className="text-white font-semibold">{destination.price}</span>
                 </div>
               </div>
 
@@ -153,7 +171,7 @@ const HoneymoonSection = () => {
                   <Button
                     variant="outline"
                     className="flex-1 text-xs"
-                    onClick={() => handleDetails(destination.cardId)}
+                    onClick={() => handleDetails(destination.place)}
                   >
                     Details
                   </Button>
@@ -161,6 +179,28 @@ const HoneymoonSection = () => {
               </CardContent>
             </Card>
           ))}
+          {honeymoonDestinations.length === 0 && !loading && (
+            <p className="text-center col-span-full">No honeymoon packages available.</p>
+          )}
+        </div>
+
+        {/* Customer Reviews */}
+        <div className="mt-12 text-center">
+          <h3 className="text-2xl font-bold text-accent mb-4">What Our Travelers Say</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <p className="font-semibold text-accent">Priya Sharma</p>
+              <p className="text-muted-foreground">Amazing travel experience with Amar Tourism!</p>
+            </div>
+            <div>
+              <p className="font-semibold text-accent">Vikram Singh</p>
+              <p className="text-muted-foreground">Best tour packages, highly recommend!</p>
+            </div>
+            <div>
+              <p className="font-semibold text-accent">Anita Desai</p>
+              <p className="text-muted-foreground">Unforgettable trips with great service!</p>
+            </div>
+          </div>
         </div>
 
         {/* Back Button */}
