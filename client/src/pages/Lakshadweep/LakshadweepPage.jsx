@@ -18,7 +18,7 @@ const LakshadweepPage = () => {
       <section>
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Agatti Arrival" />
+          <img src=" /lakshadweep/Agatti.jpg" alt="Agatti Arrival" />
           <div className="day-content">
             <h3>Day 1: Arriving at Agatti & Transfer to Kavaratti</h3>
             <p>On arrival at Agatti airport, our representative will receive you and transfer to Boat jetty point for vessel transfer to Kavaratti Island. On arrival at Kavaratti disembarkation point, our representative will escort you to the Resort. Kavaratti is the Headquarters of the Administration. The beautiful and calm lagoon offers an ideal spot for water sports. Enjoy your day at leisure in the beach resort.</p>
@@ -29,10 +29,10 @@ const LakshadweepPage = () => {
             <h3>Day 2: Kavaratti Island Exploration</h3>
             <p>Morning after breakfast proceed for Village Tour for Kavaratti sightseeing which includes Marine Aquarium, Desalination Plant, Dolphin Dive Center etc. (Own Cost). Later visit Kavaratti beach then back to room and relax. Overnight stay at Kavaratti.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80" alt="Kavaratti Island" />
+          <img src=" /lakshadweep/Kavaratti Island.jpg" alt="Kavaratti Island" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80" alt="Bangaram Island" />
+          <img src=" /lakshadweep/Bangaram Island.jpg" alt="Bangaram Island" />
           <div className="day-content">
             <h3>Day 3: Kavaratti to Bangaram Island</h3>
             <p>After breakfast we will transfer you to the Boat jetty for vessel transfer to Bangaram island. On arrival at Bangaram island walk on the enrapturing sand of Bangaram. Mesmerizing blue sea, silver beaches, crystal clear water, a stretching canopy of palms, glittering coral reefs - everything you expect from a perfect holiday gateway. Enjoy water sports activities, beach games, or simply sunbathe under warm sunrays. Dinner will be served at 8:30 PM.</p>
@@ -43,10 +43,10 @@ const LakshadweepPage = () => {
             <h3>Day 4: Bangaram Island - Thinnakkara Day Trip (Own Cost)</h3>
             <p>Today after breakfast, you can take optional tour to Thinnakkara day visit (Own Cost) or enjoy your day on the beach. Spend time with turtles and enjoy water activities. Return to Bangaram island for overnight stay.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Thinnakkara Island" />
+          <img src=" /lakshadweep/Thinnakkara.jpg" alt="Thinnakkara Island" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800&q=80" alt="Agatti Departure" />
+          <img src=" /lakshadweep/Agatti.jpg" alt="Agatti Departure" />
           <div className="day-content">
             <h3>Day 5: Departing to Agatti Airport with Memories</h3>
             <p>As your final hours approach, it's time to head to the airport. Enjoy the scenic ride through the island, passing by swaying palms, lush greenery, and glimpses of the glistening ocean. Arrive at Agatti Airport with a heart full of memories. As your plane takes off, gaze out the window for one last view of the island's sparkling waters and lush greenery.</p>

@@ -1,13 +1,12 @@
 import React from "react";
-import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import "../../styles/common.css";
 import "./dubai-hero.css";
 import FormFilling from "@/components/FormFilling.jsx";
 
-const DubaiDiscoveryPage  = () => {
+const DubaiDiscoveryPage = () => {
   return (
-   <div className="common-styles">
+    <div className="common-styles">
       <section className="hero-dubai-discovery">
         <h1>Dazzling Dubai Discovery</h1>
         <p>4 Nights / 5 Days - Experience the Magic of Dubai</p>
@@ -18,44 +17,95 @@ const DubaiDiscoveryPage  = () => {
 
       <section>
         <h2>Detailed Day-by-Day Itinerary</h2>
+
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1546412414-e1885e51cefe?auto=format&fit=crop&w=800&q=80" alt="Dubai Arrival" />
+          <img
+            src=" /dubai/dubai.jpeg"
+            alt="Dubai Arrival"
+          />
           <div className="day-content">
             <h3>Day 1: Arrival at Dubai - Dhow Cruise</h3>
-            <p>Welcome to Dubai. Arrive at Dubai airport and transfer to your hotel. On arrival check in to your hotel. In the evening proceed for Dhow Cruise with buffet dinner. Experience cruising on a traditional wooden vessel surrounded by Arabic music and buffet dinner in the heart of Dubai creek. On completion of dinner, transfer to your hotel.</p>
+            <p>
+              Welcome to Dubai. Arrive at Dubai airport and transfer to your
+              hotel. On arrival check in to your hotel. In the evening proceed
+              for Dhow Cruise with buffet dinner. Experience cruising on a
+              traditional wooden vessel surrounded by Arabic music and buffet
+              dinner in the heart of Dubai creek. On completion of dinner,
+              transfer to your hotel.
+            </p>
           </div>
         </div>
+
         <div className="day">
           <div className="day-content">
             <h3>Day 2: Discovering Dubai's Charm</h3>
-            <p>Today you will experience the historic sites and vibrant cosmopolitan life of Dubai on this comprehensive sightseeing tour of the city. Pass by Jumeirah Mosque, stop at Jumeiah Public Beach, passing by Jumeirah Beach Hotel, and stop for photo at Burj Al Arab the most luxurious and tallest standing hotel in the world. Then pass by the Sheikh's Mohamed palace. Ascend the world's tallest building with a visit to "At The Top" – Burj Khalifa during normal hours. (Tickets and transfers included)</p>
+            <p>
+              Today you will experience the historic sites and vibrant
+              cosmopolitan life of Dubai on this comprehensive sightseeing tour
+              of the city. Pass by Jumeirah Mosque, stop at Jumeiah Public
+              Beach, passing by Jumeirah Beach Hotel, and stop for photo at Burj
+              Al Arab the most luxurious and tallest standing hotel in the
+              world. Then pass by the Sheikh's Mohamed palace. Ascend the world's
+              tallest building with a visit to "At The Top" – Burj Khalifa
+              during normal hours. (Tickets and transfers included)
+            </p>
           </div>
-          <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Burj Khalifa" />
+          <img
+            src=" /dubai/1234px-Burj_Khalifa.jpg"
+            alt="Burj Khalifa"
+          />
         </div>
+
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1576866206015-5c7c514c4a09?auto=format&fit=crop&w=800&q=80" alt="Dubai Desert" />
+          <img
+            src=" /dubai/Dunes_in_the_Dubai_Desert_Conservation.jpg"
+            alt="Dubai Desert"
+          />
           <div className="day-content">
             <h3>Day 3: A Blend of Culture and Adventure</h3>
-            <p>Morning: Visit the Dubai Frame, an architectural marvel offering panoramic views of old and modern Dubai. Transfers are included for your convenience. Evening: Embark on a thrilling Desert Safari, complete with dune bashing, cultural performances, and a sumptuous BBQ dinner under the stars.</p>
+            <p>
+              Morning: Visit the Dubai Frame, an architectural marvel offering
+              panoramic views of old and modern Dubai. Transfers are included
+              for your convenience. Evening: Embark on a thrilling Desert Safari,
+              complete with dune bashing, cultural performances, and a sumptuous
+              BBQ dinner under the stars.
+            </p>
           </div>
         </div>
+
         <div className="day">
           <div className="day-content">
             <h3>Day 4: Abu Dhabi City Tour</h3>
-            <p>Visit Sheikh Zayed Grand Mosque – a masterpiece of Islamic architecture. Explore Abu Dhabi's landmarks: Emirates Palace, Corniche, and more. Stop at BAPS Hindu Mandir – a newly opened spiritual site. Return to Dubai for overnight stay.</p>
+            <p>
+              Visit Sheikh Zayed Grand Mosque – a masterpiece of Islamic
+              architecture. Explore Abu Dhabi's landmarks: Emirates Palace,
+              Corniche, and more. Stop at BAPS Hindu Mandir – a newly opened
+              spiritual site. Return to Dubai for overnight stay.
+            </p>
           </div>
-          <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2d7?auto=format&fit=crop&w=800&q=80" alt="Abu Dhabi" />
+          <img
+            src=" /dubai/1024px-Abu_dhabi_skylines_2014.jpg"
+            alt="Abu Dhabi"
+          />
         </div>
+
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1582545380460-2a40e3c91c6f?auto=format&fit=crop&w=800&q=80" alt="Dubai Departure" />
+          <img
+            src=" /dubai/dis.jpeg"
+            alt="Dubai Departure"
+          />
           <div className="day-content">
             <h3>Day 5: Bye Bye Dubai</h3>
-            <p>After a memorable stay, check out from your hotel. A transfer will take you to the airport for your departure, leaving you with wonderful memories of your Dubai adventure.</p>
+            <p>
+              After a memorable stay, check out from your hotel. A transfer will
+              take you to the airport for your departure, leaving you with
+              wonderful memories of your Dubai adventure.
+            </p>
           </div>
         </div>
       </section>
 
-      <section >
+      <section>
         <h2>Package Inclusions & Exclusions</h2>
         <div className="inclusions">
           <div className="included">
@@ -93,21 +143,38 @@ const DubaiDiscoveryPage  = () => {
         <div className="policy-container">
           <div className="policy-box">
             <h3>Payment Policy</h3>
-            <p>• <strong>Deposit:</strong> An initial deposit at the time of booking (typically 10–30% of the total package cost).<br />
-               • <strong>Installments:</strong> Option to pay the remaining balance in one or more installments before departure.<br />
-               • <strong>Full Payment:</strong> Full payment required a certain number of days before the departure date (usually 30–60 days prior).</p>
+            <p>
+              • <strong>Deposit:</strong> An initial deposit at the time of
+              booking (typically 10–30% of the total package cost).<br />
+              • <strong>Installments:</strong> Option to pay the remaining
+              balance in one or more installments before departure.<br />
+              • <strong>Full Payment:</strong> Full payment required a certain
+              number of days before the departure date (usually 30–60 days
+              prior).
+            </p>
           </div>
           <div className="policy-box">
             <h3>Important Notes</h3>
-            <p>• All rates are dynamic and subject to availability at the time of confirmation.<br />
-               • Airport transfers based on DXB airport; supplement charges apply for DWC/SHJ/AUH airports.<br />
-               • Upgraded excursions and Q fast services available at additional cost.<br />
-               • Many UAE hotels require a security deposit during check-in (refundable).<br />
-               • Museum of the Future is subject to availability and requires 100% non-refundable payment in advance.</p>
+            <p>
+              • All rates are dynamic and subject to availability at the time of
+              confirmation.<br />
+              • Airport transfers based on DXB airport; supplement charges apply
+              for DWC/SHJ/AUH airports.<br />
+              • Upgraded excursions and Q fast services available at additional
+              cost.<br />
+              • Many UAE hotels require a security deposit during check-in
+              (refundable).<br />
+              • Museum of the Future is subject to availability and requires
+              100% non-refundable payment in advance.
+            </p>
           </div>
           <div className="policy-box">
             <h3>Optional Add-ons</h3>
-            <p>• <strong>DOLPHINARIUM SHOW:</strong> Additional AED 5 per person, plus park fee to be paid at Creek Park entrance (charge by Dubai Municipality, non-negotiable).</p>
+            <p>
+              • <strong>DOLPHINARIUM SHOW:</strong> Additional AED 5 per person,
+              plus park fee to be paid at Creek Park entrance (charge by Dubai
+              Municipality, non-negotiable).
+            </p>
           </div>
         </div>
       </section>
@@ -118,37 +185,54 @@ const DubaiDiscoveryPage  = () => {
           <div className="tip-box">
             <i className="fas fa-tshirt"></i>
             <h3>Dress Code</h3>
-            <p>While Dubai is modern, it's respectful to dress modestly, especially when visiting religious sites like mosques.</p>
+            <p>
+              While Dubai is modern, it's respectful to dress modestly, especially
+              when visiting religious sites like mosques.
+            </p>
           </div>
           <div className="tip-box">
             <i className="fas fa-sun"></i>
             <h3>Weather</h3>
-            <p>Dubai has a desert climate. Stay hydrated, use sunscreen, and wear light clothing during the day.</p>
+            <p>
+              Dubai has a desert climate. Stay hydrated, use sunscreen, and wear
+              light clothing during the day.
+            </p>
           </div>
           <div className="tip-box">
             <i className="fas fa-money-bill-wave"></i>
             <h3>Currency</h3>
-            <p>Local currency is UAE Dirham (AED). Credit cards are widely accepted, but carry some cash for small purchases.</p>
+            <p>
+              Local currency is UAE Dirham (AED). Credit cards are widely
+              accepted, but carry some cash for small purchases.
+            </p>
           </div>
           <div className="tip-box">
             <i className="fas fa-mosque"></i>
             <h3>Cultural Respect</h3>
-            <p>Public displays of affection are frowned upon. Avoid drinking alcohol in public places outside licensed venues.</p>
+            <p>
+              Public displays of affection are frowned upon. Avoid drinking
+              alcohol in public places outside licensed venues.
+            </p>
           </div>
           <div className="tip-box">
             <i className="fas fa-camera"></i>
             <h3>Photography</h3>
-            <p>Always ask for permission before photographing local people, especially women. Avoid taking pictures of government buildings.</p>
+            <p>
+              Always ask for permission before photographing local people,
+              especially women. Avoid taking pictures of government buildings.
+            </p>
           </div>
         </div>
       </section>
 
       <section className="booking" id="booking">
         <h2>Book Your Dubai Adventure</h2>
-        <p>Fill out the form below, and our travel experts will help customize your vacation.</p>
-         <FormFilling/>   </section>
-
-      
+        <p>
+          Fill out the form below, and our travel experts will help customize
+          your vacation.
+        </p>
+        <FormFilling />
+      </section>
     </div>
   );
 };

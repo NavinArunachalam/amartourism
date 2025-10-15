@@ -19,7 +19,7 @@ const SingaporePage = () => {
       <section>
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&q=80" alt="Singapore Arrival" />
+          <img src=" /Singapore/Singapore.jpg" alt="Singapore Arrival" />
           <div className="day-content">
             <h3>Day 1: Arrival in Singapore and Transfer to Hotel</h3>
             <p>Meet & Greet at the Airport: Our representative will welcome you upon arrival. Private transfer to your hotel. Enjoy a Singapore Panoramic City Tour covering Clarke Quay, Bugis, Arab Street/Kampong Glam, Chinatown, Little India, Merlion Park, Esplanade, and Buddha Temple. Check-in and relax after your journey. Visit Gardens by the Bay: Supertree Grove + Cloud Forest. Experience the stunning light and music show at night. End your day with the Spectra Light & Sound Show.</p>
@@ -30,10 +30,10 @@ const SingaporePage = () => {
             <h3>Day 2: Sentosa Island & Universal Studios</h3>
             <p>Enjoy breakfast at the hotel. Head to Sentosa Island for a tour including entry to Universal Studios Singapore - South Asia's first and only movie theme park featuring six themed zones with thrilling rides, shows, and attractions. End your day with the spectacular Wings of Time light and sound show on the beach.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-15818cca44a6c24c54cf1cbbd8079245?auto=format&fit=crop&w=800&q=80" alt="Sentosa Island" />
+          <img src=" /Singapore/sentosa.jpg" alt="Sentosa Island" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1599640842223-50b5d426b8d9?auto=format&fit=crop&w=800&q=80" alt="Bird Paradise" />
+          <img src=" /Singapore/Birds Paradise.jpg" alt="Bird Paradise" />
           <div className="day-content">
             <h3>Day 3: Birds Paradise & Night Safari</h3>
             <p>Breakfast at the hotel. Visit Birds Paradise to explore exotic bird species and lush greenery. Later, experience the world's first nocturnal zoo at Night Safari with guided tram rides and walking trails.</p>
@@ -44,10 +44,10 @@ const SingaporePage = () => {
             <h3>Day 4: Marine Life & Madame Tussauds</h3>
             <p>Breakfast at the hotel. Visit SEA Aquarium, home to over 800 marine species across different habitats. Then explore Madame Tussauds Singapore, which includes IOS (Images of Singapore) + Boat Ride - an interactive tour through Singapore's cultural and historical highlights.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1591152348787-477b9b201ad7?auto=format&fit=crop&w=800&q=80" alt="SEA Aquarium" />
+          <img src=" /Singapore/Marine Life.jpg" alt="SEA Aquarium" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1582545380460-2a40e3c91c6f?auto=format&fit=crop&w=800&q=80" alt="Singapore Departure" />
+          <img src=" /Singapore/Departure from Singapore.jpg" alt="Singapore Departure" />
           <div className="day-content">
             <h3>Day 5: Departure from Singapore</h3>
             <p>On your last day, enjoy a leisurely breakfast at the hotel. Depending on your flight schedule, you may have some time for last-minute shopping or sightseeing. Our representative will assist with your transfer to Singapore Changi Airport for your departure, marking the end of an unforgettable Singapore getaway.</p>

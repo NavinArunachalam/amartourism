@@ -18,7 +18,7 @@ const AzerbaijanPage = () => {
       <section>
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=800&q=80" alt="Baku Arrival" />
+          <img src="/azerbaijan/baku.jpg" alt="Baku Arrival" />
           <div className="day-content">
             <h3>Day 1: Arrival at Baku</h3>
             <p>Arrive at Heydar Aliyev International Airport, Baku. Meet and greet by our representative. Private transfer to the hotel and check-in. Enjoy the evening at leisure to explore nearby attractions or relax.</p>
@@ -29,10 +29,10 @@ const AzerbaijanPage = () => {
             <h3>Day 2: Baku City Tour</h3>
             <p>Enjoy breakfast at the hotel. Explore the historic heart of Baku at Icherisheher (Old City), including the iconic Maiden Tower and Palace of the Shirvanshahs. Visit Juma Mosque, Heydar Aliyev Centre, Flame Towers, Baku Boulevard, Carpet Museum, Little Venice, Fountain Square & Nizami Street. Evening transfer back to the hotel.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1624444006689-1c5bd4b6fb3e?auto=format&fit=crop&w=800&q=80" alt="Baku City" />
+          <img src="/azerbaijan/BakuAbsheron.jpg" alt="Baku City" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1646817196192-30f3a4d0c433?auto=format&fit=crop&w=800&q=80" alt="Gabala" />
+          <img src="/azerbaijan/gabala.jpg" alt="Gabala" />
           <div className="day-content">
             <h3>Day 3: Gabala Day Tour</h3>
             <p>Enjoy breakfast at the hotel. Transfer to Gabala, a scenic town surrounded by the Caucasus Mountains. Experience the cable car ride at Tufandag Mountain Resort with panoramic views (2 stops included). Visit Nohur Lake and Gabala Waterfalls. Return to Baku in the evening.</p>
@@ -43,10 +43,10 @@ const AzerbaijanPage = () => {
             <h3>Day 4: Gobustan & Absheron Tour</h3>
             <p>After breakfast, visit Gobustan National Park to discover ancient rock carvings (UNESCO World Heritage Site). Explore the Gobustan Museum, witness the unique Mud Volcanoes, visit the Fire Temple (Ateshgah), and see the Burning Mountain (Yanar Dag). Return to the hotel after the tour.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1580548254596-1efd3777a2d3?auto=format&fit=crop&w=800&q=80" alt="Gobustan" />
+          <img src="azerbaijan\gobustan-absheron.jpg" alt="Gobustan" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=800&q=80" alt="Baku Departure" />
+          <img src="azerbaijan/Azerbaijan.jpg" />
           <div className="day-content">
             <h3>Day 5: Departure from Baku</h3>
             <p>Enjoy breakfast at the hotel. Enjoy a shopping tour before checking out. Transfer to Heydar Aliyev International Airport for your departure flight. Bid farewell to Azerbaijan with wonderful memories!</p>

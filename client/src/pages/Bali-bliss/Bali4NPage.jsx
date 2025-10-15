@@ -18,7 +18,7 @@ const Bali4NPage = () => {
       <section>
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=800&q=80" alt="Bali Arrival" />
+          <img src="/bali/bali.jpg" alt="Bali Arrival" />
           <div className="day-content">
             <h3>Day 1: Arrival in Bali</h3>
             <p>Upon arrival at Ngurah Rai International Airport, you'll be greeted with Balinese garlands and a warm welcome. Enjoy a private car transfer to your luxurious hotel, check-in, and relax. Spend the rest of the day relaxing or exploring nearby areas. Return to your hotel to unwind and rest for the next day's adventures.</p>
@@ -29,10 +29,10 @@ const Bali4NPage = () => {
             <h3>Day 2: Adventure & Culture</h3>
             <p>Start your day with a delicious breakfast, blending local and international flavors. Enjoy thrilling water sports at the beach, including 1 round of Banana Boat riding. Visit the iconic Uluwatu Temple for breathtaking ocean views and a chance to watch the Kecak Fire Dance at sunset. Return to your hotel to relax and rest, ready for tomorrow's adventures.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=800&q=80" alt="Uluwatu Temple" />
+          <img src="/bali/culture.jpg" alt="Uluwatu Temple" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1558741961-5cf0f91054a1?auto=format&fit=crop&w=800&q=80" alt="Rice Terraces" />
+          <img src="/bali/explore.jpg" alt="Rice Terraces" />
           <div className="day-content">
             <h3>Day 3: Scenic Bali Exploration</h3>
             <p>Start with a hearty breakfast at your hotel, then explore Bali's famous Rice Terraces. Visit Kintamani for panoramic views of Mount Batur and Lake Batur. Tour a traditional coffee plantation and sample Bali's famous Luwak coffee. Experience the spiritual atmosphere of Tampak Siring Holy Spring Temple. Return to your hotel to relax and reflect on a day of beauty and culture.</p>
@@ -43,10 +43,10 @@ const Bali4NPage = () => {
             <h3>Day 4: Nusa Penida Island Adventure</h3>
             <p>Start with a hearty breakfast at your hotel. Transfer to Sanur Port for your Nusa Penida Island trip by fast boat. Explore Kelingking Beach's stunning cliffs and crystal-clear waters. Visit Angel's Billabong, a natural infinity pool surrounded by dramatic cliffs. Discover Broken Beach, where the sea flows through a natural arch. If time permits, enjoy the pristine beach and clear waters of Crystal Bay. Return to your hotel to relax and reflect on a day of unforgettable sights.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1573767291321-c8afc371e4f5?auto=format&fit=crop&w=800&q=80" alt="Nusa Penida" />
+          <img src="\bali\nusa.jpg" alt="Nusa Penida" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1580548254596-1efd3777f8ef?auto=format&fit=crop&w=800&q=80" alt="Bali Departure" />
+          <img src="\bali\Departure.jpg" alt="Bali Departure" />
           <div className="day-content">
             <h3>Day 5: Departure</h3>
             <p>Enjoy a delightful final breakfast in Bali, soaking in the island's serene atmosphere one last time, before you transfer to Ngurah Rai International Airport for your departure. Carry cherished memories of your Bali adventure as you embark on your journey home.</p>

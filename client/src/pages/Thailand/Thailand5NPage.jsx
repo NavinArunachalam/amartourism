@@ -18,7 +18,7 @@ const Thailand5NPage = () => {
       <section className="itinerary">
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80" alt="" />
+          <img src=" /Pattaya/Pattaya.jpg" alt="" />
           <div className="day-content">
             <h3>Day 1: Arrival & Transfer to Pattaya</h3>
             <p>Arrival at DMK Airport. Transfer to Pattaya, check-in, visit Gems Gallery. Relax at hotel.</p>
@@ -32,7 +32,7 @@ const Thailand5NPage = () => {
           <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1538688423619-a81d3f23454b?auto=format&fit=crop&w=800&q=80" alt="" />
+          <img src=" /Pattaya/Floating Market.jpg" alt="" />
           <div className="day-content">
             <h3>Day 3: Nong Nooch Village & Floating Market</h3>
             <p>Breakfast. Visit Tiger Park, Elephant Show, Thai Cultural Show, tram ride, lunch at Nong Nooch. Visit Floating Market, Big Buddha Temple & Viewpoint. Overnight in Pattaya.</p>
@@ -43,10 +43,10 @@ const Thailand5NPage = () => {
             <h3>Day 4: Sanctuary of Truth</h3>
             <p>Breakfast. Explore the all-wood Sanctuary of Truth. Cultural & spiritual experience by the sea. Return & relax.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1611171719487-dcfca186f2fa?auto=format&fit=crop&w=800&q=80" alt="" />
+          <img src=" /Pattaya/Gopuram_door_panels_of_Sri_Mahamariamman_Koyil_Bangkok.jpg" alt="" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1585996728432-47e810cd7a3c?auto=format&fit=crop&w=800&q=80" alt="" />
+          <img src=" /Pattaya/Temple.jpg" alt="" />
           <div className="day-content">
             <h3>Day 5: Transfer to Bangkok – Temple Tour – Dinner Cruise</h3>
             <p>Breakfast. Transfer to Bangkok. Visit Wat Arun, Wat Pho & Wat Phra Kaew. Evening Chao Phraya Dinner Cruise. Overnight in Bangkok.</p>
@@ -57,7 +57,7 @@ const Thailand5NPage = () => {
             <h3>Day 6: Safari World & Departure</h3>
             <p>Breakfast. Visit Safari World & Marine Park (lunch included). After the tour, proceed to airport for departure.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1611171719487-dcfca186f2fa?auto=format&fit=crop&w=800&q=80" alt="" />
+          <img src=" /Pattaya/Marine Park.jpg" alt="" />
         </div>
       </section>
 

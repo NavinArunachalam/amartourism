@@ -17,7 +17,7 @@ const Thailand4NPage = () => {
       <section className="itinerary">
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80" alt="" />
+          <img src=" /Pattaya/Pattaya.jpg" alt="" />
           <div className="day-content">
             <h3>Day 1: Arrival & Transfer to Pattaya</h3>
             <p>Arrival at DMK Airport. Transfer to Pattaya, visit Gems Gallery, hotel check-in and relax.</p>
@@ -28,10 +28,10 @@ const Thailand4NPage = () => {
             <h3>Day 2: Coral Island & Alcazar Show</h3>
             <p>Breakfast. Speedboat ride to Coral Island with lunch. Evening Alcazar Cabaret Show. Overnight in Pattaya.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="" />
+          <img src=" /Pattaya/Mu_Ko_Ang_Thong,_Islands_in_the_sea_2,_Thailand.jpg" alt="" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1538688423619-a81d3f23454b?auto=format&fit=crop&w=800&q=80" alt="" />
+          <img src=" /Pattaya/Floating Market.jpg" alt="" />
           <div className="day-content">
             <h3>Day 3: Nong Nooch Village & Floating Market</h3>
             <p>Breakfast. Visit Tiger Park, Nong Nooch Village (Elephant Show, Cultural Show, Tram Ride, Lunch). Visit Floating Market, Big Buddha & Pattaya Viewpoint. Overnight in Pattaya.</p>
@@ -42,10 +42,10 @@ const Thailand4NPage = () => {
             <h3>Day 4: Transfer to Bangkok – Safari World</h3>
             <p>Breakfast. Transfer to Bangkok. Visit Safari World & Marine Park, buffet lunch included, River Safari Ride. Return to hotel. Evening free for dinner or night market.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1611171719487-dcfca186f2fa?auto=format&fit=crop&w=800&q=80" alt="" />
+          <img src=" /Pattaya/Bangkok.jpg" alt="" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1585996728432-47e810cd7a3c?auto=format&fit=crop&w=800&q=80" alt="" />
+          <img src=" /Pattaya/Ao_Thong_Nai_Pan,_Koh_Phangan,_Thailand_02-2003.jpg" alt="" />
           <div className="day-content">
             <h3>Day 5: Temple Tour & Departure</h3>
             <p>Breakfast. Temple Tour: Wat Arun, Wat Pho & Wat Phra Kaew. Transfer to airport for departure.</p>

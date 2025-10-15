@@ -19,7 +19,7 @@ const Malaysia5DaysPage = () => {
       <section>
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Kuala Lumpur Arrival" />
+          <img src=" /malaysia/Kuala Lumpur.jpg" alt="Kuala Lumpur Arrival" />
           <div className="day-content">
             <h3>Day 1: Arrival in Kuala Lumpur</h3>
             <p>Meet & greet at the airport by our representative. Visit Putrajaya, known for its stunning architecture and serene environment. Evening tour of Bukit Bintang for shopping & dining. Photo stop at Petronas Twin Towers. Hotel check-in.</p>
@@ -30,10 +30,10 @@ const Malaysia5DaysPage = () => {
             <h3>Day 2: Batu Caves & Genting Highlands</h3>
             <p>Breakfast at hotel. Morning visit to Batu Caves – iconic Hindu shrine. Continue to Genting Highlands with included two-way cable car ride. Enjoy entertainment, shopping, and attractions. Return to Kuala Lumpur. Overnight stay in KL.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1593085512230-2fc90a3ed0f5?auto=format&fit=crop&w=800&q=80" alt="Batu Caves" />
+          <img src=" /malaysia/Batu_Caves_stairs_2022-05.jpg" alt="Batu Caves" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1567007882970-64e320b7c19b?auto=format&fit=crop&w=800&q=80" alt="Kuala Lumpur City" />
+          <img src=" /malaysia/Putrajaya Tour.jpg" alt="Kuala Lumpur City" />
           <div className="day-content">
             <h3>Day 3: Full-Day Kuala Lumpur City Tour</h3>
             <p>Breakfast at hotel. Visit KL highlights: Butterfly Park, National Museum, KLCC Aquarium (tickets included). Explore the cultural and modern attractions of the city. Overnight stay in Kuala Lumpur.</p>
@@ -44,10 +44,10 @@ const Malaysia5DaysPage = () => {
             <h3>Day 4: Malacca Tour with River Cruise</h3>
             <p>Breakfast at hotel. Full-day excursion to Malacca – a UNESCO World Heritage site. Visit historic landmarks and enjoy a relaxing river cruise. Return to Kuala Lumpur for overnight stay.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1598965402089-d8280b4a7ea3?auto=format&fit=crop&w=800&q=80" alt="Malacca River Cruise" />
+          <img src=" /malaysia/Malacca.jpg" alt="Malacca River Cruise" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1611171719487-dcfca186f2fa?auto=format&fit=crop&w=800&q=80" alt="Departure" />
+          <img src=" /malaysia/depature.jpg" alt="Departure" />
           <div className="day-content">
             <h3>Day 5: Departure</h3>
             <p>Breakfast at hotel. Check-out and transfer to airport. Free time for last-minute shopping at Little India before departure.</p>

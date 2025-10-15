@@ -19,7 +19,7 @@ const SriLanka5NPage = () => {
       <section>
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1592386956895-279b27a64173?auto=format&fit=crop&w=800&q=80" alt="Kandy" />
+          <img src=" /srilanka/Kandy.jpg" alt="Kandy" />
           <div className="day-content">
             <h3>Day 1: Airport Pickup – Travel to Kandy (152 Km | 3 hrs 50 mins)</h3>
             <p>Pick up from Airport and travel to Kandy. En route stop at Pinnawala Millennium Elephant Foundation. Attractions include Spice Garden, Gem Museum, Temple of the Tooth, Kandy Lake, Peradeniya Botanical Garden, Batik Factory, Wood Carving Center, and Cultural Dancing Show. Kandy is a major city in the Central Province, the last capital of the Sinhalese monarchy, and home to the sacred Temple of the Tooth Relic (UNESCO World Heritage Site).</p>
@@ -30,10 +30,10 @@ const SriLanka5NPage = () => {
             <h3>Day 2: Kandy to Nuwara Eliya (94 Km | 3 hrs 8 mins)</h3>
             <p>Breakfast at the hotel. Travel from Kandy to Nuwara Eliya. Attractions include Tea Factory, Gregory Lake, Victoria Park, Ramboda Falls, Race Course, and Hanuman Temple. Nuwara Eliya is a city in the hill country at an altitude of 1,868 m, known as "Little England" for its temperate climate and tea plantations. It's the most important location for tea production in Sri Lanka.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1582044013945-acea55a01f08?auto=format&fit=crop&w=800&q=80" alt="Nuwara Eliya" />
+          <img src=" /srilanka/Nuwara Eliya.jpg" alt="Nuwara Eliya" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1596017040014-7b93ff13d1e9?auto=format&fit=crop&w=800&q=80" alt="Ella" />
+          <img src=" /srilanka/Ella.jpg" alt="Ella" />
           <div className="day-content">
             <h3>Day 3: Nuwara Eliya – Ella (Day Excursion)</h3>
             <p>Breakfast at the hotel. Day excursion to Ella. Attractions include Seeta Amman Kovil, Nine Arches Bridge, Waterfalls, and Little Adam's Peak. Ella is a small town in the Badulla District at an elevation of 1,041 meters, surrounded by hills covered with cloud forests and tea plantations. The area has rich biodiversity and offers spectacular views through the Ella Gap. Stay overnight in Nuwara Eliya.</p>
@@ -44,10 +44,10 @@ const SriLanka5NPage = () => {
             <h3>Day 4: Nuwara Eliya – Bentota</h3>
             <p>Breakfast at the hotel. Travel from Nuwara Eliya to Bentota. Stay at Bentota for 2 nights. Attractions include Madu River Boat Safari, Sea Turtle hatchery, Bentota Lake, and Bentota Beach. Bentota is a coastal town in southern Sri Lanka known for its beautiful beaches, water sports, and Ayurvedic treatments. It's located in the Galle District and is a popular tourist destination.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1564419434660-6a0ace6a1f36?auto=format&fit=crop&w=800&q=80" alt="Bentota" />
+          <img src=" /srilanka/Bentota.jpg" alt="Bentota" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1596526131083-e8e7ba6ba302?auto=format&fit=crop&w=800&q=80" alt="Bentota Beach" />
+          <img src=" /srilanka/Bentotabeach.jpg" alt="Bentota Beach" />
           <div className="day-content">
             <h3>Day 5: Bentota Sightseeing</h3>
             <p>Breakfast at the hotel. Full day to explore Bentota's attractions. Enjoy the beautiful beaches, water sports activities, and Ayurvedic treatments. Bentota is known for its pristine coastline and the Bentota River. Overnight stay at Bentota.</p>
@@ -58,7 +58,7 @@ const SriLanka5NPage = () => {
             <h3>Day 6: Bentota to Airport with Colombo City Tour</h3>
             <p>Depending on flight time: Colombo City Tour. Attractions include Beira Lake, Gangarama Temple, Independence Square, Galle Face Green, Viharamahadevi Park, Diyatha Park, Shopping Malls (Marino Mall, One Galle Face, Colombo City Center), and Lotus Tower. Colombo is the executive and judicial capital and largest city of Sri Lanka, a busy and vibrant city with a mixture of modern life and colonial buildings.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1582044013945-acea55a01f08?auto=format&fit=crop&w=800&q=80" alt="Colombo" />
+          <img src=" /srilanka/Bentota.jpg" alt="Colombo" />
         </div>
       </section>
 

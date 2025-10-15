@@ -19,7 +19,7 @@ const JammuKashmirPage = () => {
       <section>
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1591085686350-798fe0f1222b?auto=format&fit=crop&w=800&q=80" alt="Srinagar Arrival" />
+          <img src=" /jammu/srinagar.jpg" alt="Srinagar Arrival" />
           <div className="day-content">
             <h3>Day 1: Srinagar - Arrival and Sightseeing</h3>
             <p>Welcome to Srinagar. Pick up from airport and transfer to hotel. After freshening up, we will visit Mughal Garden - Chashme Shahi, one of the Mughal gardens built in 1632 AD around a spring. Drive along the Lake side on Boulevard. Visit a local Handicrafts Emporium for hand-knotted specialty Silken carpets, shawls, and jewelry ornaments. Overnight stay at Hotel/houseboat.</p>
@@ -30,10 +30,10 @@ const JammuKashmirPage = () => {
             <h3>Day 2: Srinagar to Pahalgam - Day Trip</h3>
             <p>After breakfast, embark on a tour to Pahalgam. Enjoy sightseeing at Avantipora ruins and saffron fields along the way. In Pahalgam, explore places such as Aru, Betaab Valley, and Chandanwari using union cabs at your own expense. Indulge in activities like skiing, golfing, visiting the Lidder Amusement Park, trekking, or whitewater rafting at your own cost. Return to the hotel in Srinagar for an overnight stay.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1580234811494-675e5a4ee7a5?auto=format&fit=crop&w=800&q=80" alt="Pahalgam" />
+          <img src=" /jammu/pahalgam.jpg" alt="Pahalgam" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1588880332079-9c8fea738a47?auto=format&fit=crop&w=800&q=80" alt="Gulmarg" />
+          <img src=" /jammu/gulmarg.jpg" alt="Gulmarg" />
           <div className="day-content">
             <h3>Day 3: Srinagar to Gulmarg - Day Trip</h3>
             <p>After breakfast, drive to Gulmarg (Meadow of Flowers). Enjoy the attractive sceneries of Khilammarg via Gondola ride (Phase I & II) at your own cost. The Gulmarg Gondola is the highest and longest cable car rope-way in the world. Try adventure activities like rock climbing, skiing, and trekking. You can also try golfing at one of the world's largest golf courses, the Royal Spring Golf Course. Return to your hotel by evening and stay overnight in Srinagar.</p>
@@ -44,10 +44,10 @@ const JammuKashmirPage = () => {
             <h3>Day 4: Srinagar to Sonamarg - Day Trip</h3>
             <p>After breakfast, depart for Sonamarg (Meadows of Gold), a hill station situated 90 km north-east of Srinagar. Hire a horse, pony, or union cab at an additional cost to reach Thajiwas Glacier, which is carpeted with snow all year round. Enjoy a pony ride to explore Baltal Valley or Zero Point. Capture memorable photographs of the mesmerizing scenery. Return to Srinagar and stay overnight at the hotel.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1631537565146-14b6e71bdb7f?auto=format&fit=crop&w=800&q=80" alt="Sonamarg" />
+          <img src=" /jammu/sonmarg.jpg" alt="Sonamarg" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1625047509247-4887bb3b77d6?auto=format&fit=crop&w=800&q=80" alt="Doodhpathri" />
+          <img src=" /jammu/doodhpathri.jpg" alt="Doodhpathri" />
           <div className="day-content">
             <h3>Day 5: Srinagar to Doodhpathri - Day Trip</h3>
             <p>After breakfast, proceed towards Doodhpathri (Valley of Milk), one of Kashmir's peaceful and lesser popular places. Enjoy eye-catching meadows spread over a massive land and explore the place on a pony. This place is favorable for older people and children as it's not at high altitude and just 42 km from Srinagar. After spending quality time, head back towards Srinagar for overnight stay.</p>
@@ -58,7 +58,7 @@ const JammuKashmirPage = () => {
             <h3>Day 6: Srinagar - Departure</h3>
             <p>Tour Conclusion: We ensure a punctual transfer for your convenience. Our driver will escort you to the airport, railway station, or bus station for your onward journey to your next destination.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1580234811494-675e5a4ee7a5?auto=format&fit=crop&w=800&q=80" alt="Kashmir Memories" />
+          <img src=" /jammu/depatue.jpg" alt="Kashmir Memories" />
         </div>
       </section>
 

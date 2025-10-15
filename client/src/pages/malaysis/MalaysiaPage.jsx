@@ -19,7 +19,7 @@ const MalaysiaPage = () => {
       <section>
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c2?auto=format&fit=crop&w=800&q=80" alt="Putrajaya" />
+          <img src=" /malaysia/Putrajaya Tour.jpg" alt="Putrajaya" />
           <div className="day-content">
             <h3>Day 1: Arrival – Putrajaya Tour – Kuala Lumpur</h3>
             <p>Meet & greet at Kuala Lumpur Airport. Visit Putrajaya for a panoramic city tour. Transfer to Kuala Lumpur, hotel check-in, and relax. Overnight stay in KL.</p>
@@ -30,10 +30,10 @@ const MalaysiaPage = () => {
             <h3>Day 2: Batu Caves – Genting Highlands</h3>
             <p>After breakfast, proceed to Batu Caves, famous Hindu shrine. Continue to Genting Highlands via cable car. Explore casinos, theme park, and attractions. Return to Kuala Lumpur. Overnight stay in KL.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1593085512230-2fc90a3ed0f5?auto=format&fit=crop&w=800&q=80" alt="Batu Caves" />
+          <img src=" /malaysia/Batu_Caves_stairs_2022-05.jpg" alt="Batu Caves" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80" alt="KL Tower" />
+          <img src=" /malaysia/Kuala Lumpur.jpg" alt="KL Tower" />
           <div className="day-content">
             <h3>Day 3: Kuala Lumpur City Tour & Shopping</h3>
             <p>Breakfast at hotel. Visit KL Tower, King’s Palace, Independence Square, National Mosque, and Petronas Twin Towers (photo stop). Shopping at Times Square. Overnight stay in KL.</p>
@@ -44,7 +44,7 @@ const MalaysiaPage = () => {
             <h3>Day 4: Departure</h3>
             <p>Breakfast & check-out. Free time for shopping at Little India. Transfer to airport for departure flight with unforgettable memories.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1611171719487-dcfca186f2fa?auto=format&fit=crop&w=800&q=80" alt="Malaysia Departure" />
+          <img src=" /malaysia/depature.jpg" alt="Malaysia Departure" />
         </div>
       </section>
 

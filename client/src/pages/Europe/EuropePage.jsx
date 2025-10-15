@@ -1,9 +1,9 @@
 import React from "react";
-import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import "../../styles/common.css";
 import "./europe-hero.css";
 import FormFilling from "@/components/FormFilling.jsx";
+
 const EuropeGlimpsesPage = () => {
   return (
     <div className="common-styles">
@@ -17,67 +17,199 @@ const EuropeGlimpsesPage = () => {
 
       <section>
         <h2>Detailed Day-by-Day Itinerary</h2>
+
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="Paris" />
+          <img
+            src=" /europe/parishome.jpg"
+            alt="Paris"
+          />
           <div className="day-content">
-            <h3>Day 1: Arrival in Paris, the City of Romance, Lights and Glamour - Fri, 24 Oct, 2025</h3>
-            <p>We can't wait to welcome your arrival in Paris, the city of romance and glamour. After going through the immigration process, your guide will be waiting to escort you to the hotel and help with check-in. After check-in, spend your day at your own pace before your overnight in Paris.</p>
+            <h3>
+              Day 1: Arrival in Paris, the City of Romance, Lights and Glamour -
+              Fri, 24 Oct, 2025
+            </h3>
+            <p>
+              We can't wait to welcome your arrival in Paris, the city of romance
+              and glamour. After going through the immigration process, your
+              guide will be waiting to escort you to the hotel and help with
+              check-in. After check-in, spend your day at your own pace before
+              your overnight in Paris.
+            </p>
           </div>
         </div>
+
         <div className="day">
           <div className="day-content">
-            <h3>Day 2: Paris City Tour – Eiffel Tower 2nd Level and Romantic River Seine Cruise - Sat, 25 Oct, 2025</h3>
-            <p>Today we proceed for a guided city tour of Paris. Marvel at the finest Parisian tourist attractions, Place Vendôme, Place de l'Opéra Garnier, Musée d'Orsay, Place de la Concorde, Champs Elysées, one of the most recognised fashionable avenues in the world, Arc de Triomphe, and many others. Next we visit the iconic Eiffel Tower – 2nd Level, and get a stunning view of the city from the top. Then we take a romantic cruise down the river Seine, flanked by exquisite monuments like Notre Dame, Eiffel Tower, Louvre, and many more.</p>
+            <h3>
+              Day 2: Paris City Tour – Eiffel Tower 2nd Level and Romantic River
+              Seine Cruise - Sat, 25 Oct, 2025
+            </h3>
+            <p>
+              Today we proceed for a guided city tour of Paris. Marvel at the
+              finest Parisian tourist attractions, Place Vendôme, Place de
+              l'Opéra Garnier, Musée d'Orsay, Place de la Concorde, Champs
+              Elysées, one of the most recognised fashionable avenues in the
+              world, Arc de Triomphe, and many others. Next we visit the iconic
+              Eiffel Tower – 2nd Level, and get a stunning view of the city from
+              the top. Then we take a romantic cruise down the river Seine,
+              flanked by exquisite monuments like Notre Dame, Eiffel Tower,
+              Louvre, and many more.
+            </p>
           </div>
-          <img src="https://images.unsplash.com/photo-1543349689-9a4d426bee8e?auto=format&fit=crop&w=800&q=80" alt="Eiffel Tower" />
+          <img
+            src=" /europe/paris.jpeg"
+            alt="Eiffel Tower"
+          />
         </div>
+
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1592229505725-c5F54e0D7F5A?auto=format&fit=crop&w=800&q=80" alt="Disneyland Paris" />
+          <img
+            src=" /europe/disney.jpg"
+            alt="Disneyland Paris"
+          />
           <div className="day-content">
-            <h3>Day 3: Full-Day Disneyland® Paris (Optional at extra cost) - Sun, 26 Oct, 2025</h3>
-            <p>This day experience a day full of excitement at the world famous Disneyland Paris (available at extra cost). The destination to relax and enjoy different kind of thrill rides and studio movies with your loved ones. You may choose between Disney Parks, where fairy tales take flight across five incredible lands filled with classic attractions, shows and street parades with Disney Characters OR you may visit the Walt Disney Studios Park.</p>
+            <h3>
+              Day 3: Full-Day Disneyland® Paris (Optional at extra cost) - Sun,
+              26 Oct, 2025
+            </h3>
+            <p>
+              This day experience a day full of excitement at the world famous
+              Disneyland Paris (available at extra cost). The destination to
+              relax and enjoy different kind of thrill rides and studio movies
+              with your loved ones. You may choose between Disney Parks, where
+              fairy tales take flight across five incredible lands filled with
+              classic attractions, shows and street parades with Disney
+              Characters OR you may visit the Walt Disney Studios Park.
+            </p>
           </div>
         </div>
+
         <div className="day">
           <div className="day-content">
-            <h3>Day 4: Transfer from Paris to Amsterdam via Brussels - Mon, 27 Oct, 2025</h3>
-            <p>Enjoy your breakfast today before we head out. We're going to Brussels today, the capital of Belgium best known for the waffles and French Fries! We're going to visit one of Europe's most beautiful squares, the Grand Place which is where you can find the historic medieval Town Hall. Not far is where you can find the Manneken Pis statue which is another iconic landmark. We continue driving and past by St. Michael's Church before temporarily stopping at the Atomium for pictures.</p>
+            <h3>
+              Day 4: Transfer from Paris to Amsterdam via Brussels - Mon, 27
+              Oct, 2025
+            </h3>
+            <p>
+              Enjoy your breakfast today before we head out. We're going to
+              Brussels today, the capital of Belgium best known for the waffles
+              and French Fries! We're going to visit one of Europe's most
+              beautiful squares, the Grand Place which is where you can find the
+              historic medieval Town Hall. Not far is where you can find the
+              Manneken Pis statue which is another iconic landmark. We continue
+              driving and past by St. Michael's Church before temporarily
+              stopping at the Atomium for pictures.
+            </p>
           </div>
-          <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=800&q=80" alt="Amsterdam" />
+          <img
+            src=" /europe/amar.jpg"
+            alt="Amsterdam"
+          />
         </div>
+
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=800&q=80" alt="Keukenhof Gardens" />
+          <img
+            src=" /europe/Keukenhof Gardens.jpg"
+            alt="Keukenhof Gardens"
+          />
           <div className="day-content">
-            <h3>Day 5: Explore Amsterdam With Canal Cruise – Visit Keukenhof Gardens or Zaanse Schans - Tue, 28 Oct, 2025</h3>
-            <p>We'll go check out the Keukenhof Gardens which is where you can see gorgeous blooming tulips, daffodils, and hyacinths. From 13th May onwards we will venture out to the famous little village of Zaanse Schans. Explore this unique historical town with its majestic windmills and wooden houses. Visit a clog maker and observe how the famous Dutch wooden shoe is made. Board a glass-topped boat to experience the best of this historical city. We then drive towards Cologne to visit the Cologne Cathedral.</p>
+            <h3>
+              Day 5: Explore Amsterdam With Canal Cruise – Visit Keukenhof
+              Gardens or Zaanse Schans - Tue, 28 Oct, 2025
+            </h3>
+            <p>
+              We'll go check out the Keukenhof Gardens which is where you can see
+              gorgeous blooming tulips, daffodils, and hyacinths. From 13th May
+              onwards we will venture out to the famous little village of Zaanse
+              Schans. Explore this unique historical town with its majestic
+              windmills and wooden houses. Visit a clog maker and observe how
+              the famous Dutch wooden shoe is made. Board a glass-topped boat to
+              experience the best of this historical city. We then drive towards
+              Cologne to visit the Cologne Cathedral.
+            </p>
           </div>
         </div>
+
         <div className="day">
           <div className="day-content">
-            <h3>Day 6: Travel To The Black Forest And Visit Rhine Falls - Wed, 29 Oct, 2025</h3>
-            <p>After a delightful breakfast at the hotel, we're going to check-out and head into the Black Forest, a truly breathtaking forest of pines and firs. Watch the local craftsmen working on their cuckoo clocks. We'll continue driving to Switzerland with a stop at Schaffhausen that's best known as where you can see Europe's biggest falls, the Rhine Falls. The sheer size and powerful current will make this an unforgettable sight as you make your way to the hotel for check-in.</p>
+            <h3>
+              Day 6: Travel To The Black Forest And Visit Rhine Falls - Wed, 29
+              Oct, 2025
+            </h3>
+            <p>
+              After a delightful breakfast at the hotel, we're going to check-out
+              and head into the Black Forest, a truly breathtaking forest of pines
+              and firs. Watch the local craftsmen working on their cuckoo clocks.
+              We'll continue driving to Switzerland with a stop at Schaffhausen
+              that's best known as where you can see Europe's biggest falls, the
+              Rhine Falls. The sheer size and powerful current will make this an
+              unforgettable sight as you make your way to the hotel for check-in.
+            </p>
           </div>
-          <img src="https://images.unsplash.com/photo-1594736797936-d0b9f50f7f4d?auto=format&fit=crop&w=800&q=80" alt="Rhine Falls" />
+          <img
+            src=" /europe/The Black Forest.jpg"
+            alt="Rhine Falls"
+          />
         </div>
+
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1598880799703-eb8c92a4691f?auto=format&fit=crop&w=800&q=80" alt="Jungfraujoch" />
+          <img
+            src=" /europe/magical.jpg"
+            alt="Jungfraujoch"
+          />
           <div className="day-content">
-            <h3>Day 7: Magical Alpine Excursion to Jungfraujoch – The Top of Europe (Extra Cost) - Thu, 30 Oct, 2025</h3>
-            <p>Get set for a memorable magical alpine excursion to Jungfraujoch – The Top of Europe, a high-point of your tour (available at extra cost). First we proceed to Grindelwald Terminal. The new 3S-Bahn Eiger Express takes you to the Eigergletscher station in just 15 minutes. There you board a cogwheel train to reach the highest railway station in Europe at 11,333 feet – a world of eternal ice and snow. Visit the Ice Palace and the Sphinx observatory deck for breath-taking panoramic views.</p>
+            <h3>
+              Day 7: Magical Alpine Excursion to Jungfraujoch – The Top of
+              Europe (Extra Cost) - Thu, 30 Oct, 2025
+            </h3>
+            <p>
+              Get set for a memorable magical alpine excursion to Jungfraujoch –
+              The Top of Europe, a high-point of your tour (available at extra
+              cost). First we proceed to Grindelwald Terminal. The new 3S-Bahn
+              Eiger Express takes you to the Eigergletscher station in just 15
+              minutes. There you board a cogwheel train to reach the highest
+              railway station in Europe at 11,333 feet – a world of eternal ice
+              and snow. Visit the Ice Palace and the Sphinx observatory deck for
+              breath-taking panoramic views.
+            </p>
           </div>
         </div>
+
         <div className="day">
           <div className="day-content">
-            <h3>Day 8: Mt. Titlis with Rotating Cable Car & Lucerne Orientation Tour - Fri, 31 Oct, 2025</h3>
-            <p>Today our day starts by heading to the small and beautiful town of Engelberg. Enjoy amazing scenery with an exhilarating trip to the top of Mt Titlis at 3020 meters on various cable cars including Rotair, the world's first revolving cable car. Get a breath taking unrestricted 360 degrees stunning view of the dazzling snow caped peaks. Visit the "Cliff Walk" the highest suspension bridge in Europe. Later proceed on an orientation tour of Lucerne one of most beautiful cities in Switzerland.</p>
+            <h3>
+              Day 8: Mt. Titlis with Rotating Cable Car & Lucerne Orientation
+              Tour - Fri, 31 Oct, 2025
+            </h3>
+            <p>
+              Today our day starts by heading to the small and beautiful town of
+              Engelberg. Enjoy amazing scenery with an exhilarating trip to the
+              top of Mt Titlis at 3020 meters on various cable cars including
+              Rotair, the world's first revolving cable car. Get a breath taking
+              unrestricted 360 degrees stunning view of the dazzling snow caped
+              peaks. Visit the "Cliff Walk" the highest suspension bridge in
+              Europe. Later proceed on an orientation tour of Lucerne one of most
+              beautiful cities in Switzerland.
+            </p>
           </div>
-          <img src="https://images.unsplash.com/photo-1578662996448-3a300e7c7d8a?auto=format&fit=crop&w=800&q=80" alt="Mt. Titlis" />
+          <img
+            src=" /europe/Titlis with Rotating Cable Car.jpg"
+            alt="Mt. Titlis"
+          />
         </div>
+
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="Departure" />
+          <img
+            src=" /europe/depature.jpeg"
+            alt="Departure"
+          />
           <div className="day-content">
             <h3>Day 9: Departure - Sat, 01 Nov, 2025</h3>
-            <p>Enjoy your breakfast at the hotel before we check-out. Then we'll drop you at the airport for your scheduled departure back home with wonderful memories of your European adventure.</p>
+            <p>
+              Enjoy your breakfast at the hotel before we check-out. Then we'll
+              drop you at the airport for your scheduled departure back home with
+              wonderful memories of your European adventure.
+            </p>
           </div>
         </div>
       </section>
@@ -129,37 +261,58 @@ const EuropeGlimpsesPage = () => {
           <div className="tip-box">
             <i className="fas fa-money-bill-wave"></i>
             <h3>Currency</h3>
-            <p>France: Euro (EUR), Netherlands: Euro (EUR), Germany: Euro (EUR), Switzerland: Swiss Franc (CHF). Credit cards widely accepted but carry some cash.</p>
+            <p>
+              France: Euro (EUR), Netherlands: Euro (EUR), Germany: Euro (EUR),
+              Switzerland: Swiss Franc (CHF). Credit cards widely accepted but
+              carry some cash.
+            </p>
           </div>
           <div className="tip-box">
             <i className="fas fa-cloud-sun-rain"></i>
             <h3>Weather</h3>
-            <p>October offers pleasant autumn weather. Pack layers - warm clothing for cooler evenings, lighter options for daytime. Rain jacket recommended.</p>
+            <p>
+              October offers pleasant autumn weather. Pack layers - warm
+              clothing for cooler evenings, lighter options for daytime. Rain
+              jacket recommended.
+            </p>
           </div>
           <div className="tip-box">
             <i className="fas fa-plug"></i>
             <h3>Power Plugs</h3>
-            <p>Type C, E, F plugs (230V). Carry a universal adapter. Outlets may differ slightly between countries.</p>
+            <p>
+              Type C, E, F plugs (230V). Carry a universal adapter. Outlets may
+              differ slightly between countries.
+            </p>
           </div>
           <div className="tip-box">
             <i className="fas fa-users"></i>
             <h3>Cultural Etiquette</h3>
-            <p>Punctuality is valued. Tipping is expected - €3 per person per day for tour manager and driver. Respect local customs and queue orderly.</p>
+            <p>
+              Punctuality is valued. Tipping is expected - €3 per person per day
+              for tour manager and driver. Respect local customs and queue
+              orderly.
+            </p>
           </div>
           <div className="tip-box">
             <i className="fas fa-shield-alt"></i>
             <h3>Safety</h3>
-            <p>Europe is generally safe but be vigilant in tourist areas for pickpockets. Keep valuables secure and be aware of your surroundings.</p>
+            <p>
+              Europe is generally safe but be vigilant in tourist areas for
+              pickpockets. Keep valuables secure and be aware of your
+              surroundings.
+            </p>
           </div>
         </div>
       </section>
 
       <section className="booking" id="booking">
         <h2>Book Your Unforgettable Journey</h2>
-        <p>Fill out the form below, and our travel experts will help customize your vacation.</p>
-        <FormFilling />         </section>
-
-
+        <p>
+          Fill out the form below, and our travel experts will help customize
+          your vacation.
+        </p>
+        <FormFilling />
+      </section>
     </div>
   );
 };

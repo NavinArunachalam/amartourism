@@ -19,7 +19,7 @@ const MunnarPage = () => {
       <section>
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1588666309995-63aae5a1c4c4?auto=format&fit=crop&w=800&q=80" alt="Cochin Arrival" />
+          <img src=" /munnar/Kochi Drop.jpg" alt="Cochin Arrival" />
           <div className="day-content">
             <h3>Day 1: Cochin Arrival and Munnar Transfer (Approx. 140 km / 4 hours)</h3>
             <p>Upon your arrival at Cochin International Airport or Ernakulam Railway Station, you'll be met by our representative. Depart for Munnar, a scenic hill station in Kerala. En route, stop at Cheyappara and Valara Waterfalls for picturesque views. Arrive in Munnar and check into your hotel. Spend the evening at leisure, exploring local markets or relaxing at your hotel.</p>
@@ -30,10 +30,10 @@ const MunnarPage = () => {
             <h3>Day 2: Munnar Sightseeing</h3>
             <p>Enjoy breakfast at the hotel. Visit Eravikulam National Park, home to the endangered Nilgiri Tahr and lush greenery. Explore Mattupetty Dam and take a boat ride amidst serene surroundings. Visit Echo Point, known for its scenic views and natural echo phenomenon. Explore Kundala Lake and enjoy a scenic pedal boat ride. Return to your hotel in Munnar.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1627988884864-30ffc299f930?auto=format&fit=crop&w=800&q=80" alt="Munnar Sightseeing" />
+          <img src=" /munnar/munnarsight.jpg" alt="Munnar Sightseeing" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1627988884988-746b153b4c3c?auto=format&fit=crop&w=800&q=80" alt="Alleppey Houseboat" />
+          <img src=" /munnar/Alleppey.jpg" alt="Alleppey Houseboat" />
           <div className="day-content">
             <h3>Day 3: Munnar to Alleppey Houseboat (Approx. 180 km / 5 hours)</h3>
             <p>After breakfast, check out from your hotel in Munnar. Depart for Alleppey, renowned for its backwaters and houseboat cruises. Arrive in Alleppey and board your traditional Kerala houseboat. Cruise through serene backwaters, witnessing the beautiful landscape. Enjoy delicious lunch and relax onboard. Experience magical sunset over the backwaters. Enjoy delicious dinner on the houseboat.</p>
@@ -44,7 +44,7 @@ const MunnarPage = () => {
             <h3>Day 4: Alleppey to Kochi Drop (Approx. 80 km / 2.5 hours)</h3>
             <p>After breakfast on the houseboat, disembark and check out. Depart for Kochi, approximately 80 kilometers away (about 2.5 hours). Drop off at Kochi Airport or your preferred location in Kochi for your onward journey, with beautiful memories of Kerala's paradise.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1627988884988-746b153b4c3c?auto=format&fit=crop&w=800&q=80" alt="Kochi Departure" />
+          <img src=" /munnar/Kochi Drop.jpg" alt="Kochi Departure" />
         </div>
       </section>
 

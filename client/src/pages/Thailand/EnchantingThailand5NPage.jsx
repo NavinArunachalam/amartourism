@@ -19,7 +19,7 @@ const EnchantingThailand5NPage = () => {
       <section>
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80" alt="Phuket Arrival" />
+          <img src=" /Pattaya/Pattaya.jpg" alt="Phuket Arrival" />
           <div className="day-content">
             <h3>Day 1: Arrival in Phuket & City Tour</h3>
             <p>Meet & greet at Phuket Airport. Private transfer to hotel and check-in. Evening leisure. Visit Karon View Point, Tiger Park (transfer only), Wat Chalong Temple, Phuket Old Town, Gems Gallery. Return to hotel.</p>
@@ -30,10 +30,10 @@ const EnchantingThailand5NPage = () => {
             <h3>Day 2: Phuket City Tour (Private – 6 Hours)</h3>
             <p>Enjoy breakfast at hotel. Full Phuket City Tour on a private basis with scenic viewpoints, temples, and cultural highlights. Evening free for leisure.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1538688423619-a81d3f23454b?auto=format&fit=crop&w=800&q=80" alt="Phuket City" />
+          <img src=" /Pattaya/Ao_Thong_Nai_Pan,_Koh_Phangan,_Thailand_02-2003.jpg" alt="Phuket City" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Phi Phi Island" />
+          <img src=" /Pattaya/1024px-Koh_Phi_Phi_lagoon_(2007-03-037)_(706045272).jpg" alt="Phi Phi Island" />
           <div className="day-content">
             <h3>Day 3: Phi Phi Island Tour by Speed Boat</h3>
             <p>Full-day Phi Phi Island tour by speed boat (SIC). Includes snorkeling, national park fees, and lunch. Return to hotel and overnight stay in Phuket.</p>
@@ -44,10 +44,10 @@ const EnchantingThailand5NPage = () => {
             <h3>Day 4: Phuket to Bangkok + En Route Temple Tour</h3>
             <p>Breakfast & checkout from hotel. Private transfer to Phuket Airport. Flight to Bangkok. En-route visit to Mini Reclining Buddha Temple & Golden Buddha Temple. Check-in at Bangkok hotel. Evening leisure.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1611171719487-dcfca186f2fa?auto=format&fit=crop&w=800&q=80" alt="Bangkok Temple" />
+          <img src=" /Pattaya/Temple.jpg" alt="Bangkok Temple" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1611171719487-dcfca186f2fa?auto=format&fit=crop&w=800&q=80" alt="Safari World" />
+          <img src=" /Pattaya/Marine Park.jpg" alt="Safari World" />
           <div className="day-content">
             <h3>Day 5: Safari World & Marine Park</h3>
             <p>Breakfast at hotel. Visit Safari World & Marine Park (SIC). Includes wildlife safari, marine shows, and buffet lunch. Evening free in Bangkok.</p>
@@ -58,7 +58,7 @@ const EnchantingThailand5NPage = () => {
             <h3>Day 6: Departure</h3>
             <p>Breakfast at hotel. Day free at leisure until transfer to Bangkok Airport for departure.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1538688423619-a81d3f23454b?auto=format&fit=crop&w=800&q=80" alt="Departure" />
+          <img src="/Pattaya/Pattaya.jpg" alt="Departure" />
         </div>
       </section>
 

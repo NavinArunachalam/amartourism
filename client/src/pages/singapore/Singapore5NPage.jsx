@@ -19,7 +19,7 @@ const Singapore5NPage = () => {
       <section>
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1582545380460-2a40e3c91c6f?auto=format&fit=crop&w=800&q=80" alt="Singapore Arrival" />
+          <img src=" /Singapore/Singapore.jpg" alt="Singapore Arrival" />
           <div className="day-content">
             <h3>Day 1: Arrival in Singapore and Night Safari</h3>
             <p>Upon arrival at Singapore Changi Airport, you will be warmly welcomed by our representative who will assist with your transfer to your hotel. After checking in and freshening up, enjoy lunch at a local restaurant. Spend the afternoon at leisure. In the evening, head out for the famous Night Safari, the world's first nocturnal zoo. Experience the thrill of seeing animals in their natural habitat during the night and enjoy a guided tram ride that takes you across the various geographical zones of the world.</p>
@@ -30,10 +30,10 @@ const Singapore5NPage = () => {
             <h3>Day 2: Sentosa Island Adventure</h3>
             <p>Start your day with a delicious breakfast at the hotel before heading out to Sentosa Island. Enjoy a scenic cable car ride to the island and spend the day exploring its various attractions. Visit Universal Studios Singapore for thrilling rides and shows, or relax on the beautiful beaches. Don't miss the SEA Aquarium, one of the world's largest, and the Adventure Cove Waterpark for water rides and encounters with marine life. After a full day of adventure, enjoy dinner at a local restaurant on Sentosa.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1582578492419-50ad2e3b53c3?auto=format&fit=crop&w=800&q=80" alt="Sentosa Island" />
+          <img src=" /Singapore/sentosa.jpg" alt="Sentosa Island" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1599640842223-50b5d426b8d9?auto=format&fit=crop&w=800&q=80" alt="Gardens by the Bay" />
+          <img src=" /Singapore/Gardens by the Bay.jpg" alt="Gardens by the Bay" />
           <div className="day-content">
             <h3>Day 3: Gardens by the Bay and Marina Bay Sands</h3>
             <p>After breakfast at the hotel, head to the iconic Gardens by the Bay. Explore the stunning Flower Dome, Cloud Forest, and the towering Supertree Grove. Enjoy a light lunch at the Gardens before visiting the nearby Marina Bay Sands. Take a stroll along the Marina Bay Waterfront Promenade and visit the ArtScience Museum for interactive exhibits. In the evening, ascend to the Marina Bay Sands SkyPark Observation Deck for breathtaking views of the Singapore skyline. End your day with a delicious dinner at one of the many restaurants at Marina Bay Sands.</p>
@@ -44,10 +44,10 @@ const Singapore5NPage = () => {
             <h3>Day 4: Cultural and Historical Exploration</h3>
             <p>Begin your day with a hearty breakfast at the hotel, followed by a cultural exploration of Singapore. Visit Chinatown to explore the bustling markets and historic temples, such as the Buddha Tooth Relic Temple. Continue to Little India, where you can experience the vibrant colors, sounds, and scents of this cultural enclave. Have lunch at a traditional Indian restaurant. In the afternoon, head to Kampong Glam, home to the Sultan Mosque and a variety of boutique shops and cafes.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1591152348787-477b9b201ad7?auto=format&fit=crop&w=800&q=80" alt="Cultural Singapore" />
+          <img src=" /Singapore/Marine Life.jpg" alt="Cultural Singapore" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1565967521577-e4d2f472fb5e?auto=format&fit=crop&w=800&q=80" alt="Singapore Zoo" />
+          <img src=" /Singapore/Birds Paradise.jpg" alt="Singapore Zoo" />
           <div className="day-content">
             <h3>Day 5: Adventure and Shopping Extravaganza</h3>
             <p>Enjoy breakfast at the hotel before setting out for a day of adventure and shopping. Start your day at Singapore Zoo, renowned for its 'open concept' allowing visitors to experience animals up close in naturalistic settings. Continue to the River Safari for a unique experience of wildlife along the world's iconic rivers. After lunch, head to Orchard Road, Singapore's famous shopping district, for an afternoon of shopping. Explore the wide range of malls and boutiques. In the evening, enjoy a farewell dinner at a fine dining restaurant.</p>
@@ -58,7 +58,7 @@ const Singapore5NPage = () => {
             <h3>Day 6: Departure from Singapore</h3>
             <p>On your last day, enjoy a leisurely breakfast at the hotel. Depending on your flight schedule, you may have some time for last-minute shopping or sightseeing. Our representative will assist with your transfer to Singapore Changi Airport for your departure, marking the end of an unforgettable Singapore getaway.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&q=80" alt="Singapore Departure" />
+          <img src=" /Singapore/Departure from Singapore.jpg" alt="Singapore Departure" />
         </div>
       </section>
 

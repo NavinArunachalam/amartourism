@@ -1,7 +1,7 @@
 .hero-andaman {
   width: 100%;
   height: 100vh;
-  background: url('https://images.unsplash.com/photo-1580548254596-1efd3777f8ef?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+  background: url('/andaman/andamanhero.jpg') no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,22 +41,28 @@
 /* Media query for mobile view (412px and above) */
 @media screen and (min-width: 412px) and (max-width: 768px) {
   .hero-andaman {
-    padding: 0 15px; /* Slightly reduce padding for smaller screens */
-    height: 80vh; /* Reduce height to avoid excessive scrolling */
+    padding: 0 15px;
+    /* Slightly reduce padding for smaller screens */
+    height: 80vh;
+    /* Reduce height to avoid excessive scrolling */
   }
 
   .hero-andaman h1 {
-    font-size: 32px; /* Smaller heading for better fit */
+    font-size: 32px;
+    /* Smaller heading for better fit */
     margin-bottom: 12px;
   }
 
   .hero-andaman p {
-    font-size: 16px; /* Slightly smaller paragraph text */
+    font-size: 16px;
+    /* Slightly smaller paragraph text */
     margin-bottom: 20px;
   }
 
   .hero-andaman .btn {
-    padding: 10px 20px; /* Smaller button padding */
-    font-size: 14px; /* Smaller button text */
+    padding: 10px 20px;
+    /* Smaller button padding */
+    font-size: 14px;
+    /* Smaller button text */
   }
 }

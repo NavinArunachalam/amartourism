@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import styles from './PackageHero.module.css';
+import { Link } from 'react-router-dom';
 
 const slides = [
   {
@@ -15,7 +16,7 @@ const slides = [
     t1: 'OVERWATER',
     t2: 'VILLAS',
     desc: 'Experience luxury and serenity in the Maldives, with crystal-clear waters and breathtaking overwater villas.',
-    img: 'https://images.unsplash.com/photo-1563492065599-3520f775eeed?auto=format&fit=crop&w=1600&q=80',
+    img: '',
   },
 ];
 
@@ -77,10 +78,9 @@ const PackageHero = () => {
         </div>
         <p className={styles.desc}>{slides[idx].desc}</p>
         <div className={styles.cta}>
-          <button className={styles.btn}>Bookmark</button>
-          <button className={`${styles.btn} ${styles.accent}`}>
-            Discover Location
-          </button>
+        <Link to = "/customer-details">
+          <button className={styles.btn}>BookNow</button>
+         </Link> 
         </div>
       </section>
 

@@ -18,7 +18,7 @@ const EnchantingVietnam5N6DPage = () => {
       <section>
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=800&q=80" alt="Hanoi Arrival" />
+          <img src="/vitenam/Hanoi.jpg" alt="Hanoi Arrival" />
           <div className="day-content">
             <h3>Day 1: Hanoi Arrival</h3>
             <p>
@@ -33,10 +33,10 @@ const EnchantingVietnam5N6DPage = () => {
               Morning departure for a 180 km drive to Halong Bay (UNESCO World Heritage Site). On arrival, we will board our private boat and start 4-hour cruising while having lunch. Our cruise will pass through the Islet of Rocky Dog, Incense Burner, and Fighting Cock. Dock at Heavenly Palace Cave, one of the most beautiful caves for 45-minute visit before returning to our cruise and heading back to the pier. Overnight in Halong Bay Cruise.
             </p>
           </div>
-          <img src="https://images.unsplash.com/photo-1575381812281-e2986e35bfc7?auto=format&fit=crop&w=800&q=80" alt="Halong Bay" />
+          <img src="/vitenam/Halong Bay.jpg" alt="Halong Bay" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1596466131083-e8e7ba6ba302?auto=format&fit=crop&w=800&q=80" alt="Halong Bay Cruise" />
+          <img src="/vitenam/Halong Bay.jpg" alt="Halong Bay Cruise" />
           <div className="day-content">
             <h3>Day 3: Halong Bay Cruise</h3>
             <p>
@@ -51,10 +51,10 @@ const EnchantingVietnam5N6DPage = () => {
               Breakfast at Hotel then check out and transfer to airport. Arrival in Danang; meet your guide and transfer to the hotel for check-in. City Tour: Visit Son Tra Peninsula and Linh Ung Pagoda. Admire the Lady Buddha Statue, the tallest in Vietnam. Enjoy views of the city, mountains, and ocean. Evening free to explore Danang's beach on your own. Overnight: Danang.
             </p>
           </div>
-          <img src="https://images.unsplash.com/photo-1596526131083-e8e7ba6ba302?auto=format&fit=crop&w=800&q=80" alt="Danang" />
+          <img src=" /vitenam/Danang.jpg" alt="Danang" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1549482199-b6c4d5a1c48a?auto=format&fit=crop&w=800&q=80" alt="Golden Bridge" />
+          <img src=" /vitenam/960px-Golden_Gate_Bridge_as_seen_from_Battery_East.jpg" alt="Golden Bridge" />
           <div className="day-content">
             <h3>Day 5: Danang – Ba Na Hills – Golden Bridge</h3>
             <p>Breakfast at the hotel. Drive to Sun World Ba Na Hills for a full day of entertainment. Take a cable car up the Truong Son Mountains. Visit the iconic Golden Bridge. Explore Le Jardin Garden and French Village. Overnight: Danang.</p>

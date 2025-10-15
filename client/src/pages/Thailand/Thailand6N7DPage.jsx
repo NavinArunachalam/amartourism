@@ -77,7 +77,7 @@ const Thailand6N7DPage = () => {
       <section className="itinerary">
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80" alt="Bangkok Airport" />
+          <img src=" /Pattaya/Pattaya.jpg" alt="Bangkok Airport" />
           <div className="day-content">
             <h3>Day 1: Arrival at Phuket Airport - Transfer to krabi Hotel</h3>
             <p>
@@ -92,10 +92,10 @@ const Thailand6N7DPage = () => {
               Breakfast at hotel, Check-out from Krabi Hotel (luggage stored at lobby). 04 Island Tour by Longtail Boat with Lunch – SIC Basis (National Park Fee Included). Return to hotel, collect luggage. Private transfer to Phuket Hotel Check-in and overnight stay in Phuket.
             </p>
           </div>
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Coral Island" />
+          <img src=" /Pattaya/West_coast_of_Koh_Tarutao.jpg" alt="Coral Island" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1538688423619-a81d3f23454b?auto=format&fit=crop&w=800&q=80" alt="Nong Nooch Garden" />
+          <img src=" /Pattaya/1024px-Koh_Phi_Phi_lagoon_(2007-03-037)_(706045272).jpg" alt="Nong Nooch Garden" />
           <div className="day-content">
             <h3>Day 3: Phi Phi Island Tour</h3>
             <p>Breakfast at hotel. Phi Phi Island Tour by Speed Boat – SIC Basis. Includes Lunch, National Park Fee & Snorkeling. Return to hotel. Overnight stay in Phuke.</p>
@@ -108,10 +108,10 @@ const Thailand6N7DPage = () => {
               Breakfast at hotel. Check-out from hotel. 06-Hour Phuket City Tour – Private Basis: Karon View Point, Tiger Park, Wat Chalong Temple, Phuket Old Town, Gems Gallery, Transfer to Phuket Airport (HKT), Flight to Don Mueang Airport (DMK), Bangkok. Private transfer to Pattaya Hotel. Check-in and overnight stay in Pattaya.
             </p>
           </div>
-          <img src="https://images.unsplash.com/photo-1611171719487-dcfca186f2fa?auto=format&fit=crop&w=800&q=80" alt="Safari World" />
+          <img src=" /Pattaya/Ao_Thong_Nai_Pan,_Koh_Phangan,_Thailand_02-2003.jpg" alt="Safari World" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1538688423619-a81d3f23454b?auto=format&fit=crop&w=800&q=80" alt="Nong Nooch Garden" />
+          <img src=" /Pattaya/Mu_Ko_Ang_Thong,_Islands_in_the_sea_2,_Thailand.jpg" alt="Nong Nooch Garden" />
           <div className="day-content">
             <h3>Day 5: Pattaya City Tour</h3>
             <p>
@@ -126,10 +126,10 @@ const Thailand6N7DPage = () => {
               Breakfast at hotel. Check-out from Pattaya Hotel. Transfer to Bangkok Hotel Safari World & Marine Park with Lunch – Private Basis (Note: Marine Park is closed on Mondays). Transfer to Bangkok Hotel. Check-in and overnight stay in Bangkok.
             </p>
           </div>
-          <img src="https://images.unsplash.com/photo-1611171719487-dcfca186f2fa?auto=format&fit=crop&w=800&q=80" alt="Safari World" />
+          <img src=" /Pattaya/Bangkok.jpg" alt="Safari World" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1538688423619-a81d3f23454b?auto=format&fit=crop&w=800&q=80" alt="Nong Nooch Garden" />
+          <img src=" /Pattaya/Gopuram_door_panels_of_Sri_Mahamariamman_Koyil_Bangkok.jpg" alt="Nong Nooch Garden" />
           <div className="day-content">
             <h3>Day 7: Bangkok Temple Tour – Departure</h3>
             <p>Breakfast at hotel. Check-out from hotel. Bangkok Temple Tour – Private Basis: Marble Buddha, Golden Buddha, Transfer to Don Mueang Airport (DMK) for Departure.</p>

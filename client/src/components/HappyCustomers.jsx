@@ -4,44 +4,38 @@ import { Thumbs, Autoplay, Pagination, EffectCoverflow, Controller } from "swipe
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import axios from "axios";
 
 import styles from "./HappyCustomers.module.css";
 
 const CustomerReviewSection = () => {
   const [swiperThumbs, setSwiperThumbs] = useState(null);
   const [swiperTestimonial, setSwiperTestimonial] = useState(null);
-
-  const testimonials = [
-    {
-      quote:
-        "This is the best and biggest unified platform for instant online admission. We can easily take admission for any course in any institute.",
-      name: "Ramkishor Verma",
-      designation: "University Student",
-      image: "https://md-aqil.github.io/images/2091127763_1_1_1.jpg",
-    },
-    {
-      quote:
-        "Amazing interface and easy-to-use platform. Great for students and institutes alike.",
-      name: "Suresh Kumar",
-      designation: "IT Professional",
-      image: "https://md-aqil.github.io/images/attractive-beautiful-beauty-1986684.jpg",
-    },
-    {
-      quote:
-        "The most convenient way to manage admissions online. Highly recommended.",
-      name: "Ananya Patel",
-      designation: "College Student",
-      image: "https://md-aqil.github.io/images/beautiful-beauty-face-2657838.jpg",
-    },
-  ];
+  const [testimonials, setTestimonials] = useState([]);
 
   const quoteIcon = "https://md-aqil.github.io/images/quote.png";
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000"; 
+
+  // Fetch testimonials from API
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const response = await axios.get(`${API_URL}/api/reviews`,{withCredentials:true}); // Replace with actual API endpoint
+        const data = await response.data;
+        setTestimonials(data); 
+      } catch (error) {
+        console.error("Error fetching testimonials:", error);
+      }
+    };
+
+    fetchTestimonials();
+  }, []);
 
   // Preload images
   useEffect(() => {
     testimonials.forEach((t) => new Image().src = t.image);
     new Image().src = quoteIcon;
-  }, []);
+  }, [testimonials]);
 
   return (
     <div className={styles.customerReviewSection}>
@@ -69,7 +63,7 @@ const CustomerReviewSection = () => {
               controller={{ control: swiperTestimonial }}
             >
               {testimonials.map((t, i) => (
-                <SwiperSlide key={i} className={styles.swiperSlide}>
+                <SwiperSlide key={t._id} className={styles.swiperSlide}>
                   <img
                     src={t.image}
                     alt={t.name}
@@ -98,7 +92,7 @@ const CustomerReviewSection = () => {
               controller={{ control: swiperThumbs }}
             >
               {testimonials.map((t, i) => (
-                <SwiperSlide key={i}>
+                <SwiperSlide key={t._id}>
                   <div className={styles.quote}>
                     <img
                       className={styles.quoteIcon}
@@ -107,10 +101,9 @@ const CustomerReviewSection = () => {
                       loading="lazy"
                     />
                     <p className={styles.testimonialText}>
-                      "{t.quote}"
+                      "{t.comment}"
                     </p>
                     <div className={styles.name}>{t.name}</div>
-                    <div className={styles.designation}>{t.designation}</div>
                   </div>
                 </SwiperSlide>
               ))}

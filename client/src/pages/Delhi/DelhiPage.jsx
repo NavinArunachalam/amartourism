@@ -19,7 +19,7 @@ const GoldenTrianglePage = () => {
       <section>
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80" alt="Delhi Arrival" />
+          <img src=" /delhi/istockphoto-510795912-612x612.jpg" alt="Delhi Arrival" />
           <div className="day-content">
             <h3>Day 1: Arriving at Delhi Airport & Proceed for Sightseeing</h3>
             <p>Meet our representatives at Delhi Airport and get transferred to the Hotel. In the afternoon you will be taken to Rajghat and Jantar Mantar. Post that, in the evening visit Parliament House, Rashtrapati Bhavan, and India Gate. Return back to Hotel for overnight stay.</p>
@@ -30,10 +30,10 @@ const GoldenTrianglePage = () => {
             <h3>Day 2: Delhi to Agra - Transfer & Sightseeing</h3>
             <p>Early morning pick-up from Delhi to transfer to Agra (approx. 230 km, 4-hour drive). Visit the Taj Mahal, one of the Seven Wonders of the World. Explore the Agra Fort, a UNESCO World Heritage Site. Visit the Itmad-Ud-Daulah's Tomb (Baby Taj). Drop-off at your hotel for overnight stay in Agra.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80" alt="Taj Mahal" />
+          <img src=" /delhi/tajmahal.jpg" alt="Taj Mahal" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1596383523217-4dd011266d34?auto=format&fit=crop&w=800&q=80" alt="Jaipur" />
+          <img src=" /delhi/jaipur.jpg" alt="Jaipur" />
           <div className="day-content">
             <h3>Day 3: Agra to Jaipur - Transfer & Sightseeing</h3>
             <p>Start early, take your breakfast and check out from the hotel. Head on to Jaipur city (4-5 hours drive). Arrive in Jaipur, check in the hotel and take some rest. Begin your Jaipur tour with a short stopover at the iconic Hawa Mahal. Next, explore the Jantar Mantar observatory, a UNESCO World Heritage Site. In the evening, go to Govind Dev Ji Temple. Later stroll through the local markets for souvenirs.</p>
@@ -44,10 +44,10 @@ const GoldenTrianglePage = () => {
             <h3>Day 4: Jaipur - Local Sightseeing</h3>
             <p>After breakfast, begin your day with local sightseeing. Visit Amer Fort, which has the 3rd largest wall in the World. Next, visit Jaigarh Fort and Nahargarh Fort to experience panoramic views of the city. Later visit City Palace, the residence of the current Maharana. Come back to the hotel for an overnight stay.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1477587458880-447c0c034691?auto=format&fit=crop&w=800&q=80" alt="Amer Fort" />
+          <img src=" /delhi/20191219_Fort_Amber,_Amer,_Jaipur_0955_9481.jpg" alt="Amer Fort" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1601327020796-3654c595e32d?auto=format&fit=crop&w=800&q=80" alt="Jaipur Departure" />
+          <img src=" /delhi/despature.jpg" alt="Jaipur Departure" />
           <div className="day-content">
             <h3>Day 5: Jaipur - Departure</h3>
             <p>After breakfast, check out from the hotel and head to the nearest airport for your departure. Your Golden Triangle tour concludes with beautiful memories of India's rich cultural heritage.</p>

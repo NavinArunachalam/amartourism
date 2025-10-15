@@ -18,7 +18,7 @@ const Ooty3N4DPage = () => {
       <section>
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1588666309995-63aae5a1c4c4?auto=format&fit=crop&w=800&q=80" alt="Ooty Arrival" />
+          <img src="\ooty\ooty.jpg" alt="Ooty Arrival" />
           <div className="day-content">
             <h3>Day 1: Arrival & Ooty Local Sightseeing</h3>
             <p>
@@ -33,10 +33,10 @@ const Ooty3N4DPage = () => {
               After Breakfast: Pykara Boat House, Pykara Waterfalls, Pine Forest, Kamaraj Sagar Dam, Golf Links, 9th Mile Shooting Point. Pykara Lake Boat House. Return to hotel in Ooty. Overnight Stay in Ooty.
             </p>
           </div>
-          <img src="https://images.unsplash.com/photo-1627988884864-30ffc299f930?auto=format&fit=crop&w=800&q=80" alt="Pykara" />
+          <img src=" /ooty/Pykara_Temple.jpg" alt="Pykara" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1627988884988-746b153b4c3c?auto=format&fit=crop&w=800&q=80" alt="Coonoor" />
+          <img src=" /ooty/Coonoor.jpg" alt="Coonoor" />
           <div className="day-content">
             <h3>Day 3: Coonoor Day Trip</h3>
             <p>
@@ -46,12 +46,12 @@ const Ooty3N4DPage = () => {
         </div>
         <div className="day">
           <div className="day-content">
-            <h3>Day 4: Checkout & Madumalai Wildlife Drive</h3>
+            <h3>Day 4: Checkout & Mudumalai Wildlife Drive</h3>
             <p>
               Morning: Checkout from Ooty hotel. Enroute to Coimbatore: Frog Mountain (Long View), Needle Rock View Point, Eucalyptus Trees Avenue, Madumalai Wildlife Safari, 36 Hairpin Bend Scenic Drive. Drop at Coimbatore.
             </p>
           </div>
-          <img src="https://images.unsplash.com/photo-1627988884988-746b153b4c3c?auto=format&fit=crop&w=800&q=80" alt="Madumalai" />
+          <img src=" /ooty/Mudumalai Wildlife.jpg" alt="Madumalai" />
         </div>
       </section>
 

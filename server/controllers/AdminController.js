@@ -4,7 +4,7 @@ const ADMIN_JWT_SECRET = process.env.ADMIN_JWT_SECRET || "supersecretadmin";
 // Hardcoded admin credentials (use env vars in production)
 const ADMIN_CREDENTIALS = {
   username: "amartourism",
-  password: "amartorism1234",
+  password: "amar1234",
   name: "Admin User",
 };
 

@@ -19,7 +19,7 @@ const KulluManaliPage = () => {
       <section>
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1580549074306-34519bfc2c91?auto=format&fit=crop&w=800&q=80" alt="Delhi to Manali" />
+          <img src=" /manali/Manali.jpg" alt="Delhi to Manali" />
           <div className="day-content">
             <h3>Day 1: Depart For Manali From Delhi On Volvo Bus</h3>
             <p>Take a flight or train to reach Delhi. On arrival at Delhi Airport or Railway Station, proceed to your next adventure. At 4:30 PM, report at the Delhi Volvo Pickup Point: R.K. Ashram or Majnu Ka Tilla. Board the Volvo AC Bus to Manali, beginning an overnight journey of around 12 to 14 hours. Immerse yourself in the breathtaking beauty of the Himalayan ranges and their stunning landscapes. Relax and enjoy a smooth ride under the starry sky.</p>
@@ -30,10 +30,10 @@ const KulluManaliPage = () => {
             <h3>Day 2: Arrival At Manali | Manali Local Sightseeing</h3>
             <p>Arrive in Manali in the morning. Warm welcome by our representative who will be your tour guide throughout your Manali trip. Transfer to hotel for check-in and refresh. Visit various places in Manali: Hidimba temple, Club house, Tibetan Monastery, Van Vihar, Manu Temple, Shiva Temple, Vashisht Hot springs, Jogini waterfalls. In the evening, take a romantic stroll through Mall Road and IBEX Market for unique souvenirs. Cozy dinner and overnight stay in Manali. Meal Included: Dinner Only.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1563793253440-a8d87cc31ed1?auto=format&fit=crop&w=800&q=80" alt="Manali" />
+          <img src=" /manali/local.jpg" alt="Manali" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1580549074306-34519bfc2c91?auto=format&fit=crop&w=800&q=80" alt="Solang Valley" />
+          <img src=" /manali/Solang Valley.JPG" alt="Solang Valley" />
           <div className="day-content">
             <h3>Day 3: Excursion To Solang Valley</h3>
             <p>Start your morning with delicious breakfast at the hotel. Explore the beauty and adventure of Nehru Kund and Solang Valley. Marvel at breathtaking views of majestic mountains rising above the clouds. In Solang Valley, embrace thrilling activities: zorbing, paragliding, parachuting, and horse riding (during summer months). Experience the newly opened Ski Himalayas Ropeway for panoramic views. Return to hotel to relax and spend a cozy evening. Meals Included: Breakfast & Dinner.</p>
@@ -44,10 +44,10 @@ const KulluManaliPage = () => {
             <h3>Day 4: Excursion To Kullu Kasol Manikaran Full Day Tour</h3>
             <p>After breakfast, proceed to cover Kullu (River Rafting at own cost), explore Kasol River View Cafe, visit Gurudwara Sahib Manikaran. Return to Manali in the evening. Meals Included: Breakfast & Dinner.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1580549074306-34519bfc2c91?auto=format&fit=crop&w=800&q=80" alt="Kasol" />
+          <img src=" /manali/Kullu Kasol.jpg" alt="Kasol" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1563793253440-a8d87cc31ed1?auto=format&fit=crop&w=800&q=80" alt="Naggar Castle" />
+          <img src=" /manali/Naggar Castle.jpg" alt="Naggar Castle" />
           <div className="day-content">
             <h3>Day 5: Excursion To Naggar Castle - Manali to Delhi by Volvo</h3>
             <p>After breakfast, check out from the hotel. Visit Naggar Castle (former residence of Raja of Kullu, popular for movie shootings) and Roerich Art Gallery (displays art of famous Russian Painter Nikolai Roerich). Enjoy shopping at Manali Market. In the evening at 4:30 PM, drop at Manali Volvo Bus Stand & board Volvo Bus for Delhi. Overnight journey by Volvo Bus. Meal Included: Breakfast Only.</p>
@@ -58,7 +58,7 @@ const KulluManaliPage = () => {
             <h3>Day 6: Reach Delhi | End of Trip With Beautiful Memories</h3>
             <p>Arrive in Delhi around 8 AM, and head towards your home destination. Your amazing Kullu-Manali trip ends here with a bag full of lifetime memories.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1580549074306-34519bfc2c91?auto=format&fit=crop&w=800&q=80" alt="Himalayan Memories" />
+          <img src=" /manali/memroy.jpg" alt="Himalayan Memories" />
         </div>
       </section>
 

@@ -19,7 +19,7 @@ const KazakhstanPage = () => {
       <section>
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1588666309995-63aae5a1c4c4?auto=format&fit=crop&w=800&q=80" alt="Almaty Arrival" />
+          <img src=" /kaz/Almaty.jpg" alt="Almaty Arrival" />
           <div className="day-content">
             <h3>Day 1: Arrival in Almaty & Kok Tobe</h3>
             <p>Arrive in Almaty and transfer to the hotel. Freshen up and relax. Visit Kok Tobe, a famous hilltop attraction offering panoramic city views. Enjoy the cable car ride to Kok Tobe. Overnight stay at the hotel in Almaty.</p>
@@ -30,10 +30,10 @@ const KazakhstanPage = () => {
             <h3>Day 2: Shymbulak Mountains, Zenkov Cathedral & Walking Street</h3>
             <p>Breakfast at the hotel. Visit Shymbulak Ski Resort, known for its stunning mountain scenery. Take a cable car ride to explore the high-altitude resort. Explore Zenkov Cathedral, a historic wooden church. Stroll through Walking Street, experiencing local culture and shopping. Return to the hotel and overnight stay in Almaty.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1627988884864-30ffc299f930?auto=format&fit=crop&w=800&q=80" alt="Shymbulak Mountains" />
+          <img src=" /kaz/Shimbulak1.JPG" alt="Shymbulak Mountains" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1627988884988-746b153b4c3c?auto=format&fit=crop&w=800&q=80" alt="Charyn Canyon" />
+          <img src=" /kaz/KolsaiLake.jpg" alt="Charyn Canyon" />
           <div className="day-content">
             <h3>Day 3: Kolsai Lake & Charyn Canyon</h3>
             <p>Breakfast at the hotel. Full-day tour to Kolsai Lake, famous for its breathtaking mountain landscapes. Visit Charyn Canyon, often called the "Grand Canyon of Kazakhstan." Enjoy an off-road vehicle experience at Charyn Canyon. Return to Almaty and overnight stay at the hotel.</p>
@@ -44,10 +44,10 @@ const KazakhstanPage = () => {
             <h3>Day 4: Almarasan Mountain OR Gorilla Energy Park</h3>
             <p>Breakfast at the hotel. Choose between visiting Almarasan Mountain, a scenic natural area for relaxation, or Gorilla Energy Park, an adventure park with fun activities. Return to the hotel and overnight stay in Almaty.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1627988884988-746b153b4c3c?auto=format&fit=crop&w=800&q=80" alt="Almarasan Mountain" />
+          <img src=" /kaz/Alma-Arasan.jpg" alt="Almarasan Mountain" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1588666309995-63aae5a1c4c4?auto=format&fit=crop&w=800&q=80" alt="Oi-Qaragai Mountain Resort" />
+          <img src=" /kaz/Oi-Qaragai Mountain Resort.jpg" alt="Oi-Qaragai Mountain Resort" />
           <div className="day-content">
             <h3>Day 5: Oi-Qaragai Mountain Resort</h3>
             <p>Breakfast at the hotel. Day trip to Oi-Qaragai Mountain Resort, a picturesque retreat in the mountains. Enjoy the serene environment and optional activities. Return to Almaty and overnight stay at the hotel.</p>
@@ -58,7 +58,8 @@ const KazakhstanPage = () => {
             <h3>Day 6: Shopping & Departure</h3>
             <p>Breakfast at the hotel. Enjoy shopping in Almaty, exploring local markets and malls. Transfer to the airport for departure with memories of Kazakhstan's stunning landscapes and rich culture.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1627988884864-30ffc299f930?auto=format&fit=crop&w=800&q=80" alt="Almaty Shopping" />
+          <img src="G:\Procols\amartourism\client\public\kaz\dispature.jpg" alt="Oi-Qaragai Mountain Resort" />
+        
         </div>
       </section>
 

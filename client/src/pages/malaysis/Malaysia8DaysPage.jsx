@@ -19,7 +19,7 @@ const Malaysia8DaysPage = () => {
       <section>
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1549887534-1541e9326641?auto=format&fit=crop&w=800&q=80" alt="Langkawi Arrival" />
+          <img src=" /malaysia/Langkawi.jpg" alt="Langkawi Arrival" />
           <div className="day-content">
             <h3>Day 1: Arrival in Langkawi</h3>
             <p>Arrive at Langkawi International Airport. Transfer to hotel and check-in. Evening free for leisure. Overnight stay in Langkawi.</p>
@@ -30,10 +30,10 @@ const Malaysia8DaysPage = () => {
             <h3>Day 2: Langkawi Island Hopping Tour</h3>
             <p>Breakfast at hotel. Enjoy Island Hopping Tour covering Pulau Dayang Bunting (Lake of the Pregnant Maiden), Pulau Beras Basah, and eagle feeding at Pulau Singa Besar. Overnight stay in Langkawi.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1602055793171-5f86cbb6a421?auto=format&fit=crop&w=800&q=80" alt="Langkawi Islands" />
+          <img src=" /malaysia/Langkawiiland.jpg" alt="Langkawi Islands" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Langkawi Tour" />
+          <img src=" /malaysia/Kuala Lumpur.jpg" alt="Langkawi Tour" />
           <div className="day-content">
             <h3>Day 3: Langkawi City Tour – Transfer to Kuala Lumpur</h3>
             <p>Breakfast at hotel. Half-day Langkawi City Tour including Langkawi Sky Bridge, Eagle Square, and duty-free shopping. Transfer to airport for flight to Kuala Lumpur. Check-in at hotel. Overnight stay in KL.</p>
@@ -44,10 +44,10 @@ const Malaysia8DaysPage = () => {
             <h3>Day 4: Kuala Lumpur City Tour</h3>
             <p>Breakfast at hotel. Visit major attractions: National Monument, National Mosque, King’s Palace, Independence Square, Twin Towers (photo stop), KL Tower (observation deck). Overnight stay in Kuala Lumpur.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80" alt="KL City" />
+          <img src=" /malaysia/Kuala Lumpur Leisure.jpg" alt="KL City" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1593085512230-2fc90a3ed0f5?auto=format&fit=crop&w=800&q=80" alt="Batu Caves" />
+          <img src=" /malaysia/Batu_Caves_stairs_2022-05.jpg" alt="Batu Caves" />
           <div className="day-content">
             <h3>Day 5: Batu Caves & Genting Highlands</h3>
             <p>Breakfast at hotel. Visit Batu Caves Temple. Continue to Genting Highlands by private vehicle. Experience the famous cable car ride. Free time at leisure in Genting. Return to Kuala Lumpur for overnight stay.</p>
@@ -58,10 +58,10 @@ const Malaysia8DaysPage = () => {
             <h3>Day 6: Kuala Lumpur Leisure Day</h3>
             <p>Breakfast at hotel. Free day for shopping or optional activities. Suggested visits: KLCC Aquarium, Sunway Lagoon Theme Park, Pavilion Mall. Overnight stay in Kuala Lumpur.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1567007882970-64e320b7c19b?auto=format&fit=crop&w=800&q=80" alt="Shopping in KL" />
+          <img src=" /malaysia/Kuala Lumpur Leisure.jpg" alt="Shopping in KL" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1598965402089-d8280b4a7ea3?auto=format&fit=crop&w=800&q=80" alt="Malacca" />
+          <img src=" /malaysia/Malacca.jpg" alt="Malacca" />
           <div className="day-content">
             <h3>Day 7: Malacca Tour</h3>
             <p>Breakfast at hotel. Full-day excursion to Malacca – a UNESCO World Heritage site. Visit St. Paul’s Hill, Dutch Square, Christ Church, Jonker Street, and enjoy Malacca River Cruise. Return to Kuala Lumpur for overnight stay.</p>
@@ -72,7 +72,7 @@ const Malaysia8DaysPage = () => {
             <h3>Day 8: Departure</h3>
             <p>Breakfast at hotel. Check-out and transfer to Kuala Lumpur International Airport for your departure flight.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1611171719487-dcfca186f2fa?auto=format&fit=crop&w=800&q=80" alt="Departure" />
+          <img src=" /malaysia/depature.jpg" alt="Departure" />
         </div>
       </section>
 

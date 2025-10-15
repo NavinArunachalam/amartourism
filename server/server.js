@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 
 // ✅ CORS setup for frontend (Vercel)
 app.use(cors({
-  origin: process.env.CLIENT_URL || "https://amartourism-client.vercel.app",
+  origin: process.env.CLIENT_URL,
   credentials: true,
 }));
 
@@ -36,4 +36,7 @@ connectDB()
   .then(() => console.log("MongoDB connected ✅"))
   .catch((err) => console.error("Failed to connect to DB:", err));
 
+  app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT} 🚀`);
+});
 module.exports = app;

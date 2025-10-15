@@ -20,7 +20,7 @@ const AndamanPage = () => {
         <h2>Detailed Day-by-Day Itinerary</h2>
 
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1580548254596-1efd3777f8ef?auto=format&fit=crop&w=800&q=80" alt="Port Blair" />
+          <img src="/andaman/andaman.jpg" />
           <div className="day-content">
             <h3>Day 1: Welcome to Andaman!</h3>
             <p>Meet our tour representative on arrival at Port Blair Airport. Transfer to hotel and check-in. After lunch, proceed for a city tour: Visit the historical monument of Cellular Jail and Carbyn's Cove Beach – one of the most picturesque beaches. Evening: Light & Sound Show at Cellular Jail depicting the heroic saga of Indian freedom struggle. Overnight stay at Port Blair.</p>
@@ -36,7 +36,7 @@ const AndamanPage = () => {
         </div>
 
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80" alt="Elephant Beach" />
+          <img src="/andaman/elephantbeach.jpg" alt="Elephant Beach" />
           <div className="day-content">
             <h3>Day 3: Elephant Beach Excursion</h3>
             <p>After breakfast, escorted to Havelock Jetty to take a speed boat to Elephant Beach and return back to Havelock. Elephant Beach is the most visited snorkeling destination in Havelock - a secluded beach with clear blue waters and sugary white sand. Complimentary snorkeling session with guide included. Option for glass bottom boat ride for underwater coral viewing. Overnight Stay: Havelock.</p>
@@ -48,11 +48,11 @@ const AndamanPage = () => {
             <h3>Day 4: Havelock to Neil Island | Bharatpur & Laxmanpur Beaches</h3>
             <p>Check-out from the hotel and transfer to Havelock Harbor to board a ferry to Neil Island. Neil Island is a tiny island with unexplored coral reefs, biodiversity, white sandy beaches, and tropical forests. Known as the 'vegetable bowl' of the Andaman. Explore Bharatpur Beach and Lakshmanpur Beach (Sunset Point). Relax on Laxmanpur Beach while enjoying the amazing sunset view. Overnight Stay: Neil Island.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=80" alt="Neil Island" />
+          <img src="/andaman/neilisland.jpg" alt="Neil Island" />
         </div>
 
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Natural Bridge" />
+          <img src=" /andaman/PortBlair.jpg" alt="Natural Bridge" />
           <div className="day-content">
             <h3>Day 5: Neil Island to Port Blair | Natural Bridge, Museum & Shopping</h3>
             <p>Return journey to Port Blair enjoying scenic sights en route – often accompanied by dolphins and flying fishes. Visit Natural Bridge (Howrah Bridge) - main attraction of Neil Island with rock formation and marine life. Explore Anthropological Museum showcasing Negrito tribes and Mongoloid tribes. Visit Sagarika Emporium - government-managed fair-price emporium for wooden handicrafts and shell ornaments. Overnight Stay: Port Blair.</p>
@@ -64,7 +64,7 @@ const AndamanPage = () => {
             <h3>Day 6: Departure</h3>
             <p>Check-out from the hotel. Transfer to Port Blair Airport / Harbour for your onward journey. Back to home with wonderful and sweet memories of your Andaman adventure.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1506477331477-33d5d8b3dc85?auto=format&fit=crop&w=800&q=80" alt="Andaman Departure" />
+          <img src=" /andaman/ranganathar.jpg" alt="Andaman Departure" />
         </div>
       </section>
 

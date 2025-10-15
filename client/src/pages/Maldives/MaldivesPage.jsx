@@ -19,7 +19,7 @@ const MaldivesPage = () => {
       <section>
         <h2>Detailed Day-by-Day Itinerary</h2>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80" alt="Maldives Arrival" />
+          <img src=" /maldives/maldives.jpg" alt="Maldives Arrival" />
           <div className="day-content">
             <h3>Day 1: Arrival & Fishing Trip</h3>
             <p>Welcome to the Maldives! Arrival at Velana International Airport. Transfer to Maafushi Island. Enjoy a Sunset Fishing Trip & BBQ Dinner (5:00 PM – 7:30 PM). Overnight stay at the hotel.</p>
@@ -30,10 +30,10 @@ const MaldivesPage = () => {
             <h3>Day 2: Snorkeling Excursion</h3>
             <p>Breakfast at the hotel. Half-Day Snorkeling Trip (9:00 AM – 2:30 PM) including: Two Snorkeling Points, Dolphin Watching, and Sandbank or Gulhi Island Visit. Dinner at the hotel. Overnight stay at the hotel.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=800&q=80" alt="Snorkeling" />
+          <img src=" /maldives/Snorkeling Excursion.jpg" alt="Snorkeling" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80" alt="Island Relaxation" />
+          <img src=" /maldives/Leisure.jpg" alt="Island Relaxation" />
           <div className="day-content">
             <h3>Day 3: Leisure & Relaxation</h3>
             <p>Breakfast at the hotel. Leisure time to explore the island at your own pace. Complimentary Safari Boat Visit. Lunch at the hotel. Dinner at the hotel. Overnight stay at the hotel.</p>
@@ -44,10 +44,10 @@ const MaldivesPage = () => {
             <h3>Day 4: Leisure & Relaxation</h3>
             <p>Breakfast at the hotel. Another day of leisure to explore the island at your own pace. Complimentary Safari Boat Visit. Lunch at the hotel. Dinner at the hotel. Overnight stay at the hotel.</p>
           </div>
-          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="Beach Relaxation" />
+          <img src=" /maldives/beach.jpg" alt="Beach Relaxation" />
         </div>
         <div className="day">
-          <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80" alt="Maldives Departure" />
+          <img src=" /maldives/Departure.jpg" alt="Maldives Departure" />
           <div className="day-content">
             <h3>Day 5: Departure</h3>
             <p>Breakfast at the hotel. Checkout from the hotel. Transfer to Velana International Airport for departure with unforgettable memories of your Maldivian paradise getaway.</p>
