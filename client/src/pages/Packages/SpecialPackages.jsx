@@ -1,12 +1,41 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import styles from './SpecialPackages.module.css';
+
+const routeMap = {
+  dubai: '/dubai',
+  europe: '/europe',
+  andaman: '/andaman',
+  thailand: '/thailand-4n',
+  malaysia: '/malaysia',
+  singapore: '/singapore',
+  bali: '/bali-4n',
+  vietnam: '/enchanting-vietnam-5n6d',
+  australia: '/australia',
+  azerbaijan: '/azerbaijan',
+  bhutan: '/bhutan',
+  delhi: '/delhi',
+  japan: '/japan',
+  kazakhstan: '/kazakhstan',
+  lakshadweep: '/lakshadweep',
+  maldives: '/maldives',
+  manali: '/kullu-manali',
+  munnar: '/munnar',
+  newzealand: '/new-zealand',
+  ooty: '/ooty-3n4d',
+  scandinavia: '/scandinavia',
+  srilanka: '/sri-lanka',
+  wayanad: '/wayanad',
+};
 
 const SpecialPackages = () => {
   const [apiPackages, setApiPackages] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
-  const Card = ({ dataImage, header, content }) => {
+  const Card = ({ dataImage, header, content, place }) => {
     const cardRef = useRef(null);
     const [width, setWidth] = useState(0);
     const [height, setHeight] = useState(0);
@@ -62,13 +91,27 @@ const SpecialPackages = () => {
       setMouseLeaveDelay(timeout);
     };
 
+    const handleCardClick = () => {
+      const route = routeMap[place];
+      if (route) {
+        navigate(route);
+      } else {
+        console.warn(`No route found for place: ${place}`);
+      }
+    };
+
     return (
       <div
         className={styles.specialOffersCardWrap}
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        onClick={handleCardClick}
+        onKeyDown={(e) => e.key === 'Enter' && handleCardClick()}
+        role="button"
+        tabIndex={0}
         ref={cardRef}
+        aria-label={header}
       >
         <div className={styles.specialOffersCard} style={cardStyle}>
           <div
@@ -87,21 +130,25 @@ const SpecialPackages = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:3000'}/api/tour-packages`, { withCredentials: true });
-        const specialOffers = response.data.filter(p => p.specialOffer === true);
-        setApiPackages(specialOffers.map(p => ({
-          header: p.title,
-          content: p.description || p.place || 'No description available',
-          image: p.image || 'https://via.placeholder.com/400'
-        })));
-        setLoading(false);
+        setLoading(true);
+        const response = await axios.get(`${API_URL}/api/tour-packages`, { withCredentials: true });
+        const specialOffers = response.data
+          .filter(p => p.specialOffer === true)
+          .map(p => ({
+            place: p.place?.toLowerCase() || (p.title ? Object.keys(routeMap).find(key => p.title.toLowerCase().includes(key)) : 'unknown'),
+            header: p.title || 'No Title',
+            content: p.description || p.place || 'No description available',
+            image: p.image || 'https://via.placeholder.com/400'
+          }));
+        setApiPackages(specialOffers);
       } catch (err) {
         console.error('Error fetching special offers:', err);
+      } finally {
         setLoading(false);
       }
     };
     fetchData();
-  }, []);
+  }, [API_URL]);
 
   useEffect(() => {
     const dotsContainer = document.getElementById('specialOffersDots');
@@ -151,6 +198,7 @@ const SpecialPackages = () => {
               dataImage={pkg.image}
               header={pkg.header}
               content={pkg.content}
+              place={pkg.place}
             />
           ))
         )}
