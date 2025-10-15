@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Heart, MapPin, Star, Calendar } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
-
+import PackageHero from "@/pages/Packages/PackageHero";
 const HoneymoonSection = () => {
   const navigate = useNavigate();
   const [honeymoonDestinations, setHoneymoonDestinations] = useState([]);

@@ -133,9 +133,6 @@ const AllPackages = () => {
                   <Star className="h-4 w-4 text-primary fill-current" />
                   <span className="text-sm font-semibold">{pkg.rating}</span>
                 </div>
-                <div className="absolute bottom-4 left-4 bg-accent/90 backdrop-blur-sm rounded-lg px-3 py-2">
-                  <span className="text-white font-semibold">{pkg.price}</span>
-                </div>
               </div>
 
               <CardHeader className="pb-4">
