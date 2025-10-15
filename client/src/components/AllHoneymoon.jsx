@@ -35,14 +35,14 @@ const HoneymoonSection = () => {
           .filter(p => p.groupSize === 'Honeymoon') // Adjust filter based on API
           .map(p => ({
             id: p._id,
-           place: p.place?.toLowerCase()|| (p.title ? Object.keys(routeMap).find(key => p.title.toLowerCase().includes(key)) : 'unknown'),
+            place: p.place?.toLowerCase() || (p.title ? Object.keys(routeMap).find(key => p.title.toLowerCase().includes(key)) : 'unknown'),
             title: p.title || 'No Title',
             description: p.place || 'No Description',
             image: p.image || 'https://via.placeholder.com/400',
             duration: p.duration || 'Unknown Duration',
             groupSize: p.groupSize || 'Group Tour',
             rating: p.rating || '4.0',
-            price: p.price || 'Contact for Price',
+
             highlights: p.highlights || [],
             departure: p.departure || 'Unknown Departure',
             destination: p.title || 'Unknown Destination'
@@ -83,7 +83,7 @@ const HoneymoonSection = () => {
 
   return (
     <section id="honeymoon" className="py-20 bg-gradient-to-br from-rose-50 to-pink-50">
-         <PackageHero />
+      <PackageHero />
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -96,7 +96,7 @@ const HoneymoonSection = () => {
             International Honeymoon Packages
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Begin your journey of love with our carefully curated honeymoon destinations. 
+            Begin your journey of love with our carefully curated honeymoon destinations.
             Create memories that will last a lifetime in the world's most romantic locations.
           </p>
         </div>
@@ -123,9 +123,6 @@ const HoneymoonSection = () => {
                 </div>
                 <div className="absolute top-3 left-3 bg-rose-500/90 backdrop-blur-sm rounded-full p-1">
                   <Heart className="h-4 w-4 text-white fill-current" />
-                </div>
-                <div className="absolute bottom-3 left-3 bg-accent/90 backdrop-blur-sm rounded-lg px-2 py-1">
-                  <span className="text-white font-semibold">{destination.price}</span>
                 </div>
               </div>
 
